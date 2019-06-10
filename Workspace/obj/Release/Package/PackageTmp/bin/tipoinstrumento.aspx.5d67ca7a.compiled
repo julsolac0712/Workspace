@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="3" virtualPath="/Pages/Expedientes/Catalogos/TipoInstrumento.aspx" hash="fffffff43f3610b9" filehash="4645d40a4a9e3efb" flags="110000" assembly="App_Web_mtkr30jt" type="ASP.pages_expedientes_catalogos_tipoinstrumento_aspx">
+    <filedeps>
+        <filedep name="/Pages/Expedientes/Catalogos/TipoInstrumento.aspx" />
+        <filedep name="/Site.Master" />
+    </filedeps>
+</preserve>

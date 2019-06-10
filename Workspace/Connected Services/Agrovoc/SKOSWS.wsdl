@@ -1,0 +1,1778 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:intf="http://aos.aims.fao.org" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://aos.aims.fao.org" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://aos.aims.fao.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://aos.aims.fao.org">
+      <xsd:element name="close">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="closeResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getTermCodeByTermAndLangXML">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="term" type="xsd:string" />
+            <xsd:element name="lang" type="xsd:string" />
+            <xsd:element name="codeName" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTermCodeByTermAndLangXMLResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getTermCodeByTermAndLangXMLReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDefinitionsByClassName">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="className" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+            <xsd:element name="outputlang" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDefinitionsByClassNameResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getDefinitionsByClassNameReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTermsByCodesAndLanguage">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="termcode" type="xsd:string" />
+            <xsd:element name="codeName" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+            <xsd:element name="lang" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTermsByCodesAndLanguageResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getTermsByCodesAndLanguageReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDefinitionsByURI">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="conceptURI" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+            <xsd:element name="outputlang" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDefinitionsByURIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getDefinitionsByURIReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAgrovocCSLanguagesExpand">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getAgrovocCSLanguagesExpandResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getAgrovocCSLanguagesExpandReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptInfoByClassName">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="conceptName" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptInfoByClassNameResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getConceptInfoByClassNameReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptInfoByURI">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="conceptURI" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptInfoByURIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getConceptInfoByURIReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDataTypeRelationship">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDataTypeRelationshipResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getDataTypeRelationshipReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getObjectPropertyRelationship">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getObjectPropertyRelationshipResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getObjectPropertyRelationshipReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAgrovocCSModules">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getAgrovocCSModulesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getAgrovocCSModulesReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAgrovocCSLanguages">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getAgrovocCSLanguagesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getAgrovocCSLanguagesReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTermsByClassName">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="className" type="xsd:string" />
+            <xsd:element name="descriptor" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+            <xsd:element name="status" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTermsByClassNameResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getTermsByClassNameReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchByModeLangScopeXML">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="searchString" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+            <xsd:element name="searchMode" type="xsd:string" />
+            <xsd:element name="lang" type="xsd:string" />
+            <xsd:element maxOccurs="unbounded" name="outlang" type="xsd:string" />
+            <xsd:element name="scopeid" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchByModeLangScopeXMLResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="searchByModeLangScopeXMLReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="simpleSearchByMode2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="searchString" type="xsd:string" />
+            <xsd:element name="searchmode" type="xsd:string" />
+            <xsd:element name="separator" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="simpleSearchByMode2Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="simpleSearchByMode2Return" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="complexSearchByTermXML">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="searchString" type="xsd:string" />
+            <xsd:element name="separator" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="complexSearchByTermXMLResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="complexSearchByTermXMLReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptRelationshipList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="clsName" type="xsd:string" />
+            <xsd:element name="OntolgoyDatabase" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptRelationshipListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getConceptRelationshipListReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptInfoByTermcode">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="termCode" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptInfoByTermcodeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="getConceptInfoByTermcodeReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptInfoByTermcodeXML">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="searchTerm" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptInfoByTermcodeXMLResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getConceptInfoByTermcodeXMLReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAuthoritySegment">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="integerFrom" type="xsd:int" />
+            <xsd:element name="integerTo" type="xsd:int" />
+            <xsd:element name="format" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAuthoritySegmentResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getAuthoritySegmentReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAllTermInSubClass">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="clsName" type="xsd:string" />
+            <xsd:element name="OntolgoyDatabase" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAllTermInSubClassResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getAllTermInSubClassReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTermCodeByTermXML">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="term" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTermCodeByTermXMLResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getTermCodeByTermXMLReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTermByLanguage">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="termcode" type="xsd:string" />
+            <xsd:element name="language" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTermByLanguageResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getTermByLanguageReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getRejectedConcepts">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="authorityFile" type="xsd:string" />
+            <xsd:element name="dateFrom" type="xsd:string" />
+            <xsd:element name="dateTo" type="xsd:string" />
+            <xsd:element name="integerFrom" type="xsd:int" />
+            <xsd:element name="integerTo" type="xsd:int" />
+            <xsd:element name="format" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getRejectedConceptsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getRejectedConceptsReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptByKeyword2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="searchString" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+            <xsd:element name="searchMode" type="xsd:string" />
+            <xsd:element name="lang" type="xsd:string" />
+            <xsd:element name="outlang" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptByKeyword2Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getConceptByKeyword2Return" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptByRelationshipValue">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="relationURI" type="xsd:string" />
+            <xsd:element name="value" type="xsd:string" />
+            <xsd:element name="searchMode" type="xsd:string" />
+            <xsd:element name="lang" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptByRelationshipValueResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getConceptByRelationshipValueReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptByKeyword">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="searchString" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+            <xsd:element name="searchMode" type="xsd:string" />
+            <xsd:element name="lang" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptByKeywordResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getConceptByKeywordReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="simpleSearchByModeLangXML">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="searchString" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+            <xsd:element name="searchMode" type="xsd:string" />
+            <xsd:element name="lang" type="xsd:string" />
+            <xsd:element maxOccurs="unbounded" name="outlang" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="simpleSearchByModeLangXMLResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="simpleSearchByModeLangXMLReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAllLabelsByTermcode2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="termcode" type="xsd:string" />
+            <xsd:element name="separator" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAllLabelsByTermcode2Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getAllLabelsByTermcode2Return" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTermCodeByTerm">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="term" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTermCodeByTermResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getTermCodeByTermReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getURIByTermAndLangXML">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="term" type="xsd:string" />
+            <xsd:element name="searchMode" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+            <xsd:element name="lang" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getURIByTermAndLangXMLResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getURIByTermAndLangXMLReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getWebServicesVersion">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getWebServicesVersionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getWebServicesVersionReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDefinitions">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="termcode" type="xsd:string" />
+            <xsd:element name="languagecode" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDefinitionsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="getDefinitionsReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTermExpansion">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="searchString" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+            <xsd:element name="searchMode" type="xsd:string" />
+            <xsd:element name="lang" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTermExpansionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getTermExpansionReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getStatusConcept">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="conceptURI" type="xsd:string" />
+            <xsd:element name="lang" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getStatusConceptResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getStatusConceptReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getStatusList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getStatusListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getStatusListReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getLanguageCode">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="localLang" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getLanguageCodeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getLanguageCodeReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getStatusTerm">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="termCode" type="xsd:string" />
+            <xsd:element name="codeName" type="xsd:string" />
+            <xsd:element name="lang" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getStatusTermResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getStatusTermReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="reloadOWLModel">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="reloadOWLModelResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="reloadOWLModelReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptObject">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="clsName" type="xsd:string" />
+            <xsd:element name="OntolgoyDatabase" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptObjectResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getConceptObjectReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getLatestUpdates">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="dateFrom" type="xsd:string" />
+            <xsd:element name="dateTo" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getLatestUpdatesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getLatestUpdatesReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getFullAuthority">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="searchString" type="xsd:string" />
+            <xsd:element name="searchMode" type="xsd:string" />
+            <xsd:element name="lang" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getFullAuthorityResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getFullAuthorityReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getListofURI">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="uriStart" type="xsd:string" />
+            <xsd:element name="numResult" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getListofURIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getListofURIReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTermsByURI">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="conceptURI" type="xsd:string" />
+            <xsd:element name="lang" type="xsd:string" />
+            <xsd:element name="descriptor" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+            <xsd:element name="status" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTermsByURIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getTermsByURIReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptByURI">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="conceptURI" type="xsd:string" />
+            <xsd:element name="format" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getConceptByURIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getConceptByURIReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="suggestTerm">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="label" type="xsd:string" />
+            <xsd:element name="lang" type="xsd:string" />
+            <xsd:element name="namespace" type="xsd:string" />
+            <xsd:element name="parentURI" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="suggestTermResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="suggestTermReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getReleaseDate">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getReleaseDateResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getReleaseDateReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAvailableCode">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAvailableCodeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getAvailableCodeReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCodesByURI">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Ontology" type="xsd:string" />
+            <xsd:element name="ConceptURI" type="xsd:string" />
+            <xsd:element name="CodeName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCodesByURIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getCodesByURIReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPossibleRelationsFromConceptURI">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="conceptURI" type="xsd:string" />
+            <xsd:element name="relationType" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPossibleRelationsFromConceptURIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getPossibleRelationsFromConceptURIReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getRelatedValuesFromConceptURIRelationURI">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ontologyName" type="xsd:string" />
+            <xsd:element name="conceptURI" type="xsd:string" />
+            <xsd:element name="relationURI" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getRelatedValuesFromConceptURIRelationURIResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getRelatedValuesFromConceptURIRelationURIReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getConceptObjectResponse">
+    <wsdl:part name="parameters" element="impl:getConceptObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDefinitionsByClassNameResponse">
+    <wsdl:part name="parameters" element="impl:getDefinitionsByClassNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="getStatusConceptRequest">
+    <wsdl:part name="parameters" element="impl:getStatusConcept" />
+  </wsdl:message>
+  <wsdl:message name="getDefinitionsByClassNameRequest">
+    <wsdl:part name="parameters" element="impl:getDefinitionsByClassName" />
+  </wsdl:message>
+  <wsdl:message name="getDefinitionsRequest">
+    <wsdl:part name="parameters" element="impl:getDefinitions" />
+  </wsdl:message>
+  <wsdl:message name="getListofURIRequest">
+    <wsdl:part name="parameters" element="impl:getListofURI" />
+  </wsdl:message>
+  <wsdl:message name="getAgrovocCSLanguagesExpandResponse">
+    <wsdl:part name="parameters" element="impl:getAgrovocCSLanguagesExpandResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllLabelsByTermcode2Request">
+    <wsdl:part name="parameters" element="impl:getAllLabelsByTermcode2" />
+  </wsdl:message>
+  <wsdl:message name="complexSearchByTermXMLResponse">
+    <wsdl:part name="parameters" element="impl:complexSearchByTermXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTermCodeByTermResponse">
+    <wsdl:part name="parameters" element="impl:getTermCodeByTermResponse" />
+  </wsdl:message>
+  <wsdl:message name="closeRequest">
+    <wsdl:part name="parameters" element="impl:close" />
+  </wsdl:message>
+  <wsdl:message name="reloadOWLModelResponse">
+    <wsdl:part name="parameters" element="impl:reloadOWLModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRelatedValuesFromConceptURIRelationURIResponse">
+    <wsdl:part name="parameters" element="impl:getRelatedValuesFromConceptURIRelationURIResponse" />
+  </wsdl:message>
+  <wsdl:message name="simpleSearchByModeLangXMLRequest">
+    <wsdl:part name="parameters" element="impl:simpleSearchByModeLangXML" />
+  </wsdl:message>
+  <wsdl:message name="getStatusTermResponse">
+    <wsdl:part name="parameters" element="impl:getStatusTermResponse" />
+  </wsdl:message>
+  <wsdl:message name="getConceptByKeywordRequest">
+    <wsdl:part name="parameters" element="impl:getConceptByKeyword" />
+  </wsdl:message>
+  <wsdl:message name="getTermsByURIResponse">
+    <wsdl:part name="parameters" element="impl:getTermsByURIResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAuthoritySegmentRequest">
+    <wsdl:part name="parameters" element="impl:getAuthoritySegment" />
+  </wsdl:message>
+  <wsdl:message name="getReleaseDateResponse">
+    <wsdl:part name="parameters" element="impl:getReleaseDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="getConceptByRelationshipValueResponse">
+    <wsdl:part name="parameters" element="impl:getConceptByRelationshipValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="getConceptInfoByTermcodeXMLRequest">
+    <wsdl:part name="parameters" element="impl:getConceptInfoByTermcodeXML" />
+  </wsdl:message>
+  <wsdl:message name="getConceptInfoByClassNameResponse">
+    <wsdl:part name="parameters" element="impl:getConceptInfoByClassNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLanguageCodeResponse">
+    <wsdl:part name="parameters" element="impl:getLanguageCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTermExpansionRequest">
+    <wsdl:part name="parameters" element="impl:getTermExpansion" />
+  </wsdl:message>
+  <wsdl:message name="getAuthoritySegmentResponse">
+    <wsdl:part name="parameters" element="impl:getAuthoritySegmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="getConceptRelationshipListResponse">
+    <wsdl:part name="parameters" element="impl:getConceptRelationshipListResponse" />
+  </wsdl:message>
+  <wsdl:message name="closeResponse">
+    <wsdl:part name="parameters" element="impl:closeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllLabelsByTermcode2Response">
+    <wsdl:part name="parameters" element="impl:getAllLabelsByTermcode2Response" />
+  </wsdl:message>
+  <wsdl:message name="getTermsByURIRequest">
+    <wsdl:part name="parameters" element="impl:getTermsByURI" />
+  </wsdl:message>
+  <wsdl:message name="getPossibleRelationsFromConceptURIResponse">
+    <wsdl:part name="parameters" element="impl:getPossibleRelationsFromConceptURIResponse" />
+  </wsdl:message>
+  <wsdl:message name="getConceptInfoByTermcodeResponse">
+    <wsdl:part name="parameters" element="impl:getConceptInfoByTermcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListofURIResponse">
+    <wsdl:part name="parameters" element="impl:getListofURIResponse" />
+  </wsdl:message>
+  <wsdl:message name="getConceptByKeyword2Request">
+    <wsdl:part name="parameters" element="impl:getConceptByKeyword2" />
+  </wsdl:message>
+  <wsdl:message name="getTermByLanguageResponse">
+    <wsdl:part name="parameters" element="impl:getTermByLanguageResponse" />
+  </wsdl:message>
+  <wsdl:message name="getConceptByURIResponse">
+    <wsdl:part name="parameters" element="impl:getConceptByURIResponse" />
+  </wsdl:message>
+  <wsdl:message name="getReleaseDateRequest">
+    <wsdl:part name="parameters" element="impl:getReleaseDate" />
+  </wsdl:message>
+  <wsdl:message name="getConceptRelationshipListRequest">
+    <wsdl:part name="parameters" element="impl:getConceptRelationshipList" />
+  </wsdl:message>
+  <wsdl:message name="getLatestUpdatesResponse">
+    <wsdl:part name="parameters" element="impl:getLatestUpdatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllTermInSubClassResponse">
+    <wsdl:part name="parameters" element="impl:getAllTermInSubClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDefinitionsByURIRequest">
+    <wsdl:part name="parameters" element="impl:getDefinitionsByURI" />
+  </wsdl:message>
+  <wsdl:message name="getDefinitionsByURIResponse">
+    <wsdl:part name="parameters" element="impl:getDefinitionsByURIResponse" />
+  </wsdl:message>
+  <wsdl:message name="getConceptByURIRequest">
+    <wsdl:part name="parameters" element="impl:getConceptByURI" />
+  </wsdl:message>
+  <wsdl:message name="getFullAuthorityResponse">
+    <wsdl:part name="parameters" element="impl:getFullAuthorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="getConceptInfoByURIRequest">
+    <wsdl:part name="parameters" element="impl:getConceptInfoByURI" />
+  </wsdl:message>
+  <wsdl:message name="simpleSearchByModeLangXMLResponse">
+    <wsdl:part name="parameters" element="impl:simpleSearchByModeLangXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTermByLanguageRequest">
+    <wsdl:part name="parameters" element="impl:getTermByLanguage" />
+  </wsdl:message>
+  <wsdl:message name="getRejectedConceptsResponse">
+    <wsdl:part name="parameters" element="impl:getRejectedConceptsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getConceptInfoByClassNameRequest">
+    <wsdl:part name="parameters" element="impl:getConceptInfoByClassName" />
+  </wsdl:message>
+  <wsdl:message name="getTermsByClassNameRequest">
+    <wsdl:part name="parameters" element="impl:getTermsByClassName" />
+  </wsdl:message>
+  <wsdl:message name="getAgrovocCSLanguagesResponse">
+    <wsdl:part name="parameters" element="impl:getAgrovocCSLanguagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getStatusListRequest">
+    <wsdl:part name="parameters" element="impl:getStatusList" />
+  </wsdl:message>
+  <wsdl:message name="getPossibleRelationsFromConceptURIRequest">
+    <wsdl:part name="parameters" element="impl:getPossibleRelationsFromConceptURI" />
+  </wsdl:message>
+  <wsdl:message name="getConceptInfoByTermcodeRequest">
+    <wsdl:part name="parameters" element="impl:getConceptInfoByTermcode" />
+  </wsdl:message>
+  <wsdl:message name="getTermCodeByTermXMLResponse">
+    <wsdl:part name="parameters" element="impl:getTermCodeByTermXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="reloadOWLModelRequest">
+    <wsdl:part name="parameters" element="impl:reloadOWLModel" />
+  </wsdl:message>
+  <wsdl:message name="getAgrovocCSModulesResponse">
+    <wsdl:part name="parameters" element="impl:getAgrovocCSModulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="suggestTermResponse">
+    <wsdl:part name="parameters" element="impl:suggestTermResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAgrovocCSLanguagesExpandRequest">
+    <wsdl:part name="parameters" element="impl:getAgrovocCSLanguagesExpand" />
+  </wsdl:message>
+  <wsdl:message name="getLanguageCodeRequest">
+    <wsdl:part name="parameters" element="impl:getLanguageCode" />
+  </wsdl:message>
+  <wsdl:message name="getDataTypeRelationshipRequest">
+    <wsdl:part name="parameters" element="impl:getDataTypeRelationship" />
+  </wsdl:message>
+  <wsdl:message name="getWebServicesVersionResponse">
+    <wsdl:part name="parameters" element="impl:getWebServicesVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTermsByCodesAndLanguageResponse">
+    <wsdl:part name="parameters" element="impl:getTermsByCodesAndLanguageResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRejectedConceptsRequest">
+    <wsdl:part name="parameters" element="impl:getRejectedConcepts" />
+  </wsdl:message>
+  <wsdl:message name="getObjectPropertyRelationshipRequest">
+    <wsdl:part name="parameters" element="impl:getObjectPropertyRelationship" />
+  </wsdl:message>
+  <wsdl:message name="getStatusConceptResponse">
+    <wsdl:part name="parameters" element="impl:getStatusConceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="getURIByTermAndLangXMLResponse">
+    <wsdl:part name="parameters" element="impl:getURIByTermAndLangXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLatestUpdatesRequest">
+    <wsdl:part name="parameters" element="impl:getLatestUpdates" />
+  </wsdl:message>
+  <wsdl:message name="getCodesByURIRequest">
+    <wsdl:part name="parameters" element="impl:getCodesByURI" />
+  </wsdl:message>
+  <wsdl:message name="getTermExpansionResponse">
+    <wsdl:part name="parameters" element="impl:getTermExpansionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getStatusListResponse">
+    <wsdl:part name="parameters" element="impl:getStatusListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTermsByCodesAndLanguageRequest">
+    <wsdl:part name="parameters" element="impl:getTermsByCodesAndLanguage" />
+  </wsdl:message>
+  <wsdl:message name="getObjectPropertyRelationshipResponse">
+    <wsdl:part name="parameters" element="impl:getObjectPropertyRelationshipResponse" />
+  </wsdl:message>
+  <wsdl:message name="complexSearchByTermXMLRequest">
+    <wsdl:part name="parameters" element="impl:complexSearchByTermXML" />
+  </wsdl:message>
+  <wsdl:message name="getDefinitionsResponse">
+    <wsdl:part name="parameters" element="impl:getDefinitionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTermCodeByTermXMLRequest">
+    <wsdl:part name="parameters" element="impl:getTermCodeByTermXML" />
+  </wsdl:message>
+  <wsdl:message name="getTermCodeByTermAndLangXMLRequest">
+    <wsdl:part name="parameters" element="impl:getTermCodeByTermAndLangXML" />
+  </wsdl:message>
+  <wsdl:message name="getConceptObjectRequest">
+    <wsdl:part name="parameters" element="impl:getConceptObject" />
+  </wsdl:message>
+  <wsdl:message name="getAgrovocCSLanguagesRequest">
+    <wsdl:part name="parameters" element="impl:getAgrovocCSLanguages" />
+  </wsdl:message>
+  <wsdl:message name="getWebServicesVersionRequest">
+    <wsdl:part name="parameters" element="impl:getWebServicesVersion" />
+  </wsdl:message>
+  <wsdl:message name="getTermsByClassNameResponse">
+    <wsdl:part name="parameters" element="impl:getTermsByClassNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCodesByURIResponse">
+    <wsdl:part name="parameters" element="impl:getCodesByURIResponse" />
+  </wsdl:message>
+  <wsdl:message name="getURIByTermAndLangXMLRequest">
+    <wsdl:part name="parameters" element="impl:getURIByTermAndLangXML" />
+  </wsdl:message>
+  <wsdl:message name="getConceptByRelationshipValueRequest">
+    <wsdl:part name="parameters" element="impl:getConceptByRelationshipValue" />
+  </wsdl:message>
+  <wsdl:message name="getAvailableCodeRequest">
+    <wsdl:part name="parameters" element="impl:getAvailableCode" />
+  </wsdl:message>
+  <wsdl:message name="getTermCodeByTermRequest">
+    <wsdl:part name="parameters" element="impl:getTermCodeByTerm" />
+  </wsdl:message>
+  <wsdl:message name="getDataTypeRelationshipResponse">
+    <wsdl:part name="parameters" element="impl:getDataTypeRelationshipResponse" />
+  </wsdl:message>
+  <wsdl:message name="getConceptInfoByURIResponse">
+    <wsdl:part name="parameters" element="impl:getConceptInfoByURIResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchByModeLangScopeXMLRequest">
+    <wsdl:part name="parameters" element="impl:searchByModeLangScopeXML" />
+  </wsdl:message>
+  <wsdl:message name="getConceptByKeywordResponse">
+    <wsdl:part name="parameters" element="impl:getConceptByKeywordResponse" />
+  </wsdl:message>
+  <wsdl:message name="getStatusTermRequest">
+    <wsdl:part name="parameters" element="impl:getStatusTerm" />
+  </wsdl:message>
+  <wsdl:message name="getRelatedValuesFromConceptURIRelationURIRequest">
+    <wsdl:part name="parameters" element="impl:getRelatedValuesFromConceptURIRelationURI" />
+  </wsdl:message>
+  <wsdl:message name="getFullAuthorityRequest">
+    <wsdl:part name="parameters" element="impl:getFullAuthority" />
+  </wsdl:message>
+  <wsdl:message name="getConceptInfoByTermcodeXMLResponse">
+    <wsdl:part name="parameters" element="impl:getConceptInfoByTermcodeXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="simpleSearchByMode2Request">
+    <wsdl:part name="parameters" element="impl:simpleSearchByMode2" />
+  </wsdl:message>
+  <wsdl:message name="getAgrovocCSModulesRequest">
+    <wsdl:part name="parameters" element="impl:getAgrovocCSModules" />
+  </wsdl:message>
+  <wsdl:message name="simpleSearchByMode2Response">
+    <wsdl:part name="parameters" element="impl:simpleSearchByMode2Response" />
+  </wsdl:message>
+  <wsdl:message name="getTermCodeByTermAndLangXMLResponse">
+    <wsdl:part name="parameters" element="impl:getTermCodeByTermAndLangXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllTermInSubClassRequest">
+    <wsdl:part name="parameters" element="impl:getAllTermInSubClass" />
+  </wsdl:message>
+  <wsdl:message name="getConceptByKeyword2Response">
+    <wsdl:part name="parameters" element="impl:getConceptByKeyword2Response" />
+  </wsdl:message>
+  <wsdl:message name="suggestTermRequest">
+    <wsdl:part name="parameters" element="impl:suggestTerm" />
+  </wsdl:message>
+  <wsdl:message name="searchByModeLangScopeXMLResponse">
+    <wsdl:part name="parameters" element="impl:searchByModeLangScopeXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAvailableCodeResponse">
+    <wsdl:part name="parameters" element="impl:getAvailableCodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SKOSWS">
+    <wsdl:operation name="close">
+      <wsdl:input name="closeRequest" message="impl:closeRequest" />
+      <wsdl:output name="closeResponse" message="impl:closeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTermCodeByTermAndLangXML">
+      <wsdl:input name="getTermCodeByTermAndLangXMLRequest" message="impl:getTermCodeByTermAndLangXMLRequest" />
+      <wsdl:output name="getTermCodeByTermAndLangXMLResponse" message="impl:getTermCodeByTermAndLangXMLResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDefinitionsByClassName">
+      <wsdl:input name="getDefinitionsByClassNameRequest" message="impl:getDefinitionsByClassNameRequest" />
+      <wsdl:output name="getDefinitionsByClassNameResponse" message="impl:getDefinitionsByClassNameResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTermsByCodesAndLanguage">
+      <wsdl:input name="getTermsByCodesAndLanguageRequest" message="impl:getTermsByCodesAndLanguageRequest" />
+      <wsdl:output name="getTermsByCodesAndLanguageResponse" message="impl:getTermsByCodesAndLanguageResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDefinitionsByURI">
+      <wsdl:input name="getDefinitionsByURIRequest" message="impl:getDefinitionsByURIRequest" />
+      <wsdl:output name="getDefinitionsByURIResponse" message="impl:getDefinitionsByURIResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAgrovocCSLanguagesExpand">
+      <wsdl:input name="getAgrovocCSLanguagesExpandRequest" message="impl:getAgrovocCSLanguagesExpandRequest" />
+      <wsdl:output name="getAgrovocCSLanguagesExpandResponse" message="impl:getAgrovocCSLanguagesExpandResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getConceptInfoByClassName">
+      <wsdl:input name="getConceptInfoByClassNameRequest" message="impl:getConceptInfoByClassNameRequest" />
+      <wsdl:output name="getConceptInfoByClassNameResponse" message="impl:getConceptInfoByClassNameResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getConceptInfoByURI">
+      <wsdl:input name="getConceptInfoByURIRequest" message="impl:getConceptInfoByURIRequest" />
+      <wsdl:output name="getConceptInfoByURIResponse" message="impl:getConceptInfoByURIResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDataTypeRelationship">
+      <wsdl:input name="getDataTypeRelationshipRequest" message="impl:getDataTypeRelationshipRequest" />
+      <wsdl:output name="getDataTypeRelationshipResponse" message="impl:getDataTypeRelationshipResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getObjectPropertyRelationship">
+      <wsdl:input name="getObjectPropertyRelationshipRequest" message="impl:getObjectPropertyRelationshipRequest" />
+      <wsdl:output name="getObjectPropertyRelationshipResponse" message="impl:getObjectPropertyRelationshipResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAgrovocCSModules">
+      <wsdl:input name="getAgrovocCSModulesRequest" message="impl:getAgrovocCSModulesRequest" />
+      <wsdl:output name="getAgrovocCSModulesResponse" message="impl:getAgrovocCSModulesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAgrovocCSLanguages">
+      <wsdl:input name="getAgrovocCSLanguagesRequest" message="impl:getAgrovocCSLanguagesRequest" />
+      <wsdl:output name="getAgrovocCSLanguagesResponse" message="impl:getAgrovocCSLanguagesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTermsByClassName">
+      <wsdl:input name="getTermsByClassNameRequest" message="impl:getTermsByClassNameRequest" />
+      <wsdl:output name="getTermsByClassNameResponse" message="impl:getTermsByClassNameResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchByModeLangScopeXML">
+      <wsdl:input name="searchByModeLangScopeXMLRequest" message="impl:searchByModeLangScopeXMLRequest" />
+      <wsdl:output name="searchByModeLangScopeXMLResponse" message="impl:searchByModeLangScopeXMLResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="simpleSearchByMode2">
+      <wsdl:input name="simpleSearchByMode2Request" message="impl:simpleSearchByMode2Request" />
+      <wsdl:output name="simpleSearchByMode2Response" message="impl:simpleSearchByMode2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="complexSearchByTermXML">
+      <wsdl:input name="complexSearchByTermXMLRequest" message="impl:complexSearchByTermXMLRequest" />
+      <wsdl:output name="complexSearchByTermXMLResponse" message="impl:complexSearchByTermXMLResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getConceptRelationshipList">
+      <wsdl:input name="getConceptRelationshipListRequest" message="impl:getConceptRelationshipListRequest" />
+      <wsdl:output name="getConceptRelationshipListResponse" message="impl:getConceptRelationshipListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getConceptInfoByTermcode">
+      <wsdl:input name="getConceptInfoByTermcodeRequest" message="impl:getConceptInfoByTermcodeRequest" />
+      <wsdl:output name="getConceptInfoByTermcodeResponse" message="impl:getConceptInfoByTermcodeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getConceptInfoByTermcodeXML">
+      <wsdl:input name="getConceptInfoByTermcodeXMLRequest" message="impl:getConceptInfoByTermcodeXMLRequest" />
+      <wsdl:output name="getConceptInfoByTermcodeXMLResponse" message="impl:getConceptInfoByTermcodeXMLResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAuthoritySegment">
+      <wsdl:input name="getAuthoritySegmentRequest" message="impl:getAuthoritySegmentRequest" />
+      <wsdl:output name="getAuthoritySegmentResponse" message="impl:getAuthoritySegmentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllTermInSubClass">
+      <wsdl:input name="getAllTermInSubClassRequest" message="impl:getAllTermInSubClassRequest" />
+      <wsdl:output name="getAllTermInSubClassResponse" message="impl:getAllTermInSubClassResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTermCodeByTermXML">
+      <wsdl:input name="getTermCodeByTermXMLRequest" message="impl:getTermCodeByTermXMLRequest" />
+      <wsdl:output name="getTermCodeByTermXMLResponse" message="impl:getTermCodeByTermXMLResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTermByLanguage">
+      <wsdl:input name="getTermByLanguageRequest" message="impl:getTermByLanguageRequest" />
+      <wsdl:output name="getTermByLanguageResponse" message="impl:getTermByLanguageResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getRejectedConcepts">
+      <wsdl:input name="getRejectedConceptsRequest" message="impl:getRejectedConceptsRequest" />
+      <wsdl:output name="getRejectedConceptsResponse" message="impl:getRejectedConceptsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getConceptByKeyword2">
+      <wsdl:input name="getConceptByKeyword2Request" message="impl:getConceptByKeyword2Request" />
+      <wsdl:output name="getConceptByKeyword2Response" message="impl:getConceptByKeyword2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="getConceptByRelationshipValue">
+      <wsdl:input name="getConceptByRelationshipValueRequest" message="impl:getConceptByRelationshipValueRequest" />
+      <wsdl:output name="getConceptByRelationshipValueResponse" message="impl:getConceptByRelationshipValueResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getConceptByKeyword">
+      <wsdl:input name="getConceptByKeywordRequest" message="impl:getConceptByKeywordRequest" />
+      <wsdl:output name="getConceptByKeywordResponse" message="impl:getConceptByKeywordResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="simpleSearchByModeLangXML">
+      <wsdl:input name="simpleSearchByModeLangXMLRequest" message="impl:simpleSearchByModeLangXMLRequest" />
+      <wsdl:output name="simpleSearchByModeLangXMLResponse" message="impl:simpleSearchByModeLangXMLResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllLabelsByTermcode2">
+      <wsdl:input name="getAllLabelsByTermcode2Request" message="impl:getAllLabelsByTermcode2Request" />
+      <wsdl:output name="getAllLabelsByTermcode2Response" message="impl:getAllLabelsByTermcode2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="getTermCodeByTerm">
+      <wsdl:input name="getTermCodeByTermRequest" message="impl:getTermCodeByTermRequest" />
+      <wsdl:output name="getTermCodeByTermResponse" message="impl:getTermCodeByTermResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getURIByTermAndLangXML">
+      <wsdl:input name="getURIByTermAndLangXMLRequest" message="impl:getURIByTermAndLangXMLRequest" />
+      <wsdl:output name="getURIByTermAndLangXMLResponse" message="impl:getURIByTermAndLangXMLResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getWebServicesVersion">
+      <wsdl:input name="getWebServicesVersionRequest" message="impl:getWebServicesVersionRequest" />
+      <wsdl:output name="getWebServicesVersionResponse" message="impl:getWebServicesVersionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDefinitions">
+      <wsdl:input name="getDefinitionsRequest" message="impl:getDefinitionsRequest" />
+      <wsdl:output name="getDefinitionsResponse" message="impl:getDefinitionsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTermExpansion">
+      <wsdl:input name="getTermExpansionRequest" message="impl:getTermExpansionRequest" />
+      <wsdl:output name="getTermExpansionResponse" message="impl:getTermExpansionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getStatusConcept">
+      <wsdl:input name="getStatusConceptRequest" message="impl:getStatusConceptRequest" />
+      <wsdl:output name="getStatusConceptResponse" message="impl:getStatusConceptResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getStatusList">
+      <wsdl:input name="getStatusListRequest" message="impl:getStatusListRequest" />
+      <wsdl:output name="getStatusListResponse" message="impl:getStatusListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getLanguageCode">
+      <wsdl:input name="getLanguageCodeRequest" message="impl:getLanguageCodeRequest" />
+      <wsdl:output name="getLanguageCodeResponse" message="impl:getLanguageCodeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getStatusTerm">
+      <wsdl:input name="getStatusTermRequest" message="impl:getStatusTermRequest" />
+      <wsdl:output name="getStatusTermResponse" message="impl:getStatusTermResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="reloadOWLModel">
+      <wsdl:input name="reloadOWLModelRequest" message="impl:reloadOWLModelRequest" />
+      <wsdl:output name="reloadOWLModelResponse" message="impl:reloadOWLModelResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getConceptObject">
+      <wsdl:input name="getConceptObjectRequest" message="impl:getConceptObjectRequest" />
+      <wsdl:output name="getConceptObjectResponse" message="impl:getConceptObjectResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getLatestUpdates">
+      <wsdl:input name="getLatestUpdatesRequest" message="impl:getLatestUpdatesRequest" />
+      <wsdl:output name="getLatestUpdatesResponse" message="impl:getLatestUpdatesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getFullAuthority">
+      <wsdl:input name="getFullAuthorityRequest" message="impl:getFullAuthorityRequest" />
+      <wsdl:output name="getFullAuthorityResponse" message="impl:getFullAuthorityResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getListofURI">
+      <wsdl:input name="getListofURIRequest" message="impl:getListofURIRequest" />
+      <wsdl:output name="getListofURIResponse" message="impl:getListofURIResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTermsByURI">
+      <wsdl:input name="getTermsByURIRequest" message="impl:getTermsByURIRequest" />
+      <wsdl:output name="getTermsByURIResponse" message="impl:getTermsByURIResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getConceptByURI">
+      <wsdl:input name="getConceptByURIRequest" message="impl:getConceptByURIRequest" />
+      <wsdl:output name="getConceptByURIResponse" message="impl:getConceptByURIResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="suggestTerm">
+      <wsdl:input name="suggestTermRequest" message="impl:suggestTermRequest" />
+      <wsdl:output name="suggestTermResponse" message="impl:suggestTermResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getReleaseDate">
+      <wsdl:input name="getReleaseDateRequest" message="impl:getReleaseDateRequest" />
+      <wsdl:output name="getReleaseDateResponse" message="impl:getReleaseDateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAvailableCode">
+      <wsdl:input name="getAvailableCodeRequest" message="impl:getAvailableCodeRequest" />
+      <wsdl:output name="getAvailableCodeResponse" message="impl:getAvailableCodeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getCodesByURI">
+      <wsdl:input name="getCodesByURIRequest" message="impl:getCodesByURIRequest" />
+      <wsdl:output name="getCodesByURIResponse" message="impl:getCodesByURIResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPossibleRelationsFromConceptURI">
+      <wsdl:input name="getPossibleRelationsFromConceptURIRequest" message="impl:getPossibleRelationsFromConceptURIRequest" />
+      <wsdl:output name="getPossibleRelationsFromConceptURIResponse" message="impl:getPossibleRelationsFromConceptURIResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getRelatedValuesFromConceptURIRelationURI">
+      <wsdl:input name="getRelatedValuesFromConceptURIRelationURIRequest" message="impl:getRelatedValuesFromConceptURIRelationURIRequest" />
+      <wsdl:output name="getRelatedValuesFromConceptURIRelationURIResponse" message="impl:getRelatedValuesFromConceptURIRelationURIResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SKOSWSSoapBinding" type="impl:SKOSWS">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="close">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="closeRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="closeResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTermCodeByTermAndLangXML">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getTermCodeByTermAndLangXMLRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getTermCodeByTermAndLangXMLResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDefinitionsByClassName">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getDefinitionsByClassNameRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getDefinitionsByClassNameResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTermsByCodesAndLanguage">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getTermsByCodesAndLanguageRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getTermsByCodesAndLanguageResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDefinitionsByURI">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getDefinitionsByURIRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getDefinitionsByURIResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgrovocCSLanguagesExpand">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAgrovocCSLanguagesExpandRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAgrovocCSLanguagesExpandResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConceptInfoByClassName">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getConceptInfoByClassNameRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getConceptInfoByClassNameResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConceptInfoByURI">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getConceptInfoByURIRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getConceptInfoByURIResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDataTypeRelationship">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getDataTypeRelationshipRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getDataTypeRelationshipResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectPropertyRelationship">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getObjectPropertyRelationshipRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getObjectPropertyRelationshipResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgrovocCSModules">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAgrovocCSModulesRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAgrovocCSModulesResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgrovocCSLanguages">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAgrovocCSLanguagesRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAgrovocCSLanguagesResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTermsByClassName">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getTermsByClassNameRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getTermsByClassNameResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchByModeLangScopeXML">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="searchByModeLangScopeXMLRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="searchByModeLangScopeXMLResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="simpleSearchByMode2">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="simpleSearchByMode2Request">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="simpleSearchByMode2Response">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="complexSearchByTermXML">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="complexSearchByTermXMLRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="complexSearchByTermXMLResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConceptRelationshipList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getConceptRelationshipListRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getConceptRelationshipListResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConceptInfoByTermcode">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getConceptInfoByTermcodeRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getConceptInfoByTermcodeResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConceptInfoByTermcodeXML">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getConceptInfoByTermcodeXMLRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getConceptInfoByTermcodeXMLResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAuthoritySegment">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAuthoritySegmentRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAuthoritySegmentResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTermInSubClass">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAllTermInSubClassRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAllTermInSubClassResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTermCodeByTermXML">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getTermCodeByTermXMLRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getTermCodeByTermXMLResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTermByLanguage">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getTermByLanguageRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getTermByLanguageResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRejectedConcepts">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getRejectedConceptsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getRejectedConceptsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConceptByKeyword2">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getConceptByKeyword2Request">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getConceptByKeyword2Response">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConceptByRelationshipValue">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getConceptByRelationshipValueRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getConceptByRelationshipValueResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConceptByKeyword">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getConceptByKeywordRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getConceptByKeywordResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="simpleSearchByModeLangXML">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="simpleSearchByModeLangXMLRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="simpleSearchByModeLangXMLResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllLabelsByTermcode2">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAllLabelsByTermcode2Request">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAllLabelsByTermcode2Response">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTermCodeByTerm">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getTermCodeByTermRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getTermCodeByTermResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getURIByTermAndLangXML">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getURIByTermAndLangXMLRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getURIByTermAndLangXMLResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWebServicesVersion">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getWebServicesVersionRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getWebServicesVersionResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDefinitions">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getDefinitionsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getDefinitionsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTermExpansion">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getTermExpansionRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getTermExpansionResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatusConcept">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getStatusConceptRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getStatusConceptResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatusList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getStatusListRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getStatusListResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLanguageCode">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getLanguageCodeRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getLanguageCodeResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatusTerm">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getStatusTermRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getStatusTermResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reloadOWLModel">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="reloadOWLModelRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="reloadOWLModelResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConceptObject">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getConceptObjectRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getConceptObjectResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLatestUpdates">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getLatestUpdatesRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getLatestUpdatesResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFullAuthority">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getFullAuthorityRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getFullAuthorityResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListofURI">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getListofURIRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getListofURIResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTermsByURI">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getTermsByURIRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getTermsByURIResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConceptByURI">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getConceptByURIRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getConceptByURIResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="suggestTerm">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="suggestTermRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="suggestTermResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReleaseDate">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getReleaseDateRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getReleaseDateResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAvailableCode">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAvailableCodeRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAvailableCodeResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCodesByURI">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getCodesByURIRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCodesByURIResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPossibleRelationsFromConceptURI">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getPossibleRelationsFromConceptURIRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPossibleRelationsFromConceptURIResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRelatedValuesFromConceptURIRelationURI">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getRelatedValuesFromConceptURIRelationURIRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getRelatedValuesFromConceptURIRelationURIResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SKOSWSService">
+    <wsdl:port name="SKOSWS" binding="impl:SKOSWSSoapBinding">
+      <wsdlsoap:address location="http://agrovoc.uniroma2.it:8080/SKOSWS/services/SKOSWS" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

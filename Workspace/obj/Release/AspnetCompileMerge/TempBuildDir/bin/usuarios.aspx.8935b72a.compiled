@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="3" virtualPath="/Pages/Seguridad/Usuarios.aspx" hash="fffffff43f3610b9" filehash="dc4e091d47337ece" flags="110000" assembly="App_Web_f0vakpkc" type="ASP.pages_seguridad_usuarios_aspx">
+    <filedeps>
+        <filedep name="/Pages/Seguridad/Usuarios.aspx" />
+        <filedep name="/Site.Master" />
+    </filedeps>
+</preserve>

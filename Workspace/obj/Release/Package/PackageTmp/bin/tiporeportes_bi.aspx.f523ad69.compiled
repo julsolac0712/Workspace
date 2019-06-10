@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="3" virtualPath="/Pages/Metricas/Catalogos/TipoReportes_BI.aspx" hash="fffffff43f3610b9" filehash="f5ad47a47daff2d7" flags="110000" assembly="App_Web_fenxdbrn" type="ASP.pages_metricas_catalogos_tiporeportes_bi_aspx">
+    <filedeps>
+        <filedep name="/Pages/Metricas/Catalogos/TipoReportes_BI.aspx" />
+        <filedep name="/Site.Master" />
+    </filedeps>
+</preserve>

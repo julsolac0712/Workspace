@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="3" virtualPath="/Pages/Metricas/tableroDirectivo.aspx" hash="fffffff43f3610b9" filehash="6ebb8d59c1976042" flags="110000" assembly="App_Web_iykbvrq1" type="ASP.pages_metricas_tablerodirectivo_aspx">
+    <filedeps>
+        <filedep name="/Pages/Metricas/tableroDirectivo.aspx" />
+        <filedep name="/Site.Master" />
+    </filedeps>
+</preserve>

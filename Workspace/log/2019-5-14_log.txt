@@ -1,0 +1,10 @@
+9:59:11 a. m. --> Error: SqlException: mercurio Procedure WS_Man_PalabrasClaveAgrovoc State = 2 Line Number = 0 Message = Procedure or function WS_Man_PalabrasClaveAgrovoc has too many arguments specified.
+____________________________________________________
+10:00:06 a. m. --> Error: SqlException: mercurio Procedure WS_Man_PalabrasClaveAgrovoc State = 2 Line Number = 0 Message = Procedure or function WS_Man_PalabrasClaveAgrovoc has too many arguments specified.
+____________________________________________________
+10:02:44 a. m. --> Error: SqlException: mercurio Procedure WS_Man_PalabrasClaveAgrovoc State = 4 Line Number = 0 Message = Procedure or function 'WS_Man_PalabrasClaveAgrovoc' expects parameter '@id_CodigoAgrovoc', which was not supplied.
+____________________________________________________
+10:22:35 a. m. --> Error: SqlException: mercurio Procedure WS_Man_PalabrasClaveAgrovoc State = 4 Line Number = 0 Message = Procedure or function 'WS_Man_PalabrasClaveAgrovoc' expects parameter '@CronoICT', which was not supplied.
+____________________________________________________
+10:22:53 a. m. --> Error: SqlException: mercurio Procedure WS_Man_PalabrasClaveAgrovoc State = 4 Line Number = 0 Message = Procedure or function 'WS_Man_PalabrasClaveAgrovoc' expects parameter '@CronoICT', which was not supplied.
+____________________________________________________

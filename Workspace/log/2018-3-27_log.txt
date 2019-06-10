@@ -1,0 +1,4 @@
+4:06:04 p. m. --> Error: Mensaje: La cadena de entrada no tiene el formato correcto.
+____________________________________________________
+4:42:46 p. m. --> Error: Mensaje: La cadena de entrada no tiene el formato correcto.
+____________________________________________________

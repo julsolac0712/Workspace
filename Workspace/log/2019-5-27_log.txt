@@ -1,0 +1,8 @@
+3:58:11 p. m. --> Error: SqlException: mercurio Procedure WS_Man_IdentificacionProyecto State = 2 Line Number = 0 Message = Procedure or function WS_Man_IdentificacionProyecto has too many arguments specified.
+____________________________________________________
+4:01:21 p. m. --> Error: SqlException: mercurio Procedure WS_Man_IdentificacionProyecto State = 5 Line Number = 0 Message = Error converting data type nvarchar to int.
+____________________________________________________
+4:03:54 p. m. --> Error: SqlException: mercurio Procedure WS_Man_IdentificacionProyecto State = 5 Line Number = 0 Message = Error converting data type nvarchar to int.
+____________________________________________________
+4:04:53 p. m. --> Error: SqlException: mercurio Procedure WS_Man_IdentificacionProyecto State = 1 Line Number = 0 Message = @id_ODS is not a parameter for procedure WS_Man_IdentificacionProyecto.
+____________________________________________________

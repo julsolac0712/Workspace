@@ -1,0 +1,16 @@
+10:22:33 a. m. --> Error: SqlException: mercurio Procedure WS_Man_PaisesxProyecto State = 2 Line Number = 20 Message = Cannot insert the value NULL into column 'PK_ID_PaisesxProyecto', table 'WorkSpace.dbo.WS_PaisesxProyecto'; column does not allow nulls. INSERT fails.
+Error al crear   países por proyecto
+The statement has been terminated.
+____________________________________________________
+10:28:04 a. m. --> Error: SqlException: mercurio Procedure WS_Man_PaisesxProyecto State = 2 Line Number = 28 Message = Cannot insert the value NULL into column 'PK_ID_PaisesxProyecto', table 'WorkSpace.dbo.WS_PaisesxProyecto'; column does not allow nulls. INSERT fails.
+Error al crear países por proyecto
+The statement has been terminated.
+____________________________________________________
+10:30:00 a. m. --> Error: SqlException: mercurio Procedure WS_Man_PaisesxProyecto State = 2 Line Number = 28 Message = Cannot insert the value NULL into column 'PK_ID_PaisesxProyecto', table 'WorkSpace.dbo.WS_PaisesxProyecto'; column does not allow nulls. INSERT fails.
+Error al crear países por proyecto
+The statement has been terminated.
+____________________________________________________
+10:45:36 a. m. --> Error: SqlException: mercurio Procedure WS_Man_PaisesxProyecto State = 4 Line Number = 0 Message = Procedure or function 'WS_Man_PaisesxProyecto' expects parameter '@CronoICT', which was not supplied.
+____________________________________________________
+10:46:27 a. m. --> Error: SqlException: mercurio Procedure WS_Man_PaisesxProyecto State = 4 Line Number = 0 Message = Procedure or function 'WS_Man_PaisesxProyecto' expects parameter '@CronoICT', which was not supplied.
+____________________________________________________

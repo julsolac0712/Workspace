@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="3" virtualPath="/Pages/Expedientes/Catalogos/PalabrasClave.aspx" hash="fffffff43f3610b9" filehash="7fdd20815987e888" flags="110000" assembly="App_Web_mtkr30jt" type="ASP.pages_expedientes_catalogos_palabrasclave_aspx">
+    <filedeps>
+        <filedep name="/Pages/Expedientes/Catalogos/PalabrasClave.aspx" />
+        <filedep name="/Site.Master" />
+    </filedeps>
+</preserve>

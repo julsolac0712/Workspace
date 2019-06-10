@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="3" virtualPath="/Pages/Perfil/perfil.aspx" hash="fffffff43f3610b9" filehash="b487a2e2bcc8f24d" flags="110000" assembly="App_Web_pre5uop2" type="ASP.pages_perfil_perfil_aspx">
+    <filedeps>
+        <filedep name="/Pages/Perfil/perfil.aspx" />
+        <filedep name="/Site.Master" />
+    </filedeps>
+</preserve>

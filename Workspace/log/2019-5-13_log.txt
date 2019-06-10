@@ -1,0 +1,4 @@
+5:12:10 p. m. --> Error: Mensaje: La acción de actualizar no es compatible con el origen de datos 'sqlDS_PalabrasAGROVOC' a menos que se especifique UpdateCommand.
+____________________________________________________
+5:15:57 p. m. --> Error: Mensaje: La acción de actualizar no es compatible con el origen de datos 'sqlDS_PalabrasAGROVOC' a menos que se especifique UpdateCommand.
+____________________________________________________

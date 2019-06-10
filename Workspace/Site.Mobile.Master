@@ -1,0 +1,280 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.Mobile.master.vb" Inherits="WorkSpace.Site_Mobile" %>
+
+<%@ Register Src="~/ViewSwitcher.ascx" TagPrefix="friendlyUrls" TagName="ViewSwitcher" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - WorkSpace</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+              <asp:HiddenField ID="hdf_ID_Intranet" runat="server" />
+             <a href="http://apps.iica.int/workspace/"> <span class="workspace workspace-title-big" id="img_WorkSpaceTitle">WorkSpace</span> </a>
+            <div class="navbar navbar-inverse navbar-fixed-top margin-left-20 top-menu-height-movil ">
+                    <div class="container-fluid">
+                        <div  class="row">
+           
+                            <div class="col-md-11">
+                                   
+                                <div class="workspace2 navbar-form navbar-right">
+                                    <div class="input-group workspace2 ">
+                                        <a href="http://apps.iica.int/workspace/Pages/perfil/perfil">
+                                        <asp:Image ID="img_perfil" runat="server"  CssClass="workspace-image " /> </a>
+                                    </div>
+                                </div>
+
+                                <%--Framework Scripts--%>
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li runat="server" id ="li_MenuToolbox" visible="false"><a runat="server" class="dropdown-toggle" data-toggle="dropdown" href="Toolbox"><span class="top-menu-movil top-menu-icon-wrench  top-menu-icon glyphicon glyphicon-wrench"></span></a>
+                                            <ul class="dropdown-menu submenu-tools">
+                                            
+
+                                                <li  class="dropdown-submenu"><a class="dropdown-toggle dropdown-item dropdown-toggle" data-toggle="dropdown" href="Catalogos"><span>Catálogos </span></a>
+                                                 <ul class="dropdown-menu submenu-tools">
+                                                      <li ><a href="http://apps.iica.int/workspace/Pages/Expedientes/Catalogos/TipoExpediente?Admin=1"  ><span>T.Expediente</span></a></li>
+                                                      <li ><a href="http://apps.iica.int/workspace/Pages/Expedientes/Catalogos/TipoInstrumento?Admin=1"  ><span>T.Instrumento</span></a></li>
+                                                      <li ><a href="http://apps.iica.int/workspace/Pages/Expedientes/Catalogos/TipoTema?Admin=1"  ><span>T.Tema</span></a></li>
+                                                      <li ><a href="http://apps.iica.int/workspace/Pages/Expedientes/Catalogos/TipoAmbito?Admin=1"  ><span>T.Ámbito</span></a></li>
+                                                     <li ><a href="http://apps.iica.int/workspace/Pages/Expedientes/Catalogos/TipoPalabrasClave?Admin=1"  ><span>T.P.Clave</span></a></li> 
+                                                     <li ><a href="http://apps.iica.int/workspace/Pages/Expedientes/Catalogos/PalabrasClave?Admin=1"  ><span>P.Clave</span></a></li>
+                                                 </ul>
+                                                    <%--Site Scripts--%>
+                                                    </li>
+                                              <li  class="dropdown-submenu"><a href="http://apps.iica.int/workspace/Pages/Expedientes/Identificacion/Panel.aspx?Admin=1"><span>Identificación </span></a></li> 
+
+                                                <li  class="dropdown-submenu"><a class="dropdown-toggle dropdown-item dropdown-toggle" data-toggle="dropdown" href="Metricas"><span>Métricas</span></a>
+                                                 <ul class="dropdown-menu submenu-tools">
+                                                    <li ><a href="http://apps.iica.int/workspace/Pages/Metricas/Catalogos/TipoReportes_BI.aspx?Admin=1" ><span>Catálogo Rep.BI</span></a></li>
+                                                    <li ><a href="http://apps.iica.int/workspace/Pages/Metricas/Catalogos/Asinar_Rep_BI.aspx?Admin=1" ><span>Asignación Rep.BI</span></a></li> 
+                                                 </ul>
+                                                    <%--Site Scripts--%>
+                                                 </li>
+                                                <li class="dropdown-submenu"><a class="dropdown-toggle dropdown-item dropdown-toggle" data-toggle="dropdown" href="Seguridad"><span>Seguridad</span></a>
+                                                    <ul class="dropdown-menu submenu-tools">
+                                                        <li><a href="http://apps.iica.int/workspace/Pages/Seguridad/Roles?Admin=1"><span>Roles</span></a></li>
+                                                        <li><a href="http://apps.iica.int/workspace/Pages/Seguridad/Usuarios?Admin=1"><span>Usuarios</span></a></li>
+                                                    </ul>
+                                                    <%--Site Scripts--%>
+                                                </li>
+
+
+                                            </ul>
+                                        </li>
+                                        	
+                                       <%--     <li><a runat="server"  href="~/Pages/ChatBot/ChatBot.aspx"><span class="top-menu-movil top-menu-icon-cog top-menu-icon glyphicon glyphicon-comment"></span></a>
+                                          
+                                        </li>--%>
+                                            <li><a runat="server" class="dropdown-toggle" data-toggle="dropdown" href="Config"><span class="top-menu-movil top-menu-icon-cog top-menu-icon glyphicon glyphicon glyphicon-cog"></span></a>
+                                            <ul class="dropdown-menu  submenu-tools">
+                                                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                                            <li><a href="http://apps.iica.int/workspace/Pages/perfil/perfil"><span>Mi perfil</span></a></li>
+                                                <li><a href="http://intranet.iica.int"><span>Cerrar sesión</span></a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                <%--Framework Scripts--%>
+                                <%--<div class="navbar-form navbar-right navbar-right-movil ">
+                                    <div class="input-group search-movil">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-default" type="submit">
+                                                <i class="glyphicon glyphicon-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>--%>
+                              </div>
+                         
+                            
+                    </div>
+                       
+                    </div>
+                </div>
+            <div class="row">
+                <div class="col-md-2" id="divleftMenu">
+                    <div class="nav-side-menu nav-side-menu-custom menu-content collapse in" id="menu_bar">
+                        <div class="row">
+                            <div class="col-md-12">
+                                
+                                <div class="brand">
+                                   <button type="button" class="navbar-toggle float-left " <%--data-toggle="collapse int"--%> data-target="#menu-content" id="hide">
+                        <span class="icon-bar icon-bar-color"></span>
+                        <span class="icon-bar icon-bar-color"></span>
+                        <span class="icon-bar icon-bar-color"></span>
+                    </button>
+                                     
+                                      <a href="http://apps.iica.int/workspace/">  <span class="workspace workspace-title displayNone" id="img_WorkSpaceTitleMovil">WS</span></a>
+       <%--<div class="navbar-collapse collapse navigation">--%>
+          </div>
+                            </div>
+                            
+                        </div>
+                        <div class="menu-list">
+            <ul id="menu-content" class="menu-content collapse in">
+                <%--  <li><a href="#"><span>Tema</span></a></li>
+                                            <li><a href="#"><span>Ayuda</span></a></li>--%>
+               <%--    <li data-toggle="collapse" data-target="#service11" class="collapsed background-color-expedientes submenu-padding-10">
+                   <a href="#">
+                       <span class="top-menu-icon-folder glyphicon glyphicon-folder-open"></span>
+                       <span class="displayMenu left-menu-text">Expedientes</span><span class="dowm-menu-icon glyphicon glyphicon-chevron-down"></span>
+                   </a>
+                </li> --%> 
+               <%-- <ul class="sub-menu collapse" id="service11">
+                    <li class="submenu-padding-25"><a href="http://apps.iica.int/workspace/Pages/Expedientes/Expediente"><span class="left-menu-icon glyphicon glyphicon-file"></span><span class="displayMenu left-menu-text">Nuevo Expediente</span></a></li>--%>
+<%--                    <li class="submenu-padding-25"><a href="#"><span class="left-menu-icon glyphicon glyphicon-globe"></span><span class="displayMenu left-menu-text">Países</span></a></li>
+                    <li class="submenu-padding-25"><a href="#"><span class="left-menu-icon glyphicon glyphicon-th-large"></span><span class="displayMenu left-menu-text">Unidades</span></a></li>
+                    <li class="submenu-padding-25"><a href="#"><span class="left-menu-icon glyphicon glyphicon glyphicon-briefcase"></span><span class="displayMenu left-menu-text">Cooperación</span></a></li>
+                    <li class="submenu-padding-25"> <a href="#"><span class="left-menu-icon glyphicon glyphicon-blackboard"></span><span class="displayMenu left-menu-text">Puestos</span></a></li>
+                    <li class="submenu-padding-25"><a href="#"><span class="left-menu-icon glyphicon glyphicon-user"></span><span class="displayMenu left-menu-text">Funcionarios</span></a></li>
+                    <li class="submenu-padding-25"><a href="#"><span class="left-menu-icon glyphicon glyphicon-list-alt"></span><span class="displayMenu left-menu-text">Convenios</span></a></li>
+                    <li class="submenu-padding-25"><a href="#"><span class="left-menu-icon glyphicon glyphicon-hdd"></span><span class="displayMenu left-menu-text">Fondos</span></a></li>
+                    <li class="submenu-padding-25"><a href="#"><span class="left-menu-icon glyphicon glyphicon-home"></span><span class="displayMenu left-menu-text">Contrapartes</span></a></li>
+                    <li class="submenu-padding-25"><a href="#"><span class="left-menu-icon glyphicon glyphicon-flag"></span><span class="displayMenu left-menu-text">Oportunidades</span></a></li>--%>
+             <%--   </ul>--%>
+                <%-- 
+                   <li data-toggle="collapse" data-target="#service12" class="collapsed background-color-process submenu-padding-10">
+                   <a href="#"><span class="top-menu-icon glyphicon glyphicon-th"></span> <span class="displayMenu left-menu-text">Procesos</span><span class="dowm-menu-icon glyphicon glyphicon-chevron-down"></span></a>
+                </li>  
+                <ul class="sub-menu collapse" id="service12">
+                    <li class="submenu-padding-25"> <a href="#"><span class="left-menu-icon glyphicon glyphicon-eye-open"></span><span class="displayMenu">Planeación Institucional</span></a></li>
+                    <li class="submenu-padding-25"><a href="#"><span class="left-menu-icon glyphicon glyphicon-retweet"></span><span class="displayMenu ">Monitoreo Institucional</span></a></li>
+                    <li class="submenu-padding-25"><a href="#"><span class="left-menu-icon glyphicon glyphicon-bell"></span><span class="displayMenu ">Evaluación Institucional</span></a></li>
+                    <li class="submenu-padding-25"><a href="#"><span class="left-menu-icon glyphicon glyphicon-tasks"></span><span class="displayMenu ">Plan de Contribución Individual</span></a></li>
+                    <li class="submenu-padding-25"><a href="#"><span class="left-menu-icon glyphicon glyphicon-certificate"></span><span class="displayMenu ">Evaluación de Desempeño Individual</span></a></li>
+                </ul>--%>
+                <li data-toggle="collapse" data-target="#new" class="collapsed background-color-reports submenu-padding-10">
+                 <a href="#"><span class="top-menu-icon glyphicon glyphicon-bullhorn"></span> <span class="displayMenu left-menu-text">Métricas</span><span class="dowm-menu-icon glyphicon glyphicon-chevron-down"></span></a>
+                </li>
+                <ul class="sub-menu collapse in" id="new">
+                     <%-- <li class="submenu-padding-25" runat="server" id="li_Tablero_DireccionGeneral" visible="false"><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroDirectorGeneral"><span class="left-menu-icon glyphicon glyphicon-signal"></span><span class="displayMenu left-menu-text">Director General</span></a></li>--%>
+                  <li class="submenu-padding-25" runat="server" id="li_Tablero_Directivo"  visible="false"><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroDirectivo"><span class="left-menu-icon glyphicon glyphicon-dashboard"></span><span class="displayMenu left-menu-text">Directivo</span></a></li>
+                    <li class="submenu-padding-25"><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroGeneral"><span class="left-menu-icon glyphicon glyphicon-equalizer"></span><span class="displayMenu left-menu-text">General</span></a></li>
+                    <li class="submenu-padding-25" id="li_Historico" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=46"><span class="left-menu-icon glyphicon glyphicon-hourglass"></span><span class="displayMenu left-menu-text">Histórico REx</span></a></li>
+                    <li class="submenu-padding-25" id="li_Programas" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=53"><span class="left-menu-icon glyphicon glyphicon-random"></span><span class="displayMenu left-menu-text">Programas</span></a></li>
+                      <li class="submenu-padding-25" id="li_Of_Belice" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=4"><span class="displayMenu">Belice</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_CR" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=5"><span class="displayMenu">Costa Rica</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Guatemala" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=6"><span class="displayMenu">Guatemala</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Honduras" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=7"><span class="displayMenu">Honduras</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Nicaragua" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=8"><span class="displayMenu">Nicaragua</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Panama" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=9"><span class="displayMenu">Panamá</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Salvador" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=10"><span class="displayMenu">El Salvador</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Antigua" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=11"><span class="displayMenu">Antigua y Barbuda</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Barbados" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=12"><span class="displayMenu">Barbados</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Dominica" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=13"><span class="displayMenu">Dominica</span></a></li>
+<%--                    <li class="submenu-padding-25" id="li_Of_ECS" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=14"><span class="displayMenu">ECS</span></a></li>--%>
+                    <li class="submenu-padding-25" id="li_Of_Guayana" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=14"><span class="displayMenu">Guyana</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Haiti" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=15"><span class="displayMenu">Haití</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Jamaica" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=16"><span class="displayMenu">Jamaica</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_SCN" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=17"><span class="displayMenu">San Cristóbal y Nieves</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_SL" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=18"><span class="displayMenu">Santa Lucía</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Bahamas" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=19"><span class="displayMenu">Bahamas</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_RDominicana" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=20"><span class="displayMenu">República Dominicana</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Granada" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=21"><span class="displayMenu">Granada</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Surinam" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=22"><span class="displayMenu">Surinam</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Trinidad" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=23"><span class="displayMenu">Trinidad y Tobago</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_SanVicente" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=24"><span class="displayMenu">San Vicente y las Granadinas</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Bolivia" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=25"><span class="displayMenu">Bolivia</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Colombia" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=26"><span class="displayMenu">Colombia</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Ecuador" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=27"><span class="displayMenu">Ecuador</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Peru" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=28"><span class="displayMenu">Perú</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Venezuela" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=29"><span class="displayMenu">Venezuela</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Argentina" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=30"><span class="displayMenu">Argentina</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Brasil" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=31"><span class="displayMenu">Brasil</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Chile" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=32"><span class="displayMenu">Chile</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Paraguay" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=33"><span class="displayMenu">Paraguay</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Uruguay" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=34"><span class="displayMenu">Uruguay</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Canada" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=35"><span class="displayMenu">Canadá</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_USA" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=36"><span class="displayMenu">Estados Unidos de América</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_España" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=37"><span class="displayMenu">España</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_Mexico" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=38"><span class="displayMenu">México</span></a></li>
+                    <li class="submenu-padding-25" id="li_Of_SedeCentral" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=39"><span class="displayMenu">Sede Central</span></a></li>
+
+ <%--      <ul class="sub-menu collapse" id="Informes">
+                    <li class="submenu-padding-40"><a href="#"><span class="left-menu-icon glyphicon glyphicon-tent"></span><span class="displayMenu">Mis Proyectos y Acciones</span></a></li>
+                    <li class="submenu-padding-40"><a href="#"><span class="left-menu-icon glyphicon glyphicon-ok-sign"></span><span class="displayMenu">Resultados Programados</span></a></li>
+                    <li class="submenu-padding-40"><a href="#"><span class="left-menu-icon glyphicon glyphicon-plus-sign"></span><span class="displayMenu">Resultados no Programados</span></a></li>
+                    <li class="submenu-padding-40"><a href="#"><span class="left-menu-icon glyphicon glyphicon-map-marker"></span><span class="displayMenu">Informe Anual</span></a></li>
+                    <li class="submenu-padding-40"><a href="#"><span class="left-menu-icon glyphicon glyphicon-exclamation-sign"></span><span class="displayMenu">Consultas Autorizadas</span></a></li>
+                </ul> --%>
+
+                </ul> 
+            </ul>
+     </div>
+                        <div class="iica-container" id="logoIICA" >
+                                             <asp:Image ID="img_IICA_Back" runat="server" ImageUrl="~/Images/logoIICAheader.png" CssClass="brand-image"  />
+                                        </div>
+                           
+                           
+</div>
+                </div>
+                <div class="col-md-9 margin-left-20" id="divcontent">
+                    <div class="container-fluid body-content margin-top-30">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+           
+        </div>
+                </div>
+            </div>
+            <asp:SqlDataSource ID="sqlDS_Perfil" runat="server" ConnectionString="<%$ ConnectionStrings:WSConnectionString %>" 
+              SelectCommand="WS_Get_Lista_Perfil" SelectCommandType="StoredProcedure"
+              ProviderName="System.Data.SqlClient">
+              <SelectParameters>
+                  <asp:ControlParameter ControlID="hdf_ID_Intranet" Name="IDIntranet" PropertyName="Value" Type="Int32" />
+                  <asp:Parameter DefaultValue="1" Name="Operacion" Type="Int32" />
+              </SelectParameters>
+             
+          </asp:SqlDataSource>
+            <asp:SqlDataSource ID="sqlDS_RolUsuario" runat="server" ConnectionString="<%$ ConnectionStrings:WSConnectionString %>" 
+              SelectCommand="WS_Seg_Valida_Usuarios" SelectCommandType="StoredProcedure"
+              ProviderName="System.Data.SqlClient">
+              <SelectParameters>
+                  <asp:ControlParameter ControlID="hdf_ID_Intranet" Name="IDIntranet" PropertyName="Value" Type="Int32" />
+                  <asp:Parameter DefaultValue="1" Name="Operacion" Type="Int32" />
+              </SelectParameters>
+             
+          </asp:SqlDataSource>
+            <asp:PlaceHolder runat="server">
+            <webopt:BundleReference runat="server" Path="~/Content/JQueryUI" />
+            <%:Scripts.Render("~/bundles/jquery-ui") %>
+            <webopt:BundleReference runat="server" Path="~/Content/JQueryUI"/>
+            <%:Scripts.Render("~/bundles/menu") %>
+                     <webopt:BundleReference runat="server" Path="~/Content/bootstrap-file-selector-css" />
+        <%:
+            Scripts.Render("~/bundles/bootstrap-file-selector-js")
+        %>
+        </asp:PlaceHolder>
+    </form>
+</body>
+</html>
+

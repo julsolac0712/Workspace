@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="3" virtualPath="/Pages/Expedientes/Identificacion/Formulario.aspx" hash="fffffff43f3610b9" filehash="6e47f0ef86a57288" flags="110000" assembly="App_Web_axz0zaak" type="ASP.pages_expedientes_identificacion_formulario_aspx">
+    <filedeps>
+        <filedep name="/Pages/Expedientes/Identificacion/Formulario.aspx" />
+        <filedep name="/Site.Master" />
+    </filedeps>
+</preserve>

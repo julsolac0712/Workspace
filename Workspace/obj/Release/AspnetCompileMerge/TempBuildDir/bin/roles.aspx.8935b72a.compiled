@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="3" virtualPath="/Pages/Seguridad/Roles.aspx" hash="fffffff43f3610b9" filehash="112c1421df8fbb59" flags="110000" assembly="App_Web_f0vakpkc" type="ASP.pages_seguridad_roles_aspx">
+    <filedeps>
+        <filedep name="/Pages/Seguridad/Roles.aspx" />
+        <filedep name="/Site.Master" />
+    </filedeps>
+</preserve>
