@@ -247,6 +247,9 @@
     <Content Include="Pages\Seguridad\Menu.aspx" />
     <Content Include="Pages\Seguridad\Roles.aspx" />
     <Content Include="Pages\Seguridad\Usuarios.aspx" />
+    <Content Include="Public\FormularioInstrumentos.aspx" />
+    <Content Include="Public\InstrumentoPublico.aspx" />
+    <Content Include="Public\PanelInstrumentos.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Contrib\bootstrap-file-input\css\fileinput.css" />
@@ -549,6 +552,34 @@
       <DependentUpon>Usuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Public\FormularioInstrumentos.aspx.designer.vb">
+      <DependentUpon>FormularioInstrumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\FormularioInstrumentos.aspx.vb">
+      <DependentUpon>FormularioInstrumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\InstrumentoPublico.aspx.designer.vb">
+      <DependentUpon>InstrumentoPublico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\InstrumentoPublico.aspx.vb">
+      <DependentUpon>InstrumentoPublico.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Public\PanelInstrumentos.aspx.designer.vb">
+      <DependentUpon>PanelInstrumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\PanelInstrumentos.aspx.vb">
+      <DependentUpon>PanelInstrumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteEmbed.Master.designer.vb">
+      <DependentUpon>SiteEmbed.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteEmbed.Master.vb">
+      <DependentUpon>SiteEmbed.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
@@ -603,6 +634,7 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="SiteEmbed.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -3,7 +3,7 @@
 Public Class Panel
     Inherits Base_Page
 
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    Protected Overridable Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Request.QueryString("Admin") Is Nothing Then
             hdf_Usuario.Value = Session("UsuarioIntranet")
         Else
@@ -12,7 +12,7 @@ Public Class Panel
     End Sub
 
 #Region "Acciones Grid"
-    Protected Sub gv_Identificacion_RowCommand1(sender As Object, e As GridViewCommandEventArgs) Handles gv_Identificacion.RowCommand
+    Protected Overridable Sub gv_Identificacion_RowCommand1(sender As Object, e As GridViewCommandEventArgs) Handles gv_Identificacion.RowCommand
         If (e.CommandName = "Edit") Then
             If e.CommandArgument IsNot Nothing And e.CommandArgument <> "" Then
                 Dim arrValues() As String = Split(e.CommandArgument, "-")
