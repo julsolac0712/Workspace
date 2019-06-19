@@ -16,3 +16,9 @@ C:\Users\jsolis\Desktop\WORKSPACE\Error_Handling\obj\Release\Error_Handling.cspr
 C:\Users\jsolis\Desktop\WORKSPACE\Error_Handling\obj\Release\Error_Handling.dll
 C:\Users\jsolis\Desktop\WORKSPACE\Error_Handling\obj\Release\Error_Handling.pdb
 C:\Users\jsolis\Desktop\WORKSPACE\Error_Handling\obj\Release\Error_Handling.csprojAssemblyReference.cache
+C:\Users\jsolis\Desktop\WORKSPACEV3\Error_Handling\bin\Release\Error_Handling.dll
+C:\Users\jsolis\Desktop\WORKSPACEV3\Error_Handling\bin\Release\Error_Handling.pdb
+C:\Users\jsolis\Desktop\WORKSPACEV3\Error_Handling\obj\Release\Error_Handling.csprojAssemblyReference.cache
+C:\Users\jsolis\Desktop\WORKSPACEV3\Error_Handling\obj\Release\Error_Handling.csproj.CoreCompileInputs.cache
+C:\Users\jsolis\Desktop\WORKSPACEV3\Error_Handling\obj\Release\Error_Handling.dll
+C:\Users\jsolis\Desktop\WORKSPACEV3\Error_Handling\obj\Release\Error_Handling.pdb

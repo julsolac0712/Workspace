@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<preserve resultType="3" virtualPath="/Pages/Seguridad/Menu.aspx" hash="fffffff43f3610b9" filehash="ef2b5487b6e45ca1" flags="110000" assembly="App_Web_f0vakpkc" type="ASP.pages_seguridad_menu_aspx">
+<preserve resultType="3" virtualPath="/Pages/Seguridad/Menu.aspx" hash="fffffff43f3610b9" filehash="9472407b21c823ec" flags="110000" assembly="App_Web_4ffiumks" type="ASP.pages_seguridad_menu_aspx">
     <filedeps>
         <filedep name="/Pages/Seguridad/Menu.aspx" />
         <filedep name="/Site.Master" />

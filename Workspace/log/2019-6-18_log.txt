@@ -1,0 +1,4 @@
+3:53:32 p. m. --> Error: SqlException: mercurio Procedure WS_Man_IdentificacionProyecto State = 1 Line Number = 0 Message = @TipoFondo is not a parameter for procedure WS_Man_IdentificacionProyecto.
+____________________________________________________
+3:53:48 p. m. --> Error: SqlException: mercurio Procedure WS_Man_IdentificacionProyecto State = 1 Line Number = 0 Message = @TipoFondo is not a parameter for procedure WS_Man_IdentificacionProyecto.
+____________________________________________________

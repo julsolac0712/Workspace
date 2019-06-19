@@ -9,6 +9,9 @@ Public Class Panel
         Else
             Response.Redirect("http://apps.iica.int/workspace/")
         End If
+
+        'hdf_Usuario.Value = 2802
+
     End Sub
 
 #Region "Acciones Grid"
@@ -30,5 +33,16 @@ Public Class Panel
         Dim Estado As String = "<span class='glyphicon glyphicon-ok-sign imagen-check icon-green' data-toggle='tooltip' title='" + valor + "'></span>"
         Return Estado
     End Function
+
+    Protected Sub lnk_ListadoCompleto_Click(sender As Object, e As EventArgs) Handles lnk_ListadoCompleto.Click
+        If gv_Identificacion.AllowPaging = True Then
+            gv_Identificacion.AllowPaging = False
+            lcl_ListadoCompleto.Text = "Agrupado"
+        Else
+            gv_Identificacion.AllowPaging = True
+            lcl_ListadoCompleto.Text = "Lista Completa"
+        End If
+    End Sub
+
 #End Region
 End Class

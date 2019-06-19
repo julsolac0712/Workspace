@@ -797,6 +797,24 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:WorkSpace.Formulario._hdf_OperacionODS">
+<summary>
+Control hdf_OperacionODS.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._hdf_OperacionTema">
+<summary>
+Control hdf_OperacionTema.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:WorkSpace.Formulario._lcl_Identificacion">
 <summary>
 Control lcl_Identificacion.
@@ -917,6 +935,42 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:WorkSpace.Formulario._sqlDS_PaisesInvolucrados">
 <summary>
 Control sqlDS_PaisesInvolucrados.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._gv_ODS">
+<summary>
+Control gv_ODS.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._sqlDS_rel_ODS">
+<summary>
+Control sqlDS_rel_ODS.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._gv_Temas">
+<summary>
+Control gv_Temas.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._sqlDS_rel_Temas">
+<summary>
+Control sqlDS_rel_Temas.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1097,6 +1151,24 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:WorkSpace.Formulario._sqlDS_Instrumentos">
 <summary>
 Control sqlDS_Instrumentos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._lnk_Regresar">
+<summary>
+Control lnk_Regresar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._lcl_Regresar">
+<summary>
+Control lcl_Regresar.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1463,6 +1535,24 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:WorkSpace.Panel._lnk_ListadoCompleto">
+<summary>
+Control lnk_ListadoCompleto.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._lcl_ListadoCompleto">
+<summary>
+Control lcl_ListadoCompleto.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:WorkSpace.Panel._lnk_Estadisticas">
 <summary>
 Control lnk_Estadisticas.
@@ -1637,6 +1727,51 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:WorkSpace.Panel._sqlDS_Agrovoc">
 <summary>
 Control sqlDS_Agrovoc.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._lcl_FiltroFondos">
+<summary>
+Control lcl_FiltroFondos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._ddl_TipoFondo">
+<summary>
+Control ddl_TipoFondo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._Localize1">
+<summary>
+Control Localize1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._txt_buscar">
+<summary>
+Control txt_buscar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._btn_buscar">
+<summary>
+Control btn_buscar.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -2267,6 +2402,519 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:WorkSpace.Usuarios._sqlDS_Roles">
 <summary>
 sqlDS_Roles control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._hdf_Operacion">
+<summary>
+hdf_Operacion control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._hdf_Usuario">
+<summary>
+hdf_Usuario control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._hdf_Idioma">
+<summary>
+hdf_Idioma control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._hdf_CronoICT">
+<summary>
+hdf_CronoICT control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._hdf_SubCronoICT">
+<summary>
+hdf_SubCronoICT control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._hdf_OperacionPaises">
+<summary>
+hdf_OperacionPaises control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._hdf_NumOperativo">
+<summary>
+hdf_NumOperativo control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._FK_ID_Expediente">
+<summary>
+FK_ID_Expediente control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._hdf_ID_Expediente">
+<summary>
+hdf_ID_Expediente control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._hdf_CodTerm">
+<summary>
+hdf_CodTerm control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._hdf_Ingles">
+<summary>
+hdf_Ingles control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._hdf_Espanol">
+<summary>
+hdf_Espanol control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._hdf_Frances">
+<summary>
+hdf_Frances control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._hdf_Portuguez">
+<summary>
+hdf_Portuguez control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._lcl_Identificacion">
+<summary>
+lcl_Identificacion control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._lcl_PaisesInvolucrados">
+<summary>
+lcl_PaisesInvolucrados control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._lcl_Resultados">
+<summary>
+lcl_Resultados control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._lcl_RecursosIICA">
+<summary>
+lcl_RecursosIICA control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._lcl_PalabrasClave">
+<summary>
+lcl_PalabrasClave control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._lcl_Enlaces">
+<summary>
+lcl_Enlaces control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._lcl_Descripcion">
+<summary>
+lcl_Descripcion control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._fv_Perfil">
+<summary>
+fv_Perfil control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._gv_PalabrasClave">
+<summary>
+gv_PalabrasClave control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._sqlDS_PalabrasClave">
+<summary>
+sqlDS_PalabrasClave control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._lcl_Descripcion_Paises">
+<summary>
+lcl_Descripcion_Paises control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._gv_PaisesInvolucrados">
+<summary>
+gv_PaisesInvolucrados control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._sqlDS_PaisesInvolucrados">
+<summary>
+sqlDS_PaisesInvolucrados control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._lcl_ResultadosEsperados">
+<summary>
+lcl_ResultadosEsperados control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._gv_Resultados">
+<summary>
+gv_Resultados control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._sqlDS_Resultados">
+<summary>
+sqlDS_Resultados control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._lcl_RecursosIICAT">
+<summary>
+lcl_RecursosIICAT control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._gv_RecursosIICA">
+<summary>
+gv_RecursosIICA control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._sqlDS_RecursosIICA">
+<summary>
+sqlDS_RecursosIICA control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._lcl_RecursosExternosT">
+<summary>
+lcl_RecursosExternosT control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._gv_RecursosExternos">
+<summary>
+gv_RecursosExternos control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._sqlDS_RecursosExternos">
+<summary>
+sqlDS_RecursosExternos control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._lcl_KeyWords">
+<summary>
+lcl_KeyWords control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._gv_PalabraClave">
+<summary>
+gv_PalabraClave control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._sqlDS_PalabrasClave2">
+<summary>
+sqlDS_PalabrasClave2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._lcl_Agrovoc">
+<summary>
+lcl_Agrovoc control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._txt_PalabraBuscarAgrovoc">
+<summary>
+txt_PalabraBuscarAgrovoc control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._gv_PalabrasAGROVOC">
+<summary>
+gv_PalabrasAGROVOC control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._sqlDS_PalabrasAGROVOC">
+<summary>
+sqlDS_PalabrasAGROVOC control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._lcl_links">
+<summary>
+lcl_links control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._gv_Participantes_Enlaces">
+<summary>
+gv_Participantes_Enlaces control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._sqlDS_Participantes_Enlaces">
+<summary>
+sqlDS_Participantes_Enlaces control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.FormularioInstrumentos._sqlDS_Instrumentos">
+<summary>
+sqlDS_Instrumentos control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.InstrumentoPublico._hdf_CronoICT">
+<summary>
+hdf_CronoICT control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.InstrumentoPublico._hdf_SubCronoICT">
+<summary>
+hdf_SubCronoICT control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.InstrumentoPublico._hdf_NumOperativo">
+<summary>
+hdf_NumOperativo control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.InstrumentoPublico._hdf_Idioma">
+<summary>
+hdf_Idioma control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.InstrumentoPublico._fv_Instrumento">
+<summary>
+fv_Instrumento control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.InstrumentoPublico._sqlDS_Instrumentos">
+<summary>
+sqlDS_Instrumentos control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.SiteEmbedMaster._hdf_ID_Intranet">
+<summary>
+hdf_ID_Intranet control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.SiteEmbedMaster._MainContent">
+<summary>
+MainContent control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.SiteEmbedMaster._sqlDS_Perfil">
+<summary>
+sqlDS_Perfil control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.SiteEmbedMaster._sqlDS_RolUsuario">
+<summary>
+sqlDS_RolUsuario control.
 </summary>
 <remarks>
 Auto-generated field.

@@ -140,6 +140,24 @@ Partial Public Class Formulario
     Protected WithEvents hdf_Portuguez As Global.System.Web.UI.WebControls.HiddenField
     
     '''<summary>
+    '''Control hdf_OperacionODS.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents hdf_OperacionODS As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''Control hdf_OperacionTema.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents hdf_OperacionTema As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
     '''Control lcl_Identificacion.
     '''</summary>
     '''<remarks>
@@ -264,6 +282,42 @@ Partial Public Class Formulario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents sqlDS_PaisesInvolucrados As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
+    '''Control gv_ODS.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents gv_ODS As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''Control sqlDS_rel_ODS.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents sqlDS_rel_ODS As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
+    '''Control gv_Temas.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents gv_Temas As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''Control sqlDS_rel_Temas.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents sqlDS_rel_Temas As Global.System.Web.UI.WebControls.SqlDataSource
     
     '''<summary>
     '''Control lcl_ResultadosEsperados.
@@ -444,4 +498,22 @@ Partial Public Class Formulario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents sqlDS_Instrumentos As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
+    '''Control lnk_Regresar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lnk_Regresar As Global.System.Web.UI.WebControls.LinkButton
+    
+    '''<summary>
+    '''Control lcl_Regresar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lcl_Regresar As Global.System.Web.UI.WebControls.Localize
 End Class

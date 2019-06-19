@@ -77,6 +77,24 @@ Partial Public Class Panel
     Protected WithEvents IntroduccionExpandir As Global.System.Web.UI.HtmlControls.HtmlGenericControl
     
     '''<summary>
+    '''Control lnk_ListadoCompleto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lnk_ListadoCompleto As Global.System.Web.UI.WebControls.LinkButton
+    
+    '''<summary>
+    '''Control lcl_ListadoCompleto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lcl_ListadoCompleto As Global.System.Web.UI.WebControls.Localize
+    
+    '''<summary>
     '''Control lnk_Estadisticas.
     '''</summary>
     '''<remarks>
@@ -255,6 +273,51 @@ Partial Public Class Panel
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents sqlDS_Agrovoc As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
+    '''Control lcl_FiltroFondos.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lcl_FiltroFondos As Global.System.Web.UI.WebControls.Localize
+    
+    '''<summary>
+    '''Control ddl_TipoFondo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ddl_TipoFondo As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
+    '''Control Localize1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Localize1 As Global.System.Web.UI.WebControls.Localize
+    
+    '''<summary>
+    '''Control txt_buscar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txt_buscar As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Control btn_buscar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btn_buscar As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''Control gv_Identificacion.

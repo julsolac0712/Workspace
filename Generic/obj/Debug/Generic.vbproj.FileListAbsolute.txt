@@ -42,3 +42,13 @@ C:\Users\jsolis\Desktop\WORKSPACE\Generic\obj\Debug\Generic.dll
 C:\Users\jsolis\Desktop\WORKSPACE\Generic\obj\Debug\Generic.xml
 C:\Users\jsolis\Desktop\WORKSPACE\Generic\obj\Debug\Generic.pdb
 C:\Users\jsolis\Desktop\WORKSPACE\Generic\obj\Debug\Generic.vbprojAssemblyReference.cache
+C:\Users\jsolis\Desktop\WORKSPACEV3\Generic\bin\Debug\Generic.dll
+C:\Users\jsolis\Desktop\WORKSPACEV3\Generic\bin\Debug\Generic.pdb
+C:\Users\jsolis\Desktop\WORKSPACEV3\Generic\bin\Debug\Generic.xml
+C:\Users\jsolis\Desktop\WORKSPACEV3\Generic\obj\Debug\Generic.vbprojAssemblyReference.cache
+C:\Users\jsolis\Desktop\WORKSPACEV3\Generic\obj\Debug\Generic.Resources.resources
+C:\Users\jsolis\Desktop\WORKSPACEV3\Generic\obj\Debug\Generic.vbproj.GenerateResource.cache
+C:\Users\jsolis\Desktop\WORKSPACEV3\Generic\obj\Debug\Generic.vbproj.CoreCompileInputs.cache
+C:\Users\jsolis\Desktop\WORKSPACEV3\Generic\obj\Debug\Generic.dll
+C:\Users\jsolis\Desktop\WORKSPACEV3\Generic\obj\Debug\Generic.xml
+C:\Users\jsolis\Desktop\WORKSPACEV3\Generic\obj\Debug\Generic.pdb

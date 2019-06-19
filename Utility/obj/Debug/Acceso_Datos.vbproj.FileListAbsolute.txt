@@ -50,3 +50,12 @@ C:\Users\jsolis\Desktop\WORKSPACE\Utility\obj\Debug\Utility.dll
 C:\Users\jsolis\Desktop\WORKSPACE\Utility\obj\Debug\Utility.xml
 C:\Users\jsolis\Desktop\WORKSPACE\Utility\obj\Debug\Utility.pdb
 C:\Users\jsolis\Desktop\WORKSPACE\Utility\obj\Debug\Acceso_Datos.vbprojAssemblyReference.cache
+C:\Users\jsolis\Desktop\WORKSPACEV3\Utility\bin\Debug\Utility.dll
+C:\Users\jsolis\Desktop\WORKSPACEV3\Utility\bin\Debug\Utility.pdb
+C:\Users\jsolis\Desktop\WORKSPACEV3\Utility\bin\Debug\Utility.xml
+C:\Users\jsolis\Desktop\WORKSPACEV3\Utility\obj\Debug\Utility.Resources.resources
+C:\Users\jsolis\Desktop\WORKSPACEV3\Utility\obj\Debug\Acceso_Datos.vbproj.GenerateResource.cache
+C:\Users\jsolis\Desktop\WORKSPACEV3\Utility\obj\Debug\Acceso_Datos.vbproj.CoreCompileInputs.cache
+C:\Users\jsolis\Desktop\WORKSPACEV3\Utility\obj\Debug\Utility.dll
+C:\Users\jsolis\Desktop\WORKSPACEV3\Utility\obj\Debug\Utility.xml
+C:\Users\jsolis\Desktop\WORKSPACEV3\Utility\obj\Debug\Utility.pdb

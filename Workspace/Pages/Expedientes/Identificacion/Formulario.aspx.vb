@@ -273,4 +273,114 @@ Public Class Formulario
             Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro de País Involucrado - Update")
         End If
     End Sub
+
+    Protected Sub gv_ODS_RowCreated(sender As Object, e As GridViewRowEventArgs) Handles gv_ODS.RowCreated
+        Try
+            If e.Row.RowIndex <> -1 Then
+
+                If CType(sender, GridView).DataKeys(e.Row.RowIndex).Values(0) = 0 Then
+
+                    Dim btn As LinkButton
+
+                    btn = CType(e.Row.FindControl("lnk_Eliminar_ODS"), LinkButton)
+                    If Not btn Is Nothing Then
+                        btn.Visible = False
+                    End If
+
+                    btn = CType(e.Row.FindControl("lnk_Editar_ODS"), LinkButton)
+                    If Not btn Is Nothing Then
+                        btn.Visible = False
+                    End If
+
+                    btn = CType(e.Row.FindControl("lnk_Agregar_ODS"), LinkButton)
+                    If Not btn Is Nothing Then
+                        btn.Visible = True
+                    End If
+
+                End If
+
+            End If
+        Catch ex As Exception
+            Gestor_Errores.Escribir_Log(ex, "Error de Registro de País Involucrado - Created")
+        End Try
+    End Sub
+
+    Protected Sub gv_ODS_RowUpdating(sender As Object, e As GridViewUpdateEventArgs) Handles gv_ODS.RowUpdating
+        If (e.Keys(0) = 0) Then
+            hdf_OperacionODS.Value = 1
+        Else
+            hdf_OperacionODS.Value = 2
+        End If
+    End Sub
+
+    Protected Sub gv_ODS_RowUpdated(sender As Object, e As GridViewUpdatedEventArgs) Handles gv_ODS.RowUpdated
+        If e.Exception IsNot Nothing Then
+            e.ExceptionHandled = True
+            Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro al actualizar ODS - Updated")
+        End If
+    End Sub
+
+    Protected Sub gv_ODS_RowDeleted(sender As Object, e As GridViewDeletedEventArgs) Handles gv_ODS.RowDeleted
+        If e.Exception IsNot Nothing Then
+            e.ExceptionHandled = True
+            Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro al Borrar ODS - Deleted")
+        End If
+    End Sub
+
+    Protected Sub lnk_Regresar_Click(sender As Object, e As EventArgs) Handles lnk_Regresar.Click
+        Response.Redirect("Panel?Admin=1", False)
+    End Sub
+
+    Protected Sub gv_Temas_RowCreated(sender As Object, e As GridViewRowEventArgs) Handles gv_Temas.RowCreated
+        Try
+            If e.Row.RowIndex <> -1 Then
+
+                If CType(sender, GridView).DataKeys(e.Row.RowIndex).Values(0) = 0 Then
+
+                    Dim btn As LinkButton
+
+                    btn = CType(e.Row.FindControl("lnk_Eliminar_Tema"), LinkButton)
+                    If Not btn Is Nothing Then
+                        btn.Visible = False
+                    End If
+
+                    btn = CType(e.Row.FindControl("lnk_Editar_Tema"), LinkButton)
+                    If Not btn Is Nothing Then
+                        btn.Visible = False
+                    End If
+
+                    btn = CType(e.Row.FindControl("lnk_Agregar_Tema"), LinkButton)
+                    If Not btn Is Nothing Then
+                        btn.Visible = True
+                    End If
+
+                End If
+
+            End If
+        Catch ex As Exception
+            Gestor_Errores.Escribir_Log(ex, "Error de Registro de Tema Involucrado - Created")
+        End Try
+    End Sub
+
+    Protected Sub gv_Temas_RowUpdating(sender As Object, e As GridViewUpdateEventArgs) Handles gv_Temas.RowUpdating
+        If (e.Keys(0) = 0) Then
+            hdf_OperacionTema.Value = 1
+        Else
+            hdf_OperacionTema.Value = 2
+        End If
+    End Sub
+
+    Protected Sub gv_Temas_RowUpdated(sender As Object, e As GridViewUpdatedEventArgs) Handles gv_Temas.RowUpdated
+        If e.Exception IsNot Nothing Then
+            e.ExceptionHandled = True
+            Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro al actualizar Temas - Updated")
+        End If
+    End Sub
+
+    Protected Sub gv_Temas_RowDeleted(sender As Object, e As GridViewDeletedEventArgs) Handles gv_Temas.RowDeleted
+        If e.Exception IsNot Nothing Then
+            e.ExceptionHandled = True
+            Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro al Borrar Temas - Deleted")
+        End If
+    End Sub
 End Class

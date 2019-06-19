@@ -18,16 +18,20 @@
                  </span>
 
                  <div class="row">
-                     <div class="col-md-10" runat="server" id="IntroduccionExpandir">
-                         <div class="alinear-justificado margin-top-20">
-                         </div>
-                         <div class="alinear-justificado margin-top-40">
+                     <div class="col-md-8" runat="server" id="IntroduccionExpandir">
+                     </div>
+                     <div class="col-md-2" runat="server">
+                         <div class="margin-top-10 alineado-justificado">
+                             <asp:LinkButton ID="lnk_ListadoCompleto" runat="server" CssClass="btn btn-iica-blue-light">
+                                 <span class="glyphicon glyphicon-list-alt imagen-miplan" runat="server"></span>&nbsp;
+                         <asp:Localize runat="server" ID="lcl_ListadoCompleto" Text="Listado Completo"></asp:Localize>
+                             </asp:LinkButton>
                          </div>
                      </div>
                      <div class="col-md-2" runat="server">
-                         <div class="alinear-justificado margin-top-20">
+                         <div class="alinear-justificado margin-top-10">
                              <asp:LinkButton ID="lnk_Estadisticas" runat="server" CssClass="btn btn-iica-blue-light" data-toggle="modal" data-target="#myModal">
-                                 <span class="glyphicon glyphicon-stats imagen-miplan" runat="server"></span>
+                                 <span class="glyphicon glyphicon-stats imagen-miplan" runat="server"></span>&nbsp;
                                  <asp:Localize runat="server" ID="lcl_Estadisticas" Text="Estadísticas"></asp:Localize>
                              </asp:LinkButton>
                              <!-- Modal -->
@@ -164,6 +168,9 @@
                          </div>
                      </div>
                  </div>
+                 <div class="row margin-top-10">
+
+                 </div>
 
                  <div class="row margin-top-10 margin-bottom-30">
                      <div class="col-md-2">
@@ -201,6 +208,25 @@
                          </asp:SqlDataSource>
 
                      </div>
+                     <div class="col-md-2">
+                         <asp:Localize ID="lcl_FiltroFondos" runat="server" Text="Filtrar por Fondos"></asp:Localize>
+                         <asp:DropDownList ID="ddl_TipoFondo" runat="server" CssClass="form-control"
+                             SelectedValue='<%# Bind("TipoFondo") %>' AutoPostBack="True" Width="98%">
+                             <asp:ListItem Value="0" Text="Todos"></asp:ListItem>
+                             <asp:ListItem Value="1" Text="Recursos IICA"></asp:ListItem>
+                             <asp:ListItem Value="2" Text="Recursos Externos"></asp:ListItem>
+                             <asp:ListItem Value="3" Text="Mixto"></asp:ListItem>
+                         </asp:DropDownList>
+                     </div>
+                     <div class="col-md-4">
+                         <div class="divFloatRight">
+                             <asp:Localize ID="Localize1" runat="server" Text="Filtrar por"></asp:Localize>
+                             <div class="input-group">
+                                 <asp:TextBox ID="txt_buscar" runat="server" CssClass="form-control" Width="70%" placeholder="Palabra clave"></asp:TextBox>&nbsp;
+                            <asp:Button ID="btn_buscar" runat="server" Text="Buscar" CssClass="btn btn-info" />
+                             </div>
+                    </div>
+                </div>
 
                  </div>
 
@@ -250,6 +276,10 @@
                              <asp:ControlParameter ControlID="ddl_FiltroRegion" DefaultValue="0" Name="Region" PropertyName="SelectedValue" Type="Int32" />
                              <asp:ControlParameter ControlID="ddl_FiltroPais" DefaultValue="0" Name="Cod_Unidad" PropertyName="SelectedValue" Type="String" />
                              <asp:ControlParameter ControlID="ddl_FiltroAgrovoc" DefaultValue="0" Name="FK_id_CodigoAgrovoc" PropertyName="SelectedValue" Type="Int32" />
+
+                             <asp:ControlParameter ControlID="ddl_TipoFondo" Name="Fondo" PropertyName="SelectedValue" Type="Int32" />
+
+                             <asp:ControlParameter ControlID="txt_buscar" DefaultValue="0" Name="Clave" PropertyName="Text" Type="String" />
                          </SelectParameters>
                      </asp:SqlDataSource>
                  </div>

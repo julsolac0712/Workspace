@@ -16,6 +16,9 @@
         <asp:HiddenField ID="hdf_Espanol" runat="server" />
         <asp:HiddenField ID="hdf_Frances" runat="server" />
         <asp:HiddenField ID="hdf_Portuguez" runat="server" />
+        <asp:HiddenField ID="hdf_OperacionODS" runat="server" />
+        <asp:HiddenField ID="hdf_OperacionTema" runat="server" />
+
         <div class="margin-top-10 ">
             <div id="exTab2" class="container margin-top-30">
                 <ul class="nav nav-tabs">
@@ -24,7 +27,7 @@
                         <asp:Localize ID="lcl_Identificacion" runat="server" Text="Identificación"></asp:Localize></a>
                     </li>
                     <li><a href="#1" data-toggle="tab">
-                        <asp:Localize ID="lcl_PaisesInvolucrados" runat="server" Text="Países Involucrados"></asp:Localize></a>
+                        <asp:Localize ID="lcl_PaisesInvolucrados" runat="server" Text="Otros datos relacionados"></asp:Localize></a>
                     </li>
                     <li><a href="#2" data-toggle="tab">
                             <asp:Localize ID="lcl_Resultados" runat="server" Text="Resultados"></asp:Localize></a>
@@ -102,14 +105,8 @@
                                             </div>
                                             <div class="row margin-top-10">
                                                 <div class="col-md-12">
-                                                    <asp:Label ID="lbl_TipoTema" runat="server" Text="Tema:" AssociatedControlID="ltl_TipoTema"></asp:Label>
-                                                    <asp:Literal ID="ltl_TipoTema" runat="server" Text='<%# Eval("TipoTema")  %>'></asp:Literal>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <asp:Label ID="lbl_ODS" runat="server" Text="ODS:" AssociatedControlID="ltl_ODS"></asp:Label>
-                                                    <asp:Literal ID="ltl_ODS" runat="server" Text='<%# Eval("DescripcionODS")  %>'></asp:Literal>
+                                                    <asp:Label ID="lbl_Fondo" runat="server" Text="Fondos:" AssociatedControlID="ltl_Fondo"></asp:Label>
+                                                    <asp:Literal ID="ltl_Fondo" runat="server" Text='<%# Eval("Fondo")  %>'></asp:Literal>
                                                 </div>
                                             </div>
                                             <div class="row margin-top-10">
@@ -128,6 +125,18 @@
                                                 <div class="col-md-12">
                                                     <asp:Label ID="lbl_Objetivos" runat="server" Text="Objetivo General:" AssociatedControlID="ltl_Objetivos"></asp:Label>
                                                     <asp:Literal ID="ltl_Objetivos" runat="server" Text='<%# Eval("ObjetivoGeneral") %>'></asp:Literal>
+                                                </div>
+                                            </div>
+                                             <div class="row margin-top-10">
+                                                <div class="col-md-12">
+                                                    <asp:Label ID="Label1" runat="server" Text="Latitud:" AssociatedControlID="ltl_Latitud"></asp:Label>
+                                                    <asp:Literal ID="ltl_Latitud" runat="server" Text='<%# Eval("Latitud") %>'></asp:Literal>
+                                                </div>
+                                            </div>
+                                            <div class="row margin-top-10">
+                                                 <div class="col-md-12">
+                                                    <asp:Label ID="Label2" runat="server" Text="Longitud:" AssociatedControlID="ltl_Longitud"></asp:Label>
+                                                    <asp:Literal ID="ltl_Longitud" runat="server" Text='<%# Eval("Longitud") %>'></asp:Literal>
                                                 </div>
                                             </div>
                                         </ItemTemplate>
@@ -228,39 +237,19 @@
                                             </div>
                                             <div class="row margin-top-10">
                                                 <div class="col-md-2">
-                                                    <asp:Label ID="lbl_TipoTema" runat="server" Text="Tema:" AssociatedControlID="ddl_TipoTema"></asp:Label>
+                                                    <asp:Label ID="lbl_TipoFondo" runat="server" Text="Fondos:" AssociatedControlID="ddl_TipoFondo"></asp:Label>
                                                 </div>
                                                 <div class="col-md-5">
-                                                    <asp:DropDownList ID="ddl_TipoTema" runat="server" CssClass="form-control"
-                                                        SelectedValue='<%# Bind("FK_ID_TipoTema")  %>'
-                                                        DataTextField="Descripcion" DataValueField="PK_ID_TipoTema" DataSourceID="sqlDS_TipoTema">
+                                                    <asp:DropDownList ID="ddl_TipoFondo" runat="server" CssClass="form-control"
+                                                        SelectedValue='<%# Bind("TipoFondo") %>'>
+                                                        <asp:ListItem Value="0" Text="Sin Definir"></asp:ListItem>
+                                                        <asp:ListItem Value="1" Text="Recursos IICA"></asp:ListItem>
+                                                        <asp:ListItem Value="2" Text="Recursos Externos"></asp:ListItem>
+                                                        <asp:ListItem Value="3" Text="Mixto"></asp:ListItem>
                                                     </asp:DropDownList>
-                                                    <asp:CompareValidator ID="cv_TipoTema" runat="server" ControlToValidate="ddl_TipoTema" ValueToCompare="0" Operator="NotEqual"
+                                                    <asp:CompareValidator ID="cv_TipoFondo" runat="server" ControlToValidate="ddl_TipoFondo" ValueToCompare="0" Operator="NotEqual"
                                                         ErrorMessage="Requerido" Text="<%$ Resources:Global , CampoRequerido %>" CssClass="error-span"
                                                         Display="Dynamic" ValidationGroup="Registro"></asp:CompareValidator>
-                                                    <asp:SqlDataSource ID="sqlDS_TipoTema" runat="server" ConnectionString="<%$ ConnectionStrings:WSConnectionString %>"
-                                                        SelectCommand="WS_Get_Lista_TipoTemas"
-                                                        SelectCommandType="StoredProcedure">
-                                                        <SelectParameters>
-                                                            <asp:ControlParameter ControlID="hdf_Idioma" Name="Idioma" PropertyName="Value" Type="String" DefaultValue="es" />
-                                                            <asp:Parameter DefaultValue="2" Name="Operacion" Type="Int32" />
-                                                        </SelectParameters>
-                                                    </asp:SqlDataSource>
-                                                </div>
-                                            </div>
-                                            <div class="row margin-top-10">
-                                                <div class="col-md-2">
-                                                    <asp:Label ID="lbl_ODS" runat="server" Text="ODS:" AssociatedControlID="ddl_ODS"></asp:Label>
-                                                </div>
-                                                <div class="col-md-5">
-                                                    <asp:DropDownList ID="ddl_ODS" runat="server" CssClass="form-control" DataSourceID="sqlDS_ODS" DataTextField="Descripcion_ODS" DataValueField="id_ODS" SelectedValue='<%# Bind("id_ODS")  %>'></asp:DropDownList>
-                                                    <asp:SqlDataSource ID="sqlDS_ODS" runat="server" ConnectionString="<%$ ConnectionStrings:SUGIConnectionString %>" SelectCommand="SUGI_OPOR_Get_Lista_ODS" SelectCommandType="StoredProcedure">
-                                                        <SelectParameters>
-                                                            <asp:Parameter DefaultValue="1" Name="Operacion" Type="Int32" />
-                                                            <asp:ControlParameter ControlID="hdf_Idioma" DefaultValue="es" Name="Idioma" PropertyName="Value" Type="String" />
-                                                        </SelectParameters>
-                                                    </asp:SqlDataSource>
-
                                                 </div>
                                             </div>
                                             <div class="row margin-top-10">
@@ -308,6 +297,22 @@
                                                 </div>
                                             </div>
                                             <div class="row margin-top-10">
+                                                <div class="col-md-2">
+                                                    <asp:Label ID="lbl_Latitud" runat="server" Text="Latitud:" AssociatedControlID="txt_Latitud"></asp:Label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <asp:TextBox ID="txt_Latitud" runat="server" Text='<%# Bind("Latitud") %>' CssClass="form-control"></asp:TextBox>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <asp:Label ID="lbl_Longitud" runat="server" Text="Longitud:" AssociatedControlID="txt_Longitud"></asp:Label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <asp:TextBox ID="txt_Longitud" runat="server" Text='<%# Bind("Longitud") %>' CssClass="form-control"></asp:TextBox>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row margin-top-10">
                                                 <div class="col-md-2 col-sm-offset-2">
                                                     <asp:Button ID="btn_Guardar_Edit" runat="server" Text="Guardar Formulario" CssClass="btn btn-iica-green" CommandName="Update" CausesValidation="true" ValidationGroup="Registro" />
                                                 </div>
@@ -345,7 +350,7 @@
                     </div>
                     <div class="tab-pane" id="1">
                         <span class="page-titles">
-                            <asp:Localize ID="lcl_Descripcion_Paises" runat="server" Text="Países Involucrados"></asp:Localize>
+                            <asp:Localize ID="lcl_Descripcion_Paises" runat="server" Text="Otros datos relacionados"></asp:Localize>
                         </span>
                         <div class="margin-top-30">
                             <asp:UpdatePanel runat="server">
@@ -416,6 +421,113 @@
                                             <asp:ControlParameter ControlID="hdf_SubCronoICT" Name="SubCronoICT" PropertyName="Value" Type="String" />
                                             <asp:ControlParameter ControlID="hdf_Usuario" DefaultValue="2815" Name="Usuario" PropertyName="Value" Type="Int32" />
                                             <asp:ControlParameter ControlID="hdf_OperacionPaises" DefaultValue="2" Name="Operacion" PropertyName="Value" Type="Int32" />
+                                        </UpdateParameters>
+                                    </asp:SqlDataSource>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                        </div>
+                        <div class="margin-top-30">
+                            <asp:UpdatePanel runat="server">
+                                <ContentTemplate>
+                                    <asp:GridView ID="gv_ODS" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered" DataKeyNames="id_Rel_ODS" DataSourceID="sqlDS_rel_ODS" Width="100%">
+                                        <Columns>
+                                            <asp:TemplateField ShowHeader="False">
+                                                <EditItemTemplate>
+                                                    <asp:LinkButton ID="lnk_Guardar_ODS" runat="server" ClientIDMode="AutoID" CommandName="Update" ValidationGroup="Registro" CssClass="btn btn-default" ToolTip="<%$ Resources:Global, SalvarTooltip %>"><span class="glyphicon glyphicon-ok glyphicons-iica"></span></asp:LinkButton>
+                                                    <asp:LinkButton ID="lnk_Cancelar_ODS" runat="server" ClientIDMode="AutoID" CommandName="Cancel" CssClass="btn btn-default" ToolTip="<%$ Resources:Global, CancelarTooltip %>"><span class="glyphicon glyphicon-remove glyphicons-iica"></asp:LinkButton>
+                                                </EditItemTemplate>
+                                                <ItemTemplate>
+                                                   
+                                                    <asp:LinkButton ID="lnk_Eliminar_ODS" runat="server" ClientIDMode="AutoID" CommandName="Delete" ToolTip="<%$ Resources:Global, EliminarTooltip %>" CssClass="btn btn-default" OnClientClick="return confirm('¿Desea eliminar el registro?');"><span class="glyphicon glyphicon-trash glyphicons-iica"></span></asp:LinkButton>
+                                                    <asp:LinkButton ID="lnk_Agregar_ODS" runat="server" ClientIDMode="AutoID" CommandName="Edit" ToolTip="<%$ Resources:Global, NuevoTooltip %>" Visible="False" CssClass="btn btn-default"><span class="glyphicon glyphicon-plus glyphicons-iica"></span></asp:LinkButton>
+                                                </ItemTemplate>
+                                                <ItemStyle HorizontalAlign="Center" VerticalAlign="Top" Width="10%" />
+                                            </asp:TemplateField>
+                                            <asp:TemplateField HeaderText="Objetivo de Desarrollo Sostenible" SortExpression="Descripcion_ODS">
+                                                <EditItemTemplate>
+                                                    <asp:DropDownList ID="ddl_ODS" runat="server" CssClass="form-control" DataSourceID="sqlDS_ODS" DataTextField="Descripcion_ODS" DataValueField="id_ODS" SelectedValue='<%# Bind("FK_id_ODS") %>' Width="98%"></asp:DropDownList>
+                                                    <asp:SqlDataSource ID="sqlDS_ODS" runat="server" ConnectionString="<%$ ConnectionStrings:SUGIConnectionString %>" SelectCommand="SUGI_OPOR_Get_Lista_ODS" SelectCommandType="StoredProcedure">
+                                                        <SelectParameters>
+                                                            <asp:Parameter DefaultValue="1" Name="Operacion" Type="Int32" />
+                                                            <asp:ControlParameter ControlID="hdf_Idioma" DefaultValue="es" Name="Idioma" PropertyName="Value" Type="String" />
+                                                        </SelectParameters>
+                                                    </asp:SqlDataSource>
+                                                </EditItemTemplate>
+                                                <ItemTemplate>
+                                                    <asp:Label ID="lbl_DescripcionODS" runat="server" Text='<%# Eval("Descripcion_ODS") %>'></asp:Label>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                        </Columns>
+                                    </asp:GridView>
+                                    <asp:SqlDataSource ID="sqlDS_rel_ODS" runat="server" ConnectionString="<%$ ConnectionStrings:WSConnectionString %>" SelectCommand="WS_Get_Lista_ODSxProyecto" SelectCommandType="StoredProcedure" DeleteCommand="WS_Man_Rel_ODSxProyecto" DeleteCommandType="StoredProcedure" UpdateCommand="WS_Man_Rel_ODSxProyecto" UpdateCommandType="StoredProcedure">
+                                        <DeleteParameters>
+                                            <asp:Parameter DefaultValue="3" Name="Operacion" Type="Int32" />
+                                        </DeleteParameters>
+                                        <SelectParameters>
+                                            <asp:Parameter DefaultValue="1" Name="Operacion" Type="Int32" />
+                                            <asp:ControlParameter ControlID="hdf_CronoICT" DefaultValue="" Name="CronoICT" PropertyName="Value" Type="Int32" />
+                                            <asp:ControlParameter ControlID="hdf_SubCronoICT" Name="SubCronoICT" PropertyName="Value" Type="String" />
+                                        </SelectParameters>
+                                        <UpdateParameters>
+                                            <asp:ControlParameter ControlID="hdf_OperacionODS" DefaultValue="1" Name="Operacion" PropertyName="Value" Type="Int32" />
+                                            <asp:ControlParameter ControlID="hdf_CronoICT" Name="CronoICT" PropertyName="Value" Type="Int32" />
+                                            <asp:ControlParameter ControlID="hdf_SubCronoICT" Name="SubCronoICT" PropertyName="Value" Type="String" />
+                                        </UpdateParameters>
+                                    </asp:SqlDataSource>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                        </div>
+                        <div class="margin-top-30">
+                            <asp:UpdatePanel runat="server">
+                                <ContentTemplate>
+                                    <asp:GridView ID="gv_Temas" CssClass="table table-bordered" runat="server" AutoGenerateColumns="False" DataKeyNames="id_Rel_Tema" DataSourceID="sqlDS_rel_Temas" Width="100%">
+                                        <Columns>
+                                             <asp:TemplateField ShowHeader="False">
+                                                <EditItemTemplate>
+                                                    <asp:LinkButton ID="lnk_Guardar_Tema" runat="server" ClientIDMode="AutoID" CommandName="Update" ValidationGroup="Registro" CssClass="btn btn-default" ToolTip="<%$ Resources:Global, SalvarTooltip %>"><span class="glyphicon glyphicon-ok glyphicons-iica"></span></asp:LinkButton>
+                                                    <asp:LinkButton ID="lnk_Cancelar_Tema" runat="server" ClientIDMode="AutoID" CommandName="Cancel" CssClass="btn btn-default" ToolTip="<%$ Resources:Global, CancelarTooltip %>"><span class="glyphicon glyphicon-remove glyphicons-iica"></asp:LinkButton>
+                                                </EditItemTemplate>
+                                                <ItemTemplate>
+                                                    <asp:LinkButton ID="lnk_Eliminar_Tema" runat="server" ClientIDMode="AutoID" CommandName="Delete" ToolTip="<%$ Resources:Global, EliminarTooltip %>" CssClass="btn btn-default" OnClientClick="return confirm('¿Desea eliminar el registro?');"><span class="glyphicon glyphicon-trash glyphicons-iica"></span></asp:LinkButton>
+                                                    <asp:LinkButton ID="lnk_Agregar_Tema" runat="server" ClientIDMode="AutoID" CommandName="Edit" ToolTip="<%$ Resources:Global, NuevoTooltip %>" Visible="False" CssClass="btn btn-default"><span class="glyphicon glyphicon-plus glyphicons-iica"></span></asp:LinkButton>
+                                                </ItemTemplate>
+                                                <ItemStyle HorizontalAlign="Center" VerticalAlign="Top" Width="10%" />
+                                            </asp:TemplateField>
+                                            <asp:TemplateField HeaderText="Programas, tranversalidad y temas IICA" SortExpression="Descripcion_Esp">
+                                                <EditItemTemplate>
+                                                    <asp:DropDownList ID="ddl_TipoTema" runat="server" CssClass="form-control"
+                                                        SelectedValue='<%# Bind("FK_ID_TipoTema")  %>'
+                                                        DataTextField="Descripcion" DataValueField="PK_ID_TipoTema" DataSourceID="sqlDS_TipoTema">
+                                                    </asp:DropDownList>
+                                                    <asp:SqlDataSource ID="sqlDS_TipoTema" runat="server" ConnectionString="<%$ ConnectionStrings:WSConnectionString %>"
+                                                        SelectCommand="WS_Get_Lista_TipoTemas"
+                                                        SelectCommandType="StoredProcedure">
+                                                        <SelectParameters>
+                                                            <asp:ControlParameter ControlID="hdf_Idioma" Name="Idioma" PropertyName="Value" Type="String" DefaultValue="es" />
+                                                            <asp:Parameter DefaultValue="2" Name="Operacion" Type="Int32" />
+                                                        </SelectParameters>
+                                                    </asp:SqlDataSource>
+                                                </EditItemTemplate>
+                                                <ItemTemplate>
+                                                    <asp:Label ID="lbl_DescripcionTEMA" runat="server" Text='<%# Eval("Descripcion_Esp") %>'></asp:Label>
+                                                </ItemTemplate>
+                                                <ItemStyle VerticalAlign="Top" Width="90%" />
+                                            </asp:TemplateField>
+                                        </Columns>
+                                    </asp:GridView>
+                                    <asp:SqlDataSource ID="sqlDS_rel_Temas" runat="server" ConnectionString="<%$ ConnectionStrings:WSConnectionString %>" DeleteCommand="WS_Man_Rel_TemaxProyecto" DeleteCommandType="StoredProcedure" SelectCommand="WS_Get_Lista_TemaxProyecto" SelectCommandType="StoredProcedure" UpdateCommand="WS_Man_Rel_TemaxProyecto" UpdateCommandType="StoredProcedure">
+                                        <DeleteParameters>
+                                            <asp:Parameter DefaultValue="3" Name="Operacion" Type="Int32" />
+                                        </DeleteParameters>
+                                        <SelectParameters>
+                                            <asp:Parameter DefaultValue="1" Name="Operacion" Type="Int32" />
+                                            <asp:ControlParameter ControlID="hdf_CronoICT" DefaultValue="" Name="CronoICT" PropertyName="Value" Type="Int32" />
+                                            <asp:ControlParameter ControlID="hdf_SubCronoICT" Name="SubCronoICT" PropertyName="Value" Type="String" />
+                                        </SelectParameters>
+                                        <UpdateParameters>
+                                            <asp:ControlParameter ControlID="hdf_OperacionTema" DefaultValue="1" Name="Operacion" PropertyName="Value" Type="Int32" />
+                                            <asp:ControlParameter ControlID="hdf_CronoICT" Name="CronoICT" PropertyName="Value" Type="Int32" />
+                                            <asp:ControlParameter ControlID="hdf_SubCronoICT" Name="SubCronoICT" PropertyName="Value" Type="String" />
                                         </UpdateParameters>
                                     </asp:SqlDataSource>
                                 </ContentTemplate>
@@ -898,7 +1010,23 @@
                 </UpdateParameters>
             </asp:SqlDataSource>
         </div>
+
+
+
+        <div class="margin-top-10 margin-left-10">
+            <asp:LinkButton ID="lnk_Regresar" runat="server" CssClass="btn btn-iica-green">
+                <span class="glyphicon glyphicon-arrow-left imagen-miplan" runat="server"></span>&nbsp;
+                         <asp:Localize runat="server" ID="lcl_Regresar" Text="Regresar"></asp:Localize>
+            </asp:LinkButton>
+        </div>
+
     </div>
+
+
+
+
+
+   
 
 
 </asp:Content>
