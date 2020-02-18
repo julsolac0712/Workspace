@@ -20,7 +20,6 @@ Public Class Formulario
         lnkBtn_EditarID.Visible = False
     End Sub
 
-
     Protected Sub sqlDS_Instrumentos_Updated(sender As Object, e As SqlDataSourceStatusEventArgs) Handles sqlDS_Instrumentos.Updated
         If e.Exception IsNot Nothing Then
             e.ExceptionHandled = True
@@ -35,6 +34,19 @@ Public Class Formulario
 
     Protected Sub btn_Cancelar_Click(sender As Object, e As EventArgs)
         lnkBtn_EditarID.Visible = True
+    End Sub
+
+    Protected Function PrintKeyWords(ByVal valor As Object, ByVal count As Object) As String
+        Dim arrValues() As String = Split(valor, ",")
+        Dim Estado As String = ""
+        For vAN_Indice As Integer = 0 To count - 1
+            Estado += "<span class='tag'>" + arrValues(vAN_Indice) + " </span>"
+        Next
+        Return Estado
+    End Function
+
+    Protected Sub lnk_Regresar_Click(sender As Object, e As EventArgs) Handles lnk_Regresar.Click
+        Response.Redirect("Panel?Admin=1", False)
     End Sub
 
 #Region "AccionesGrid"
@@ -146,15 +158,8 @@ Public Class Formulario
     End Sub
 #End Region
 #End Region
-    Protected Function PrintKeyWords(ByVal valor As Object, ByVal count As Object) As String
-        Dim arrValues() As String = Split(valor, ",")
-        Dim Estado As String = ""
-        For vAN_Indice As Integer = 0 To count - 1
-            Estado += "<span class='tag'>" + arrValues(vAN_Indice) + " </span>"
-        Next
-        Return Estado
-    End Function
 
+#Region "AGROVOC"
     Protected Sub gv_PalabrasAGROVOC_RowEditing(sender As Object, e As GridViewEditEventArgs) Handles gv_PalabrasAGROVOC.RowEditing
 
     End Sub
@@ -273,7 +278,9 @@ Public Class Formulario
             Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro de País Involucrado - Update")
         End If
     End Sub
+#End Region
 
+#Region "ODS"
     Protected Sub gv_ODS_RowCreated(sender As Object, e As GridViewRowEventArgs) Handles gv_ODS.RowCreated
         Try
             If e.Row.RowIndex <> -1 Then
@@ -326,11 +333,9 @@ Public Class Formulario
             Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro al Borrar ODS - Deleted")
         End If
     End Sub
+#End Region
 
-    Protected Sub lnk_Regresar_Click(sender As Object, e As EventArgs) Handles lnk_Regresar.Click
-        Response.Redirect("Panel?Admin=1", False)
-    End Sub
-
+#Region "Temas"
     Protected Sub gv_Temas_RowCreated(sender As Object, e As GridViewRowEventArgs) Handles gv_Temas.RowCreated
         Try
             If e.Row.RowIndex <> -1 Then
@@ -383,4 +388,176 @@ Public Class Formulario
             Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro al Borrar Temas - Deleted")
         End If
     End Sub
+
+
+#End Region
+
+#Region "Enlaces"
+    Protected Sub gv_Enlaces_RowCreated(sender As Object, e As GridViewRowEventArgs) Handles gv_Enlaces.RowCreated
+        Try
+            If e.Row.RowIndex <> -1 Then
+
+                If CType(sender, GridView).DataKeys(e.Row.RowIndex).Values(0) = 0 Then
+
+                    Dim btn As LinkButton
+
+                    btn = CType(e.Row.FindControl("lnk_Eliminar_Enlace"), LinkButton)
+                    If Not btn Is Nothing Then
+                        btn.Visible = False
+                    End If
+
+                    btn = CType(e.Row.FindControl("lnk_Editar_Enlace"), LinkButton)
+                    If Not btn Is Nothing Then
+                        btn.Visible = False
+                    End If
+
+                    btn = CType(e.Row.FindControl("lnk_Agregar_Enlace"), LinkButton)
+                    If Not btn Is Nothing Then
+                        btn.Visible = True
+                    End If
+
+                End If
+
+            End If
+        Catch ex As Exception
+            Gestor_Errores.Escribir_Log(ex, "Error de Registro de Enlace - Created")
+        End Try
+    End Sub
+
+    Protected Sub gv_Enlaces_RowDeleted(sender As Object, e As GridViewDeletedEventArgs) Handles gv_Enlaces.RowDeleted
+        If e.Exception IsNot Nothing Then
+            e.ExceptionHandled = True
+            Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro al Borrar Enlaces - Deleted")
+        End If
+    End Sub
+
+    Protected Sub gv_Enlaces_RowUpdating(sender As Object, e As GridViewUpdateEventArgs) Handles gv_Enlaces.RowUpdating
+        If (e.Keys(0) = 0) Then
+            hdf_OperacionEnlace.Value = 1
+        Else
+            hdf_OperacionEnlace.Value = 2
+        End If
+    End Sub
+
+    Protected Sub gv_Enlaces_RowUpdated(sender As Object, e As GridViewUpdatedEventArgs) Handles gv_Enlaces.RowUpdated
+        If e.Exception IsNot Nothing Then
+            e.ExceptionHandled = True
+            Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro al Modificar Enlaces - Updated")
+        End If
+    End Sub
+
+#Region "Contrapartes"
+
+#End Region
+
+    Protected Sub gv_ContraparteFinanciera_RowCreated(sender As Object, e As GridViewRowEventArgs) Handles gv_ContraparteFinanciera.RowCreated
+        Try
+            If e.Row.RowIndex <> -1 Then
+
+                If CType(sender, GridView).DataKeys(e.Row.RowIndex).Values(0) = 0 Then
+
+                    Dim btn As LinkButton
+
+                    btn = CType(e.Row.FindControl("lnk_Eliminar_Contra"), LinkButton)
+                    If Not btn Is Nothing Then
+                        btn.Visible = False
+                    End If
+
+                    btn = CType(e.Row.FindControl("lnk_Editar_Contra"), LinkButton)
+                    If Not btn Is Nothing Then
+                        btn.Visible = False
+                    End If
+
+                    btn = CType(e.Row.FindControl("lnk_Agregar_Contra"), LinkButton)
+                    If Not btn Is Nothing Then
+                        btn.Visible = True
+                    End If
+
+                End If
+
+            End If
+        Catch ex As Exception
+            Gestor_Errores.Escribir_Log(ex, "Error de Registro de Enlace - Created")
+        End Try
+    End Sub
+
+    Protected Sub gv_ContraparteFinanciera_RowDeleted(sender As Object, e As GridViewDeletedEventArgs) Handles gv_ContraparteFinanciera.RowDeleted
+        If e.Exception IsNot Nothing Then
+            e.ExceptionHandled = True
+            Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro al Modificar Enlaces - Updated")
+        End If
+    End Sub
+
+    Protected Sub gv_ContraparteFinanciera_RowUpdated(sender As Object, e As GridViewUpdatedEventArgs) Handles gv_ContraparteFinanciera.RowUpdated
+        If e.Exception IsNot Nothing Then
+            e.ExceptionHandled = True
+            Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro al Modificar Enlaces - Updated")
+        End If
+    End Sub
+
+    Protected Sub gv_ContraparteFinanciera_RowUpdating(sender As Object, e As GridViewUpdateEventArgs) Handles gv_ContraparteFinanciera.RowUpdating
+        If (e.Keys(0) = 0) Then
+            hdf_OperacionContraparte.Value = 1
+        Else
+            hdf_OperacionContraparte.Value = 2
+        End If
+    End Sub
+
+    Protected Sub gv_ActivarEnlaces_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles gv_ActivarEnlaces.RowCommand
+        Dim rowIndex As Integer = 0 'Convert.ToInt32(e.CommandArgument)
+        gv_ActivarEnlaces.SelectedIndex = rowIndex
+
+
+        Dim seletedRowPrimaryKey As Integer = Integer.Parse(gv_ActivarEnlaces.SelectedDataKey(0).ToString())
+
+        hdf_Cambio.Value = Integer.Parse(gv_ActivarEnlaces.SelectedDataKey(0).ToString())
+
+
+        If CType(gv_ActivarEnlaces.Rows(0).FindControl("chk_Documentos"), CheckBox).Checked Then
+            hdf_ConDocumentos.Value = 1
+        Else
+            hdf_ConDocumentos.Value = 0
+        End If
+
+        If CType(gv_ActivarEnlaces.Rows(rowIndex).FindControl("chk_Videos"), CheckBox).Checked Then
+            hdf_ConVideos.Value = 1
+        Else
+            hdf_ConVideos.Value = 0
+        End If
+
+        If CType(gv_ActivarEnlaces.Rows(rowIndex).FindControl("chk_Imagenes"), CheckBox).Checked Then
+            hdf_ConImagenes.Value = 1
+        Else
+            hdf_ConImagenes.Value = 0
+        End If
+
+        If CType(gv_ActivarEnlaces.Rows(rowIndex).FindControl("chk_Noticias"), CheckBox).Checked Then
+            hdf_ConNoticias.Value = 1
+        Else
+            hdf_ConNoticias.Value = 0
+        End If
+
+        If CType(gv_ActivarEnlaces.Rows(rowIndex).FindControl("chk_Eventos"), CheckBox).Checked Then
+            hdf_ConEventos.Value = 1
+        Else
+            hdf_ConEventos.Value = 0
+        End If
+
+        hdf_Operacion.Value = 1
+
+        sqlDS_ActivarEnlaces.Update()
+
+
+    End Sub
+
+    Protected Sub gv_ActivarEnlaces_RowUpdated(sender As Object, e As GridViewUpdatedEventArgs) Handles gv_ActivarEnlaces.RowUpdated
+        If e.Exception IsNot Nothing Then
+            e.ExceptionHandled = True
+            Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro al Modificar Enlaces - Updated")
+        End If
+    End Sub
+
+
+#End Region
+
 End Class

@@ -10,7 +10,7 @@ Public Class Panel
             Response.Redirect("http://apps.iica.int/workspace/")
         End If
 
-        'hdf_Usuario.Value = 2802
+        '    hdf_Usuario.Value = 2802
 
     End Sub
 
@@ -42,7 +42,15 @@ Public Class Panel
             gv_Identificacion.AllowPaging = True
             lcl_ListadoCompleto.Text = "Lista Completa"
         End If
+        lcl_Conteo1.Text = gv_Identificacion.Rows.Count
     End Sub
+
+    Protected Sub sqlDS_PanelIdentificacion_Selected(sender As Object, e As SqlDataSourceStatusEventArgs) Handles sqlDS_PanelIdentificacion.Selected
+        If (e.Exception Is Nothing) Then
+            lcl_Conteo1.Text = e.Command.Parameters("@CantResultados").Value
+        End If
+    End Sub
+
 
 #End Region
 End Class

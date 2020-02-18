@@ -1,6 +1,14 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Panel.aspx.vb" Inherits="WorkSpace.Panel" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
+    <script>
+            $(document).ready(function () {
+                $("#MainContent_ddl_FiltroRegion").click(function () {
+                    $("#progressbar").css("width", "100%");
+                });
+            });
+    </script>
+
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
@@ -14,11 +22,89 @@
              <ContentTemplate>
 
                  <span class="page-titles">
-                     <asp:Localize ID="lcl_Descripcion" runat="server" Text="Instrumentos IICA"></asp:Localize>
+                     <asp:Localize ID="lcl_Descripcion" runat="server" Text="Iniciativas de Cooperación del IICA"></asp:Localize>
                  </span>
 
                  <div class="row">
-                     <div class="col-md-8" runat="server" id="IntroduccionExpandir">
+                     <div class="col-md-6" runat="server" id="IntroduccionExpandir">
+                     </div>
+                     <div class="col-md-2" runat="server">
+                         <div class="margin-top-10 alineado-justificado">
+                               <asp:LinkButton ID="lnk_BtnSeguimientp" runat="server" CssClass="btn btn-iica-blue-light" data-toggle="modal" data-target="#modalCambios">
+                                 <span class="glyphicon glyphicon-alert imagen-miplan" runat="server"></span>&nbsp;
+                                 <asp:Localize runat="server" ID="lcl_Seguimiento" Text="Seguimiento"></asp:Localize>
+                               </asp:LinkButton>
+
+                             <!-- Modal -->
+                             <div class="modal fade" id="modalCambios" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                 <div class="modal-dialog modal-lg" role="document">
+                                     <div class="modal-content">
+                                         <div class="modal-header">
+                                             <h5 class="modal-title" id="exampleModalLabel">Seguimiento de Cambios</h5>
+                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                 <span aria-hidden="true">&times;</span>
+                                             </button>
+                                         </div>
+                                         <div class="modal-body">
+                                             <asp:GridView ID="gv_Cambios" runat="server" CssClass="table table-bordered" AutoGenerateColumns="False" DataKeyNames="CronoICT,subcronoICT" DataSourceID="sqlDS_Cambios" Width="100%">
+                                                 <Columns>
+                                                     <asp:TemplateField HeaderText="CronoICT" SortExpression="CronoICT">
+                                                         <ItemTemplate>
+                                                             <asp:Label ID="Label1" runat="server" Text='<%# Eval("CronoICT") & "-" & Eval("subcronoICT")%>'></asp:Label>
+                                                         </ItemTemplate>
+                                                         <ItemStyle VerticalAlign="Top" Width="5%" />
+                                                     </asp:TemplateField>
+                                                     <asp:TemplateField HeaderText="Nombre" SortExpression="CambioNombre">
+                                                         <ItemTemplate>
+                                                             <asp:Label ID="Label3" runat="server" Text='<%# Eval("CambioNombre") %>'></asp:Label>
+                                                         </ItemTemplate>
+                                                         <ItemStyle Width="15%" />
+                                                     </asp:TemplateField>
+                                                     <asp:TemplateField HeaderText="Descripción" SortExpression="CambioDescripcion">
+                                                         <ItemTemplate>
+                                                             <asp:Label ID="Label4" runat="server" Text='<%# Eval("CambioDescripcion") %>'></asp:Label>
+                                                         </ItemTemplate>
+                                                         <ItemStyle VerticalAlign="Top" Width="15%" />
+                                                     </asp:TemplateField>
+                                                     <asp:TemplateField HeaderText="Objetivo" SortExpression="CambioObjetivo">
+                                                         <ItemTemplate>
+                                                             <asp:Label ID="Label5" runat="server" Text='<%# Eval("CambioObjetivo") %>'></asp:Label>
+                                                         </ItemTemplate>
+                                                         <ItemStyle VerticalAlign="Top" Width="15%" />
+                                                     </asp:TemplateField>
+                                                     <asp:TemplateField HeaderText="Sede" SortExpression="CambioSede">
+                                                         <ItemTemplate>
+                                                             <asp:Label ID="Label6" runat="server" Text='<%# Eval("CambioSede") %>'></asp:Label>
+                                                         </ItemTemplate>
+                                                         <ItemStyle VerticalAlign="Top" Width="5%" />
+                                                     </asp:TemplateField>
+                                                     <asp:TemplateField HeaderText="Tipo " SortExpression="CambioTipoInstrumento">
+                                                         <ItemTemplate>
+                                                             <asp:Label ID="Label7" runat="server" Text='<%# Eval("CambioTipoInstrumento") %>'></asp:Label>
+                                                         </ItemTemplate>
+                                                         <ItemStyle VerticalAlign="Top" Width="5%" />
+                                                     </asp:TemplateField>
+                                                     <asp:TemplateField HeaderText="SubTipo " SortExpression="CambioSubTipoInstrumento">
+                                                         <ItemTemplate>
+                                                             <asp:Label ID="Label8" runat="server" Text='<%# Eval("CambioSubTipoInstrumento") %>'></asp:Label>
+                                                         </ItemTemplate>
+                                                         <ItemStyle VerticalAlign="Top" Width="10%" />
+                                                     </asp:TemplateField>
+                                                 </Columns>
+                                             </asp:GridView>
+                                             <asp:SqlDataSource ID="sqlDS_Cambios" runat="server" ConnectionString="<%$ ConnectionStrings:WSConnectionString %>" SelectCommand="WS_Get_Lista_Cambios" SelectCommandType="StoredProcedure">
+                                                 <SelectParameters>
+                                                     <asp:Parameter DefaultValue="1" Name="Operacion" Type="Int32" />
+                                                 </SelectParameters>
+                                             </asp:SqlDataSource>
+                                         </div>
+                                         <div class="modal-footer">
+                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
                      </div>
                      <div class="col-md-2" runat="server">
                          <div class="margin-top-10 alineado-justificado">
@@ -168,13 +254,14 @@
                          </div>
                      </div>
                  </div>
+
                  <div class="row margin-top-10">
 
                  </div>
 
                  <div class="row margin-top-10 margin-bottom-30">
                      <div class="col-md-2">
-                         <asp:Localize ID="lcl_FiltroRegion" runat="server" Text="Filtrar por Región"></asp:Localize>
+                         <asp:label ID="lbl_FiltroRegion" runat="server" Text="Filtrar por Región" AssociatedControlID="ddl_FiltroRegion"></asp:label>
                          <asp:DropDownList ID="ddl_FiltroRegion" runat="server" CssClass="form-control" Width="98%" AutoPostBack="True">
                              <asp:ListItem Value="0" Text="Todos"></asp:ListItem>
                              <asp:ListItem Value="1" Text="Central"></asp:ListItem>
@@ -187,7 +274,7 @@
                      </div>
 
                      <div class="col-md-2">
-                         <asp:Localize ID="lcl_FiltroPais" runat="server" Text="Filtrar por País"></asp:Localize>
+                         <asp:label ID="lbl_FiltroPais" runat="server" Text="Filtrar por País" AssociatedControlID="ddl_FiltroPais"></asp:label>
                          <asp:DropDownList ID="ddl_FiltroPais" runat="server" CssClass="form-control" Width="98%" AutoPostBack="True" DataSourceID="sqlDS_FiltroPais" DataTextField="Descripcion" DataValueField="Cod_Unidad"></asp:DropDownList>
                          <asp:SqlDataSource ID="sqlDS_FiltroPais" runat="server" ConnectionString="<%$ ConnectionStrings:WSConnectionString %>" SelectCommand="WS_Get_Lista_Paises" SelectCommandType="StoredProcedure">
                              <SelectParameters>
@@ -198,7 +285,7 @@
                      </div>
 
                      <div class="col-md-2">
-                         <asp:Localize ID="lcl_FiltroAgrovoc" runat="server" Text="Filtrar por Agrovoc"></asp:Localize>
+                         <asp:label ID="lbl_FiltroAgrovoc" runat="server" Text="Filtrar por Agrovoc" AssociatedControlID="ddl_FiltroAgrovoc"></asp:label>
                          <asp:DropDownList ID="ddl_FiltroAgrovoc" runat="server" CssClass="form-control" AutoPostBack="True" DataSourceID="sqlDS_Agrovoc" DataTextField="Termino_ES" DataValueField="FK_id_CodigoAgrovoc" Width="98%"></asp:DropDownList>
 
                          <asp:SqlDataSource ID="sqlDS_Agrovoc" runat="server" ConnectionString="<%$ ConnectionStrings:WSConnectionString %>" SelectCommand="WS_Get_Lista_PalabrasAgrovocxIdentificacionProyecto" SelectCommandType="StoredProcedure">
@@ -209,7 +296,7 @@
 
                      </div>
                      <div class="col-md-2">
-                         <asp:Localize ID="lcl_FiltroFondos" runat="server" Text="Filtrar por Fondos"></asp:Localize>
+                         <asp:label ID="lbl_FiltroFondos" runat="server" Text="Filtrar por Fondos" AssociatedControlID="ddl_TipoFondo"></asp:label>
                          <asp:DropDownList ID="ddl_TipoFondo" runat="server" CssClass="form-control"
                              SelectedValue='<%# Bind("TipoFondo") %>' AutoPostBack="True" Width="98%">
                              <asp:ListItem Value="0" Text="Todos"></asp:ListItem>
@@ -220,17 +307,65 @@
                      </div>
                      <div class="col-md-4">
                          <div class="divFloatRight">
-                             <asp:Localize ID="Localize1" runat="server" Text="Filtrar por"></asp:Localize>
+                             <asp:label ID="lblBuscarpor" runat="server" Text="Filtrar por" AssociatedControlID="txt_buscar"></asp:label>
                              <div class="input-group">
                                  <asp:TextBox ID="txt_buscar" runat="server" CssClass="form-control" Width="70%" placeholder="Palabra clave"></asp:TextBox>&nbsp;
-                            <asp:Button ID="btn_buscar" runat="server" Text="Buscar" CssClass="btn btn-info" />
+                                 <asp:Button ID="btn_buscar" runat="server" Text="Buscar" CssClass="btn btn-info" />
                              </div>
                     </div>
                 </div>
 
                  </div>
 
-                 <div class="margin-top-10 ">
+                 <div class="row margin-top-10 margin-bottom-30">
+                     <div class="col-md-2">
+                         <div class="label-input">
+                             <asp:Label ID="lbl_Contrapartes" AssociatedControlID="ddl_Contrapartes" runat="server" Text="Filtro Contraparte"></asp:Label>
+                             <asp:DropDownList ID="ddl_Contrapartes" runat="server" CssClass="form-control" DataSourceID="sqlDS_Contrapartes" DataTextField="Descripcion" DataValueField="id_ContraFinanciera" AutoPostBack="True">
+                             </asp:DropDownList>
+                             <asp:SqlDataSource runat="server" ID="sqlDS_Contrapartes" ConnectionString='<%$ ConnectionStrings:WSConnectionString %>' 
+                                 SelectCommand="Workspace_Get_Listado_Contrapartes" SelectCommandType="StoredProcedure">
+                                   <SelectParameters>
+                                 <asp:Parameter DefaultValue="1" Name="Operacion" Type="Int32" />
+                             </SelectParameters>
+                             </asp:SqlDataSource>
+                         </div>
+                     </div>
+
+                     <div class="col-md-2">
+                         <div class="label-input">
+                             <asp:Label ID="lbl_Recursos" AssociatedControlID="ddl_Recursos" runat="server" Text="Filtro por Recursos"></asp:Label>
+                             <asp:DropDownList ID="ddl_Recursos" runat="server" CssClass="form-control"  AutoPostBack="True">
+                                 <asp:ListItem Value="" Text="-- Seleccione --"></asp:ListItem>
+                                 <asp:ListItem Value="1" Text="$0 a $100,000"></asp:ListItem>
+                                 <asp:ListItem Value="2" Text="$100,000 a $500,000"></asp:ListItem>
+                                 <asp:ListItem Value="3" Text="$500,000 a $1,000,000"></asp:ListItem>
+                                 <asp:ListItem Value="4" Text="Más de 1,000,000"></asp:ListItem>
+                             </asp:DropDownList>
+                         </div>
+                     </div>
+
+                     <div class="col-md-2">
+                         <asp:label ID="lbl_FiltroTipo" runat="server" Text="Filtrar por Tipo" AssociatedControlID="ddl_FiltroTipo"></asp:label>
+                         <asp:DropDownList ID="ddl_FiltroTipo" runat="server" CssClass="form-control" AutoPostBack="True" Width="98%" DataSourceID="sqlDS_Tipos" DataTextField="Descripcion" DataValueField="PK_ID_TipoInstrumento">
+                         </asp:DropDownList>
+                         <asp:SqlDataSource ID="sqlDS_Tipos" runat="server" ConnectionString="<%$ ConnectionStrings:WSConnectionString %>" SelectCommand="WS_Get_Lista_TipoInstrumento" SelectCommandType="StoredProcedure">
+                             <SelectParameters>
+                                 <asp:Parameter DefaultValue="2" Name="Operacion" Type="Int32" />
+                                 <asp:ControlParameter ControlID="hdf_Idioma" DefaultValue="es" Name="Idioma" PropertyName="Value" Type="String" />
+                             </SelectParameters>
+                         </asp:SqlDataSource>
+                     </div>
+
+                     <div class="col-md-6 conteo">
+                         <asp:Localize ID="lcl_Conteo" runat="server" Text="Se han encontrado "></asp:Localize>
+                         <asp:Localize ID="lcl_Conteo1" runat="server" Text="0 "></asp:Localize>
+                         <asp:Localize ID="lcl_Conteo2" runat="server" Text="instrumentos."></asp:Localize>
+                     </div>
+
+                 </div>
+
+                 <div class="margin-top-30">
                      <asp:GridView ID="gv_Identificacion" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered" DataKeyNames="Codigo" DataSourceID="sqlDS_PanelIdentificacion" Width="100%" AllowPaging="True" AllowSorting="True" PageSize="12">
                          <Columns>
                              <asp:TemplateField HeaderText="Editar">
@@ -259,6 +394,8 @@
                                  <ItemTemplate>
                                      <asp:Literal ID="ltl_EstadoNoIniciado" runat="server" Mode="PassThrough" Text='<%# PrintEstadoNoIniciado(Eval("TipoEstado")) %>' Visible='<%# IIf(Eval("Estado") = 0, True, False) %>' />
                                      <asp:Literal ID="ltl_EstadoActualizado" runat="server" Mode="PassThrough" Text='<%# PrintEstadoCheck(Eval("TipoEstado")) %>' Visible='<%# IIf(Eval("Estado") = 1, True, False) %>' />
+                                     <br />
+                                     <asp:label ID="lbl_Nuevo" runat="server" Mode="PassThrough" Text='<%# Eval("Identifica") %>' Visible='<%# IIf(Eval("Identifica") = "Nuevo!", True, False) %>' ForeColor="red" Font-Size="X-Small"/>
                                  </ItemTemplate>
 
                                  <ItemStyle VerticalAlign="Top" Width="10%" HorizontalAlign="Center" />
@@ -268,7 +405,7 @@
                          </Columns>
                      </asp:GridView>
                      <asp:SqlDataSource ID="sqlDS_PanelIdentificacion" runat="server" ConnectionString="<%$ ConnectionStrings:WSConnectionString %>"
-                         SelectCommand="WS_Get_Lista_IdentificacionProyecto" SelectCommandType="StoredProcedure">
+                         SelectCommand="WS_Get_Lista_IdentificacionProyecto" SelectCommandType="StoredProcedure" OnSelected="sqlDS_PanelIdentificacion_Selected">
 
                          <SelectParameters>
                              <asp:Parameter DefaultValue="1" Name="Operacion" Type="Int32" />
@@ -280,6 +417,10 @@
                              <asp:ControlParameter ControlID="ddl_TipoFondo" Name="Fondo" PropertyName="SelectedValue" Type="Int32" />
 
                              <asp:ControlParameter ControlID="txt_buscar" DefaultValue="0" Name="Clave" PropertyName="Text" Type="String" />
+                             <asp:ControlParameter ControlID="ddl_Contrapartes" Name="Contraparte" PropertyName="SelectedValue" Type="Int32" DefaultValue="0" />
+                             <asp:ControlParameter ControlID="ddl_Recursos" Name="Recursos" PropertyName="SelectedValue" Type="Int32" DefaultValue="0" />
+                             <asp:ControlParameter ControlID="ddl_FiltroTipo" Name="Tipo" PropertyName="SelectedValue" Type="Int32" DefaultValue="0" />
+                             <asp:Parameter Direction="InputOutput" Name="CantResultados" Type="Int32" DefaultValue="0" />
                          </SelectParameters>
                      </asp:SqlDataSource>
                  </div>

@@ -59,3 +59,4 @@ C:\Users\jsolis\Desktop\WORKSPACEV3\Utility\obj\Debug\Acceso_Datos.vbproj.CoreCo
 C:\Users\jsolis\Desktop\WORKSPACEV3\Utility\obj\Debug\Utility.dll
 C:\Users\jsolis\Desktop\WORKSPACEV3\Utility\obj\Debug\Utility.xml
 C:\Users\jsolis\Desktop\WORKSPACEV3\Utility\obj\Debug\Utility.pdb
+C:\Users\jsolis\Desktop\WORKSPACEV3\Utility\obj\Debug\Acceso_Datos.vbprojAssemblyReference.cache

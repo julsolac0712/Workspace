@@ -1,0 +1,18 @@
+11:25:13 a. m. --> Error: SqlException: MERCURIO Procedure SUGI_OPOR_Man_ContrapartesFinancieras State = 2 Line Number = 0 Message = Procedure or function SUGI_OPOR_Man_ContrapartesFinancieras has too many arguments specified.
+____________________________________________________
+11:27:55 a. m. --> Error: SqlException: MERCURIO Procedure SUGI_OPOR_Man_ContrapartesFinancieras State = 2 Line Number = 0 Message = Procedure or function SUGI_OPOR_Man_ContrapartesFinancieras has too many arguments specified.
+____________________________________________________
+11:42:48 a. m. --> Error: SqlException: MERCURIO Procedure SUGI_OPOR_Man_ContrapartesFinancieras State = 2 Line Number = 0 Message = Procedure or function SUGI_OPOR_Man_ContrapartesFinancieras has too many arguments specified.
+____________________________________________________
+11:43:15 a. m. --> Error: SqlException: MERCURIO Procedure SUGI_OPOR_Man_ContrapartesFinancieras State = 4 Line Number = 0 Message = Procedure or function 'SUGI_OPOR_Man_ContrapartesFinancieras' expects parameter '@Descripcion', which was not supplied.
+____________________________________________________
+11:43:22 a. m. --> Error: SqlException: MERCURIO Procedure SUGI_OPOR_Man_ContrapartesFinancieras State = 4 Line Number = 0 Message = Procedure or function 'SUGI_OPOR_Man_ContrapartesFinancieras' expects parameter '@Descripcion', which was not supplied.
+____________________________________________________
+11:44:29 a. m. --> Error: SqlException: MERCURIO Procedure SUGI_OPOR_Man_ContrapartesFinancieras State = 4 Line Number = 0 Message = Procedure or function 'SUGI_OPOR_Man_ContrapartesFinancieras' expects parameter '@Descripcion', which was not supplied.
+____________________________________________________
+11:46:30 a. m. --> Error: SqlException: MERCURIO Procedure SUGI_OPOR_Man_ContrapartesFinancieras State = 2 Line Number = 0 Message = Procedure or function SUGI_OPOR_Man_ContrapartesFinancieras has too many arguments specified.
+____________________________________________________
+11:47:47 a. m. --> Error: SqlException: MERCURIO Procedure SUGI_OPOR_Man_ContrapartesFinancieras State = 2 Line Number = 0 Message = Procedure or function SUGI_OPOR_Man_ContrapartesFinancieras has too many arguments specified.
+____________________________________________________
+11:48:32 a. m. --> Error: SqlException: MERCURIO Procedure SUGI_OPOR_Man_ContrapartesFinancieras State = 2 Line Number = 0 Message = Procedure or function SUGI_OPOR_Man_ContrapartesFinancieras has too many arguments specified.
+____________________________________________________

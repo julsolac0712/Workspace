@@ -4,6 +4,7 @@
         If Not Page.IsPostBack Then
             Get_Cookie_Intranet()
             Session("UsuarioIntranet") = IDIntranet
+            ' Session("UsuarioIntranet") = 2802
             CargarReporte()
         End If
     End Sub

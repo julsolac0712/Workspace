@@ -218,13 +218,13 @@
     <Content Include="Connected Services\Agrovoc\WorkSpace.Agrovoc.simpleSearchByModeLangXMLResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Images\iica_azul.svg" />
     <Content Include="Images\Logo-IICA.jpg" />
     <Content Include="Images\logoIICAheader.png" />
     <Content Include="Images\prueba.jpg" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="Pages\Error\ErrorGeneral.aspx" />
+    <Content Include="Pages\Expedientes\Catalogos\Contrapartes.aspx" />
     <Content Include="Pages\Expedientes\Catalogos\PalabrasClave.aspx" />
     <Content Include="Pages\Expedientes\Catalogos\TipoAmbito.aspx" />
     <Content Include="Pages\Expedientes\Catalogos\TipoExpediente.aspx" />
@@ -290,6 +290,7 @@
     <Content Include="Scripts\Contrib\bootstrap-file-input\js\plugins\canvas-to-blob.min.js" />
     <Content Include="Scripts\Custom\file-picker-init.js" />
     <Content Include="Scripts\Custom\menu.js" />
+    <None Include="My Project\PublishProfiles\Workspace.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\Custom\sub-menu.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -396,6 +397,13 @@
     </Compile>
     <Compile Include="Pages\Error\ErrorGeneral.aspx.vb">
       <DependentUpon>ErrorGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Expedientes\Catalogos\Contrapartes.aspx.designer.vb">
+      <DependentUpon>Contrapartes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Expedientes\Catalogos\Contrapartes.aspx.vb">
+      <DependentUpon>Contrapartes.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Pages\Expedientes\Catalogos\PalabrasClave.aspx.designer.vb">

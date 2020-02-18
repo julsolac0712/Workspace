@@ -156,7 +156,7 @@ div.navbar-inverse {
     }
 
     .frame-metricas {
-        width: 100%;
+        width: 95%;
         height: 800px;
     }
     ul > li.submenu-padding-40 {
@@ -606,4 +606,9 @@ span.imagen-check {
     border-radius: 10px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
     text-transform: lowercase;
+}
+
+.conteo {
+    text-align : right;
+    padding-top : 40px;
 }

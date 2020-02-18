@@ -66,8 +66,9 @@
                                                       <li ><a href="http://apps.iica.int/workspace/Pages/Expedientes/Catalogos/TipoInstrumento?Admin=1"  ><span>T.Instrumento</span></a></li>
                                                       <li ><a href="http://apps.iica.int/workspace/Pages/Expedientes/Catalogos/TipoTema?Admin=1"  ><span>T.Tema</span></a></li>
                                                       <li ><a href="http://apps.iica.int/workspace/Pages/Expedientes/Catalogos/TipoAmbito?Admin=1"  ><span>T.Ámbito</span></a></li>
-                                                     <li ><a href="http://apps.iica.int/workspace/Pages/Expedientes/Catalogos/TipoAmbito?Admin=1"  ><span>T.P.Clave</span></a></li>
+                                                      <li ><a href="http://apps.iica.int/workspace/Pages/Expedientes/Catalogos/TipoAmbito?Admin=1"  ><span>T.P.Clave</span></a></li>
                                                       <li ><a href="http://apps.iica.int/workspace/Pages/Expedientes/Catalogos/PalabrasClave?Admin=1"  ><span>P.Clave</span></a></li>
+                                                      <li ><a href="http://apps.iica.int/workspace/Pages/Expedientes/Catalogos/Contrapartes?Admin=1"  ><span>Contrapartes</span></a></li>
                                                  </ul>
                                                     <%--Site Scripts--%>
                                                     </li>
@@ -121,38 +122,38 @@
                        
                     </div>
                 </div>
-            <div class="row">
-                <div class="col-md-2" id="divleftMenu">
-                    <div class="nav-side-menu nav-side-menu-custom menu-content collapse in" id="menu_bar">
-                        <div class="row">
-                            <div class="col-md-12">
-                                
-                                <div class="brand">
-                                   <button type="button" class="navbar-toggle float-left " <%--data-toggle="collapse int"--%> data-target="#menu-content" id="hide">
-                        <span class="icon-bar icon-bar-color"></span>
-                        <span class="icon-bar icon-bar-color"></span>
-                        <span class="icon-bar icon-bar-color"></span>
-                    </button>
-                                     
-                                      <a href="http://apps.iica.int/workspace/">  <span class="workspace workspace-title displayNone" id="img_WorkSpaceTitleMovil">WS</span></a>
-       <%--<div class="navbar-collapse collapse navigation">--%>
-          </div>
+        <div class="row">
+            <div class="col-md-2" id="divleftMenu">
+                <div class="nav-side-menu nav-side-menu-custom menu-content collapse in" id="menu_bar">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="brand">
+                                <button type="button" class="navbar-toggle float-left " <%--data-toggle="collapse int"--%> data-target="#menu-content" id="hide">
+                                    <span class="icon-bar icon-bar-color"></span>
+                                    <span class="icon-bar icon-bar-color"></span>
+                                    <span class="icon-bar icon-bar-color"></span>
+                                </button>
+
+                                <a href="http://apps.iica.int/workspace/"><span class="workspace workspace-title displayNone" id="img_WorkSpaceTitleMovil">WS</span></a>
+                                <%--<div class="navbar-collapse collapse navigation">--%>
                             </div>
-                            
                         </div>
-                        <div class="menu-list">
+
+                    </div>
+                    <div class="menu-list">
             <ul id="menu-content" class="menu-content collapse in">
                 <%--  <li><a href="#"><span>Tema</span></a></li>
                                             <li><a href="#"><span>Ayuda</span></a></li>--%>
-               <%--    <li data-toggle="collapse" data-target="#service11" class="collapsed background-color-expedientes submenu-padding-10">
+                <li data-toggle="collapse" data-target="#service11" class="collapsed background-color-expedientes submenu-padding-10">
                    <a href="#">
                        <span class="top-menu-icon-folder glyphicon glyphicon-folder-open"></span>
                        <span class="displayMenu left-menu-text">Expedientes</span><span class="dowm-menu-icon glyphicon glyphicon-chevron-down"></span>
                    </a>
-                </li> --%> 
+                </li>  
                <%-- <ul class="sub-menu collapse" id="service11">
                     <li class="submenu-padding-25"><a href="http://apps.iica.int/workspace/Pages/Expedientes/Expediente"><span class="left-menu-icon glyphicon glyphicon-file"></span><span class="displayMenu left-menu-text">Nuevo Expediente</span></a></li>--%>
-<%--                    <li class="submenu-padding-25"><a href="#"><span class="left-menu-icon glyphicon glyphicon-globe"></span><span class="displayMenu left-menu-text">Países</span></a></li>
+<%--                <li class="submenu-padding-25"><a href="#"><span class="left-menu-icon glyphicon glyphicon-globe"></span><span class="displayMenu left-menu-text">Países</span></a></li>
                     <li class="submenu-padding-25"><a href="#"><span class="left-menu-icon glyphicon glyphicon-th-large"></span><span class="displayMenu left-menu-text">Unidades</span></a></li>
                     <li class="submenu-padding-25"><a href="#"><span class="left-menu-icon glyphicon glyphicon glyphicon-briefcase"></span><span class="displayMenu left-menu-text">Cooperación</span></a></li>
                     <li class="submenu-padding-25"> <a href="#"><span class="left-menu-icon glyphicon glyphicon-blackboard"></span><span class="displayMenu left-menu-text">Puestos</span></a></li>
@@ -180,15 +181,17 @@
                      <%-- <li class="submenu-padding-25" runat="server" id="li_Tablero_DireccionGeneral" visible="false"><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroDirectorGeneral"><span class="left-menu-icon glyphicon glyphicon-signal"></span><span class="displayMenu left-menu-text">Director General</span></a></li>--%>
                   <li class="submenu-padding-25" runat="server" id="li_Tablero_Directivo"  visible="false"><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroDirectivo"><span class="left-menu-icon glyphicon glyphicon-dashboard"></span><span class="displayMenu left-menu-text">Directivo</span></a></li>
                     <li class="submenu-padding-25"><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroGeneral"><span class="left-menu-icon glyphicon glyphicon-equalizer"></span><span class="displayMenu left-menu-text">General</span></a></li>
-                    <li class="submenu-padding-25" id="li_Historico" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=48"><span class="left-menu-icon glyphicon glyphicon-hourglass"></span><span class="displayMenu left-menu-text">Histórico REx</span></a></li>
-                    <li class="submenu-padding-25" id="li_Programas" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=53"><span class="left-menu-icon glyphicon glyphicon-random"></span><span class="displayMenu left-menu-text">Programas</span></a></li>
-                    <li class="submenu-padding-25" id="li_PAEN" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=55"><span class="left-menu-icon glyphicon glyphicon-map-marker"></span><span class="displayMenu left-menu-text">PAEN</span></a></li>
-                    <li class="submenu-padding-25" id="li_PAESC" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=56"><span class="left-menu-icon glyphicon glyphicon-map-marker"></span><span class="displayMenu left-menu-text">PAESC</span></a></li>                    
+                    <li class="submenu-padding-25" id="li_Historico" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=48"><span class="left-menu-icon glyphicon glyphicon-hourglass"></span><span class="displayMenu left-menu-text">Histórico R.Externos</span></a></li>
+                    <li class="submenu-padding-25" id="li_ARR" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=64"><span class="left-menu-icon glyphicon glyphicon-dashboard"></span><span class="displayMenu left-menu-text">Acciones Respuesta Rápida</span></a></li>
+                    <li class="submenu-padding-25" id="li_Programas" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=53"><span class="left-menu-icon glyphicon glyphicon-random"></span><span class="displayMenu left-menu-text">Programas Hemisféricos</span></a></li>
                     <li class="submenu-padding-25" id="li_Comercio" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=59"><span class="left-menu-icon glyphicon glyphicon-shopping-cart"></span><span class="displayMenu left-menu-text">Comercio</span></a></li>
                     <li class="submenu-padding-25" id="li_BioEconomia" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=60"><span class="left-menu-icon glyphicon glyphicon-piggy-bank"></span><span class="displayMenu left-menu-text">Bioeconomía</span></a></li>
                     <li class="submenu-padding-25" id="li_CambioClimatico" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=61"><span class="left-menu-icon glyphicon glyphicon-globe"></span><span class="displayMenu left-menu-text">Cambio Climático</span></a></li>
                     <li class="submenu-padding-25" id="li_DesarrolloTerritorial" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=62"><span class="left-menu-icon glyphicon glyphicon glyphicon-grain"></span><span class="displayMenu left-menu-text">Desarrollo Territorial</span></a></li>
-                    <li class="submenu-padding-25" id="li_SAIA" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=63"><span class="left-menu-icon glyphicon glyphicon-cutlery"></span><span class="displayMenu left-menu-text">SAIA</span></a></li>                   
+                    <li class="submenu-padding-25" id="li_SAIA" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=63"><span class="left-menu-icon glyphicon glyphicon-cutlery"></span><span class="displayMenu left-menu-text">SAIA</span></a></li>        
+                    <li class="submenu-padding-25" id="li_PAEN" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=55"><span class="left-menu-icon glyphicon glyphicon-map-marker"></span><span class="displayMenu left-menu-text">PAEN</span></a></li>
+                    <li class="submenu-padding-25" id="li_PAESC" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=56"><span class="left-menu-icon glyphicon glyphicon-compressed"></span><span class="displayMenu left-menu-text">Servicios Corporativos</span></a></li>
+                    <li class="submenu-padding-25" id="li_FonPRI" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=65"><span class="left-menu-icon glyphicon glyphicon-bitcoin"></span><span class="displayMenu left-menu-text">FonPRI</span></a></li>
                     <li class="submenu-padding-25" id="li_Of_Belice" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=4"><span class="displayMenu">Belice</span></a></li>
                     <li class="submenu-padding-25" id="li_Of_CR" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=5"><span class="displayMenu">Costa Rica</span></a></li>
                     <li class="submenu-padding-25" id="li_Of_Guatemala" visible="false" runat="server" ><a href="http://apps.iica.int/workspace/Pages/Metricas/tableroOficina?Of=6"><span class="displayMenu">Guatemala</span></a></li>

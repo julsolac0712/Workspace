@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<preserve resultType="3" virtualPath="/Pages/Metricas/tableroDirectivo.aspx" hash="fffffff43f3610b9" filehash="4a1c95efbd80066b" flags="110000" assembly="App_Web_suiuq1jc" type="ASP.pages_metricas_tablerodirectivo_aspx">
+<preserve resultType="3" virtualPath="/Pages/Metricas/tableroDirectivo.aspx" hash="987237759" filehash="38ccd2af0a272539" flags="110000" assembly="App_Web_r43kjxp3" type="ASP.pages_metricas_tablerodirectivo_aspx">
     <filedeps>
         <filedep name="/Pages/Metricas/tableroDirectivo.aspx" />
         <filedep name="/Site.Master" />

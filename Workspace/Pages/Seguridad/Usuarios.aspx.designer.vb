@@ -77,6 +77,33 @@ Partial Public Class Usuarios
     Protected WithEvents lcl_Descripcion As Global.System.Web.UI.WebControls.Localize
     
     '''<summary>
+    '''Localize1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Localize1 As Global.System.Web.UI.WebControls.Localize
+    
+    '''<summary>
+    '''txt_buscar control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txt_buscar As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''btn_buscar control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btn_buscar As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
     '''gv_Usuarios control.
     '''</summary>
     '''<remarks>

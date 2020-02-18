@@ -815,6 +815,78 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:WorkSpace.Formulario._hdf_OperacionEnlace">
+<summary>
+Control hdf_OperacionEnlace.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._hdf_OperacionContraparte">
+<summary>
+Control hdf_OperacionContraparte.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._hdf_ConDocumentos">
+<summary>
+Control hdf_ConDocumentos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._hdf_ConImagenes">
+<summary>
+Control hdf_ConImagenes.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._hdf_ConVideos">
+<summary>
+Control hdf_ConVideos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._hdf_ConNoticias">
+<summary>
+Control hdf_ConNoticias.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._hdf_ConEventos">
+<summary>
+Control hdf_ConEventos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._hdf_Cambio">
+<summary>
+Control hdf_Cambio.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:WorkSpace.Formulario._lcl_Identificacion">
 <summary>
 Control lcl_Identificacion.
@@ -1004,6 +1076,33 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:WorkSpace.Formulario._lcl_Contrapartes">
+<summary>
+Control lcl_Contrapartes.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._gv_ContraparteFinanciera">
+<summary>
+Control gv_ContraparteFinanciera.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._sqlDS_ContraparteFinanciera">
+<summary>
+Control sqlDS_ContraparteFinanciera.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:WorkSpace.Formulario._lcl_RecursosIICAT">
 <summary>
 Control lcl_RecursosIICAT.
@@ -1142,6 +1241,60 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:WorkSpace.Formulario._sqlDS_Participantes_Enlaces">
 <summary>
 Control sqlDS_Participantes_Enlaces.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._lcl_links2">
+<summary>
+Control lcl_links2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._gv_Enlaces">
+<summary>
+Control gv_Enlaces.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._sqlDS_Enlaces">
+<summary>
+Control sqlDS_Enlaces.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._Localize1">
+<summary>
+Control Localize1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._gv_ActivarEnlaces">
+<summary>
+Control gv_ActivarEnlaces.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Formulario._sqlDS_ActivarEnlaces">
+<summary>
+Control sqlDS_ActivarEnlaces.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1529,6 +1682,42 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:WorkSpace.Panel._IntroduccionExpandir">
 <summary>
 Control IntroduccionExpandir.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._lnk_BtnSeguimientp">
+<summary>
+Control lnk_BtnSeguimientp.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._lcl_Seguimiento">
+<summary>
+Control lcl_Seguimiento.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._gv_Cambios">
+<summary>
+Control gv_Cambios.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._sqlDS_Cambios">
+<summary>
+Control sqlDS_Cambios.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -2293,119 +2482,146 @@ To modify move field declaration from designer file to code-behind file.
 </member>
 <member name="F:WorkSpace.Usuarios._hdf_Operacion">
 <summary>
-hdf_Operacion control.
+Control hdf_Operacion.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._hdf_Operacionrol">
 <summary>
-hdf_Operacionrol control.
+Control hdf_Operacionrol.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._hdf_Usuario">
 <summary>
-hdf_Usuario control.
+Control hdf_Usuario.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._hdf_Idioma">
 <summary>
-hdf_Idioma control.
+Control hdf_Idioma.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._hdf_ID">
 <summary>
-hdf_ID control.
+Control hdf_ID.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._upAjax_Usuarios">
 <summary>
-upAjax_Usuarios control.
+Control upAjax_Usuarios.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._lcl_Descripcion">
 <summary>
-lcl_Descripcion control.
+Control lcl_Descripcion.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Usuarios._Localize1">
+<summary>
+Control Localize1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Usuarios._txt_buscar">
+<summary>
+Control txt_buscar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Usuarios._btn_buscar">
+<summary>
+Control btn_buscar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._gv_Usuarios">
 <summary>
-gv_Usuarios control.
+Control gv_Usuarios.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._sqlDS_Usuarios">
 <summary>
-sqlDS_Usuarios control.
+Control sqlDS_Usuarios.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._pnl_Roles">
 <summary>
-pnl_Roles control.
+Control pnl_Roles.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._lcl_Usuario">
 <summary>
-lcl_Usuario control.
+Control lcl_Usuario.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._gv_Roles">
 <summary>
-gv_Roles control.
+Control gv_Roles.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._sqlDS_Roles">
 <summary>
-sqlDS_Roles control.
+Control sqlDS_Roles.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.FormularioInstrumentos._hdf_Operacion">
@@ -2966,27 +3182,18 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:WorkSpace.SiteMaster._li_ARR">
+<summary>
+Control li_ARR.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:WorkSpace.SiteMaster._li_Programas">
 <summary>
 Control li_Programas.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:WorkSpace.SiteMaster._li_PAEN">
-<summary>
-Control li_PAEN.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:WorkSpace.SiteMaster._li_PAESC">
-<summary>
-Control li_PAESC.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -3032,6 +3239,33 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:WorkSpace.SiteMaster._li_SAIA">
 <summary>
 Control li_SAIA.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.SiteMaster._li_PAEN">
+<summary>
+Control li_PAEN.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.SiteMaster._li_PAESC">
+<summary>
+Control li_PAESC.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.SiteMaster._li_FonPRI">
+<summary>
+Control li_FonPRI.
 </summary>
 <remarks>
 Campo generado automáticamente.

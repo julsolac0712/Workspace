@@ -1,0 +1,4 @@
+11:38:55 a. m. --> Error: SqlException: mercurio Procedure WS_Man_IdentificacionProyecto State = 1 Line Number = 60 Message = Invalid column name 'ConRevistas'.
+____________________________________________________
+11:39:17 a. m. --> Error: SqlException: mercurio Procedure WS_Man_IdentificacionProyecto State = 1 Line Number = 60 Message = Invalid column name 'ConRevistas'.
+____________________________________________________

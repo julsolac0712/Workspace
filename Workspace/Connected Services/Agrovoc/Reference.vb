@@ -614,11 +614,11 @@ Namespace Agrovoc
         Public Sub New(ByVal binding As System.ServiceModel.Channels.Binding, ByVal remoteAddress As System.ServiceModel.EndpointAddress)
             MyBase.New(binding, remoteAddress)
         End Sub
-        
-        Public Sub close() Implements Agrovoc.SKOSWS.close
-            MyBase.Channel.close
+
+        Public Overloads Sub close() Implements Agrovoc.SKOSWS.close
+            MyBase.Channel.close()
         End Sub
-        
+
         Public Function closeAsync() As System.Threading.Tasks.Task Implements Agrovoc.SKOSWS.closeAsync
             Return MyBase.Channel.closeAsync
         End Function

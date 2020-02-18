@@ -12,12 +12,24 @@
         <div class="form-body">
             <asp:UpdatePanel ID="upAjax_Usuarios" runat="server">
                 <ContentTemplate>
-        
-            <span class="page-titles"><asp:Localize ID="lcl_Descripcion" runat="server" Text="Administración de Usuarios" ></asp:Localize>
-                        </span>
-                  
-                            <div class="margin-top-10 ">
-                            <asp:GridView ID="gv_Usuarios" runat="server" CssClass="table table-bordered" AutoGenerateColumns="False" DataSourceID="sqlDS_Usuarios" AllowPaging="True" AllowSorting="True" DataKeyNames="id_Usuario,lastUpdate">
+
+                    <span class="page-titles">
+                        <asp:Localize ID="lcl_Descripcion" runat="server" Text="Administración de Usuarios"></asp:Localize>
+                    </span>
+                    <div class="row">
+                        <div class="margin-top-10  col-md-4">
+                            <div class="divFloatRight">
+                                <asp:Localize ID="Localize1" runat="server" Text="Filtrar por"></asp:Localize>
+                                <div class="input-group">
+                                    <asp:TextBox ID="txt_buscar" runat="server" CssClass="form-control" Width="70%" placeholder="Palabra clave"></asp:TextBox>&nbsp;
+                                    <asp:Button ID="btn_buscar" runat="server" Text="Buscar" CssClass="btn btn-info" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="margin-top-30 ">
+                        <asp:GridView ID="gv_Usuarios" runat="server" CssClass="table table-bordered" AutoGenerateColumns="False" DataSourceID="sqlDS_Usuarios" AllowPaging="True" AllowSorting="True" DataKeyNames="id_Usuario,lastUpdate">
                                 <Columns>
                                     <asp:TemplateField ShowHeader="False">
                                         <EditItemTemplate>
@@ -37,9 +49,9 @@
                                     <asp:TemplateField HeaderText="Funcionario" SortExpression="Nombre">
                                         <EditItemTemplate>
                                             <asp:DropDownList ID="ddl_Funcionario" runat="server" DataSourceID="sqlDS_Funcionario" DataTextField="Nombre" DataValueField="ID" CssClass="form-control" Width="100%" OnSelectedIndexChanged="ddl_Funcionario_SelectedIndexChanged" SelectedValue='<%# Bind("FK_id_Intranet") %>'></asp:DropDownList>
-                                          <asp:CompareValidator  ID="rfv_Funcionario" runat="server" ControlToValidate="ddl_Funcionario" ValueToCompare="0" Operator="NotEqual"
-                                                        ErrorMessage="Requerido" Text="<%$ Resources:Global , CampoRequerido %>" CssClass="error-span"
-                                                        Display="Dynamic" ValidationGroup="Registro"></asp:CompareValidator>
+                                            <asp:CompareValidator ID="rfv_Funcionario" runat="server" ControlToValidate="ddl_Funcionario" ValueToCompare="0" Operator="NotEqual"
+                                                ErrorMessage="Requerido" Text="<%$ Resources:Global , CampoRequerido %>" CssClass="error-span"
+                                                Display="Dynamic" ValidationGroup="Registro"></asp:CompareValidator>
                                             <asp:SqlDataSource ID="sqlDS_Funcionario" runat="server" ConnectionString="<%$ ConnectionStrings:WSConnectionString %>" SelectCommand="WS_Seg_Get_Lista_Usuarios" SelectCommandType="StoredProcedure">
                                                 <SelectParameters>
                                                     <asp:Parameter DefaultValue="2" Name="Operacion" Type="Int32" />
@@ -81,10 +93,13 @@
                                     <asp:Parameter Name="Estado" Type="Int32" />
                                     <asp:Parameter Name="FechaCreacion" Type="DateTime" />
                                     <asp:ControlParameter ControlID="hdf_Usuario" Name="Usuario" PropertyName="Value" Type="Int32" />
-                                </DeleteParameters> 
+                                </DeleteParameters>
                                 <SelectParameters>
                                     <asp:Parameter DefaultValue="1" Name="Operacion" Type="Int32" />
                                     <asp:ControlParameter ControlID="hdf_Idioma" DefaultValue="es" Name="Idioma" PropertyName="Value" Type="String" />
+
+                                    <asp:ControlParameter ControlID="txt_buscar" Name="Buscar" PropertyName="Text" Type="String" DefaultValue="0" />
+
                                 </SelectParameters>
                                 <UpdateParameters>
                                     <asp:ControlParameter ControlID="hdf_Operacion" DefaultValue="2" Name="Operacion" PropertyName="Value" Type="Int32" />
@@ -95,12 +110,14 @@
                                     <asp:ControlParameter ControlID="hdf_Usuario" DefaultValue="" Name="Usuario" PropertyName="Value" Type="Int32" />
                                 </UpdateParameters>
                             </asp:SqlDataSource>
-           </div>
+                        </div>
 
-                    <asp:Panel ID="pnl_Roles" runat="server" Visible="false">
-               
-                                 <span class="page-titles"> <asp:Localize ID="lcl_Usuario" runat="server"></asp:Localize> </span>
-                       <div class="margin-top-10 ">
+                        <asp:Panel ID="pnl_Roles" runat="server" Visible="false">
+
+                            <span class="page-titles">
+                                <asp:Localize ID="lcl_Usuario" runat="server"></asp:Localize>
+                            </span>
+                            <div class="margin-top-10 ">
                                 <asp:GridView ID="gv_Roles" runat="server" Width="100%" CssClass="table table-bordered" AutoGenerateColumns="False" DataSourceID="sqlDS_Roles" DataKeyNames="id_Rel_UsuarioRol">
                                     <Columns>
                                         <asp:TemplateField ShowHeader="False">
@@ -119,9 +136,9 @@
                                                 <asp:Label ID="Label1" runat="server" Text='<%# Eval("Descripcion") %>'></asp:Label>
                                                 <asp:DropDownList ID="ddl_Rol" runat="server" CssClass="form-control" DataSourceID="sqlDS_ListaRoles" DataTextField="Descripcion" DataValueField="id_Rol" SelectedValue='<%# Bind("FK_id_Rol") %>' Width="100%">
                                                 </asp:DropDownList>
-                                                <asp:CompareValidator  ID="rfv_Rol" runat="server" ControlToValidate="ddl_Rol" ValueToCompare="0" Operator="NotEqual"
-                                                        ErrorMessage="Requerido" Text="<%$ Resources:Global , CampoRequerido %>" CssClass="error-span"
-                                                        Display="Dynamic" ValidationGroup="Registro"></asp:CompareValidator>
+                                                <asp:CompareValidator ID="rfv_Rol" runat="server" ControlToValidate="ddl_Rol" ValueToCompare="0" Operator="NotEqual"
+                                                    ErrorMessage="Requerido" Text="<%$ Resources:Global , CampoRequerido %>" CssClass="error-span"
+                                                    Display="Dynamic" ValidationGroup="Registro"></asp:CompareValidator>
                                                 <asp:SqlDataSource ID="sqlDS_ListaRoles" runat="server" ConnectionString="<%$ ConnectionStrings:WSConnectionString %>" SelectCommand="WS_Seg_Get_Lista_Roles" SelectCommandType="StoredProcedure">
                                                     <SelectParameters>
                                                         <asp:Parameter DefaultValue="2" Name="Operacion" Type="Int32" />
@@ -145,7 +162,7 @@
                                     <DeleteParameters>
                                         <asp:Parameter DefaultValue="3" Name="Operacion" Type="Int32" />
                                     </DeleteParameters>
-                                    
+
                                     <SelectParameters>
                                         <asp:Parameter DefaultValue="1" Name="Operacion" Type="Int32" />
                                         <asp:ControlParameter ControlID="hdf_ID" DefaultValue="" Name="id_Usuario" PropertyName="Value" Type="Int32" />
@@ -156,9 +173,9 @@
                                         <asp:Parameter Name="FK_id_Rol" Type="Int32" />
                                     </UpdateParameters>
                                 </asp:SqlDataSource>
-                        
-                           </div>
-                    </asp:Panel>
+
+                            </div>
+                        </asp:Panel>
 
                 </ContentTemplate>
                 <Triggers>
