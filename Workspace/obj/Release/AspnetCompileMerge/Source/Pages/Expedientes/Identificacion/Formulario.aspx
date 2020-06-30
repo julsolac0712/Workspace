@@ -38,7 +38,8 @@
                     <li><a href="#1" data-toggle="tab">
                         <asp:Localize ID="lcl_PaisesInvolucrados" runat="server" Text="Países Involucrados, Temas y ODS's"></asp:Localize></a>
                     </li>
-                    <li><a href="#2" data-toggle="tab">
+                    <li>
+                        <a href="#2" data-toggle="tab">
                             <asp:Localize ID="lcl_Resultados" runat="server" Text="Resultados"></asp:Localize></a>
                     </li>
                     <li><a href="#3" data-toggle="tab">
@@ -680,7 +681,7 @@
                                 <SelectParameters>
                                     <asp:ControlParameter ControlID="hdf_CronoICT" Name="CronoICT" PropertyName="Value" Type="Int32" />
                                     <asp:ControlParameter ControlID="hdf_SubCronoICT" Name="subcronoICT" PropertyName="Value" Type="String" />
-                                    <asp:ControlParameter ControlID="hdf_NumOperativo" Name="Presupuesto" PropertyName="Value" Type="Int32" DefaultValue="24" />
+                                    <asp:ControlParameter ControlID="hdf_NumOperativo" Name="Presupuesto" PropertyName="Value" Type="Int32" DefaultValue="25" />
                                     <asp:ControlParameter ControlID="hdf_Idioma" Name="Idioma" PropertyName="Value" Type="String" DefaultValue="es" />
                                     <asp:Parameter DefaultValue="2" Name="Operacion" Type="Int32" />
                                 </SelectParameters>
@@ -1011,6 +1012,7 @@
                                             <asp:TemplateField HeaderText="Término AGROVOC" SortExpression="Termino_ES">
                                                 <EditItemTemplate>
                                                     <asp:DropDownList ID="ddl_Agrovoc" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddl_Agrovoc_SelectedIndexChanged"></asp:DropDownList>
+                                                    <asp:RequiredFieldValidator ID="rfv_termino" runat="server" ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="ddl_Agrovoc" ValidationGroup="Registro" Text="*" InitialValue="0"></asp:RequiredFieldValidator>
                                                 </EditItemTemplate>
                                                 <ItemTemplate>
                                                     <asp:Panel runat="server" Visible='<%# Eval("Visible") %>'>

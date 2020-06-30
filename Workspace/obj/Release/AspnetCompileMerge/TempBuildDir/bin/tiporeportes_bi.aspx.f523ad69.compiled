@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<preserve resultType="3" virtualPath="/Pages/Metricas/Catalogos/TipoReportes_BI.aspx" hash="987237759" filehash="58a6c4830c94a01c" flags="110000" assembly="App_Web_kxvblk5w" type="ASP.pages_metricas_catalogos_tiporeportes_bi_aspx">
+<preserve resultType="3" virtualPath="/Pages/Metricas/Catalogos/TipoReportes_BI.aspx" hash="de25f7585" filehash="9eaf0dba4261067" flags="110000" assembly="App_Web_cbkbpefw" type="ASP.pages_metricas_catalogos_tiporeportes_bi_aspx">
     <filedeps>
         <filedep name="/Pages/Metricas/Catalogos/TipoReportes_BI.aspx" />
         <filedep name="/Site.Master" />

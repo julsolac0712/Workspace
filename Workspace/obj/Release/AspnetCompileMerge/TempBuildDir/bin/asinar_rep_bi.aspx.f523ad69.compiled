@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<preserve resultType="3" virtualPath="/Pages/Metricas/Catalogos/Asinar_Rep_BI.aspx" hash="987237759" filehash="992ef54b63c8e1dd" flags="110000" assembly="App_Web_kxvblk5w" type="ASP.pages_metricas_catalogos_asinar_rep_bi_aspx">
+<preserve resultType="3" virtualPath="/Pages/Metricas/Catalogos/Asinar_Rep_BI.aspx" hash="de25f7585" filehash="dd9f9167b7b58751" flags="110000" assembly="App_Web_cbkbpefw" type="ASP.pages_metricas_catalogos_asinar_rep_bi_aspx">
     <filedeps>
         <filedep name="/Pages/Metricas/Catalogos/Asinar_Rep_BI.aspx" />
         <filedep name="/Site.Master" />

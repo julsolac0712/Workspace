@@ -36,4 +36,16 @@ Public Class WorkSpace_Utility : Inherits Utility.Common
 #End Region
 
 
+
+    Public Function DatosRegistradosAgrovoc(ByVal texto As String, ByVal Operacion As Integer) As DataSet
+        Dim cmd As New SqlCommand("WS_Get_Lista_PalabrasAgrovocxIdentificacionProyecto", Conexion)
+        cmd.CommandType = CommandType.StoredProcedure
+
+        cmd.Parameters.AddWithValue("Operacion", Operacion)
+        cmd.Parameters.AddWithValue("Texto", texto)
+        Return Ejecutar_Consulta_DS(cmd)
+
+
+    End Function
+
 End Class

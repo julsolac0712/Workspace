@@ -310,7 +310,7 @@
                              <asp:label ID="lblBuscarpor" runat="server" Text="Filtrar por" AssociatedControlID="txt_buscar"></asp:label>
                              <div class="input-group">
                                  <asp:TextBox ID="txt_buscar" runat="server" CssClass="form-control" Width="70%" placeholder="Palabra clave"></asp:TextBox>&nbsp;
-                            <asp:Button ID="btn_buscar" runat="server" Text="Buscar" CssClass="btn btn-info" />
+                                 <asp:Button ID="btn_buscar" runat="server" Text="Buscar" CssClass="btn btn-info" />
                              </div>
                     </div>
                 </div>
@@ -356,6 +356,14 @@
                              </SelectParameters>
                          </asp:SqlDataSource>
                      </div>
+                     <div class="col-md-2">
+                         <asp:label ID="lbl_FiltroPeriodo" runat="server" Text="Filtrar por Periodo" AssociatedControlID="ddl_FiltroPeriodo"></asp:label>
+                         <asp:DropDownList ID="ddl_FiltroPeriodo" runat="server" CssClass="form-control" AutoPostBack="True" Width="98%">
+                             <asp:ListItem Value="25" text="2020"></asp:ListItem>
+                             <asp:ListItem Value="24" Text="2019"></asp:ListItem>
+                         </asp:DropDownList>
+                         
+                     </div>
 
                      <div class="col-md-6 conteo">
                          <asp:Localize ID="lcl_Conteo" runat="server" Text="Se han encontrado "></asp:Localize>
@@ -364,8 +372,6 @@
                      </div>
 
                  </div>
-
-
 
                  <div class="margin-top-30">
                      <asp:GridView ID="gv_Identificacion" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered" DataKeyNames="Codigo" DataSourceID="sqlDS_PanelIdentificacion" Width="100%" AllowPaging="True" AllowSorting="True" PageSize="12">
@@ -422,6 +428,7 @@
                              <asp:ControlParameter ControlID="ddl_Contrapartes" Name="Contraparte" PropertyName="SelectedValue" Type="Int32" DefaultValue="0" />
                              <asp:ControlParameter ControlID="ddl_Recursos" Name="Recursos" PropertyName="SelectedValue" Type="Int32" DefaultValue="0" />
                              <asp:ControlParameter ControlID="ddl_FiltroTipo" Name="Tipo" PropertyName="SelectedValue" Type="Int32" DefaultValue="0" />
+                             <asp:ControlParameter ControlID="ddl_FiltroPeriodo" Name="Presupuesto" PropertyName="SelectedValue" Type="Int32" DefaultValue="0" />
                              <asp:Parameter Direction="InputOutput" Name="CantResultados" Type="Int32" DefaultValue="0" />
                          </SelectParameters>
                      </asp:SqlDataSource>

@@ -3,6 +3,8 @@
 Public Class Formulario
     Inherits Base_Page
 
+    Dim tiposeleccion As Integer
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Page.IsPostBack Then
             Dim QueryString As New Hashtable()
@@ -10,7 +12,7 @@ Public Class Formulario
             If (Not QueryString("OPER") Is Nothing) Then
                 hdf_CronoICT.Value = QueryString("CronoICT")
                 hdf_SubCronoICT.Value = QueryString("SubCronoICT")
-        End If
+            End If
 
         End If
     End Sub
@@ -19,7 +21,6 @@ Public Class Formulario
         fv_Perfil.ChangeMode(FormViewMode.Edit)
         lnkBtn_EditarID.Visible = False
     End Sub
-
 
     Protected Sub sqlDS_Instrumentos_Updated(sender As Object, e As SqlDataSourceStatusEventArgs) Handles sqlDS_Instrumentos.Updated
         If e.Exception IsNot Nothing Then
@@ -35,6 +36,19 @@ Public Class Formulario
 
     Protected Sub btn_Cancelar_Click(sender As Object, e As EventArgs)
         lnkBtn_EditarID.Visible = True
+    End Sub
+
+    Protected Function PrintKeyWords(ByVal valor As Object, ByVal count As Object) As String
+        Dim arrValues() As String = Split(valor, ",")
+        Dim Estado As String = ""
+        For vAN_Indice As Integer = 0 To count - 1
+            Estado += "<span class='tag'>" + arrValues(vAN_Indice) + " </span>"
+        Next
+        Return Estado
+    End Function
+
+    Protected Sub lnk_Regresar_Click(sender As Object, e As EventArgs) Handles lnk_Regresar.Click
+        Response.Redirect("Panel?Admin=1", False)
     End Sub
 
 #Region "AccionesGrid"
@@ -146,15 +160,8 @@ Public Class Formulario
     End Sub
 #End Region
 #End Region
-    Protected Function PrintKeyWords(ByVal valor As Object, ByVal count As Object) As String
-        Dim arrValues() As String = Split(valor, ",")
-        Dim Estado As String = ""
-        For vAN_Indice As Integer = 0 To count - 1
-            Estado += "<span class='tag'>" + arrValues(vAN_Indice) + " </span>"
-        Next
-        Return Estado
-    End Function
 
+#Region "AGROVOC"
     Protected Sub gv_PalabrasAGROVOC_RowEditing(sender As Object, e As GridViewEditEventArgs) Handles gv_PalabrasAGROVOC.RowEditing
 
     End Sub
@@ -201,33 +208,63 @@ Public Class Formulario
                 Dim Resultado As String
                 Dim array() As String
                 Dim t As Integer = 0
+                Dim ds As DataSet
 
 
                 If txt_PalabraBuscarAgrovoc.Text <> "" Then
-                    Resultado = TbL.simpleSearchByMode2(txt_PalabraBuscarAgrovoc.Text, "containing", "--")
-                    ' txt_Palabra1.Text = Resultado
 
                     ddl.Items.Clear()
 
-                    array = Split(Resultado, "--")
 
-                    ddl.Items.Add(New ListItem("--Seleccione--", 0))
+                    ' busca datos que ya se hayan registrado
+                    ds = AccesoDatos.DatosRegistradosAgrovoc(txt_PalabraBuscarAgrovoc.Text, 5)
 
-                    For a = 0 To array.Count - 3
-                        If t < array.Count Then
-                            If array(t) <> "NumberOfResults" Then
+                    If ds.Tables(0).Rows.Count > 0 Then
 
-                                If array(t + 2) = "es" Then
-                                    ddl.Items.Add(New ListItem(array(t + 1), array(t)))
+                        tiposeleccion = 1
+
+                        ddl.Items.Add(New ListItem("--Seleccione--", 0))
+
+                        For Each row As DataRow In ds.Tables(0).Rows
+
+                            ddl.Items.Add(New ListItem(row("Espanol"), row("CodeTermAgrovoc")))
+
+                        Next
+
+                    Else
+
+                        tiposeleccion = 2
+
+                        Resultado = TbL.simpleSearchByMode2(txt_PalabraBuscarAgrovoc.Text, "containing", "--")
+                        ' txt_Palabra1.Text = Resultado
+
+
+
+                        array = Split(Resultado, "--")
+
+                        ddl.Items.Add(New ListItem("--Seleccione--", 0))
+
+                        For a = 0 To array.Count - 3
+                            If t < array.Count Then
+                                If array(t) <> "NumberOfResults" Then
+
+                                    If array(t + 2) = "es" Then
+                                        ddl.Items.Add(New ListItem(array(t + 1), array(t)))
+                                    End If
+
                                 End If
-
                             End If
-                        End If
 
-                        t = t + 3
+                            t = t + 3
 
-                    Next
+                        Next
+
+                    End If
+
                     ddl.DataBind()
+                Else
+                    ddl.Items.Clear()
+                    ddl.Items.Add(New ListItem("--Seleccione--", 0))
                 End If
             End If
 
@@ -235,12 +272,17 @@ Public Class Formulario
 
     End Sub
 
+
+
     Protected Sub gv_PalabrasAGROVOC_RowUpdating(sender As Object, e As GridViewUpdateEventArgs) Handles gv_PalabrasAGROVOC.RowUpdating
         If (e.Keys(0) = 0) Then
             hdf_OperacionPaises.Value = 1
         Else
             hdf_OperacionPaises.Value = 2
         End If
+
+
+
     End Sub
 
     Protected Sub gv_PalabrasAGROVOC_RowUpdated(sender As Object, e As GridViewUpdatedEventArgs) Handles gv_PalabrasAGROVOC.RowUpdated
@@ -256,14 +298,23 @@ Public Class Formulario
         Dim valor As String = ddl.SelectedValue
         Dim Idioma_EN As String = ""
 
-        Dim TbL As New Agrovoc.SKOSWSClient
-
         hdf_CodTerm.Value = valor
-        hdf_Ingles.Value = TbL.getTermByLanguage(valor, "en")
-        hdf_Frances.Value = TbL.getTermByLanguage(valor, "fr")
         hdf_Espanol.Value = ddl.SelectedItem.Text
-        hdf_Portuguez.Value = TbL.getTermByLanguage(valor, "pt")
 
+        If tiposeleccion = 2 Then
+            Dim TbL As New Agrovoc.SKOSWSClient
+
+            hdf_Ingles.Value = TbL.getTermByLanguage(valor, "en")
+            hdf_Frances.Value = TbL.getTermByLanguage(valor, "fr")
+            hdf_Portuguez.Value = TbL.getTermByLanguage(valor, "pt")
+
+        Else
+
+            hdf_Ingles.Value = ""
+            hdf_Frances.Value = ""
+            hdf_Portuguez.Value = ""
+
+        End If
 
     End Sub
 
@@ -273,7 +324,9 @@ Public Class Formulario
             Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro de País Involucrado - Update")
         End If
     End Sub
+#End Region
 
+#Region "ODS"
     Protected Sub gv_ODS_RowCreated(sender As Object, e As GridViewRowEventArgs) Handles gv_ODS.RowCreated
         Try
             If e.Row.RowIndex <> -1 Then
@@ -326,11 +379,9 @@ Public Class Formulario
             Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro al Borrar ODS - Deleted")
         End If
     End Sub
+#End Region
 
-    Protected Sub lnk_Regresar_Click(sender As Object, e As EventArgs) Handles lnk_Regresar.Click
-        Response.Redirect("Panel?Admin=1", False)
-    End Sub
-
+#Region "Temas"
     Protected Sub gv_Temas_RowCreated(sender As Object, e As GridViewRowEventArgs) Handles gv_Temas.RowCreated
         Try
             If e.Row.RowIndex <> -1 Then
@@ -383,4 +434,176 @@ Public Class Formulario
             Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro al Borrar Temas - Deleted")
         End If
     End Sub
+
+
+#End Region
+
+#Region "Enlaces"
+    Protected Sub gv_Enlaces_RowCreated(sender As Object, e As GridViewRowEventArgs) Handles gv_Enlaces.RowCreated
+        Try
+            If e.Row.RowIndex <> -1 Then
+
+                If CType(sender, GridView).DataKeys(e.Row.RowIndex).Values(0) = 0 Then
+
+                    Dim btn As LinkButton
+
+                    btn = CType(e.Row.FindControl("lnk_Eliminar_Enlace"), LinkButton)
+                    If Not btn Is Nothing Then
+                        btn.Visible = False
+                    End If
+
+                    btn = CType(e.Row.FindControl("lnk_Editar_Enlace"), LinkButton)
+                    If Not btn Is Nothing Then
+                        btn.Visible = False
+                    End If
+
+                    btn = CType(e.Row.FindControl("lnk_Agregar_Enlace"), LinkButton)
+                    If Not btn Is Nothing Then
+                        btn.Visible = True
+                    End If
+
+                End If
+
+            End If
+        Catch ex As Exception
+            Gestor_Errores.Escribir_Log(ex, "Error de Registro de Enlace - Created")
+        End Try
+    End Sub
+
+    Protected Sub gv_Enlaces_RowDeleted(sender As Object, e As GridViewDeletedEventArgs) Handles gv_Enlaces.RowDeleted
+        If e.Exception IsNot Nothing Then
+            e.ExceptionHandled = True
+            Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro al Borrar Enlaces - Deleted")
+        End If
+    End Sub
+
+    Protected Sub gv_Enlaces_RowUpdating(sender As Object, e As GridViewUpdateEventArgs) Handles gv_Enlaces.RowUpdating
+        If (e.Keys(0) = 0) Then
+            hdf_OperacionEnlace.Value = 1
+        Else
+            hdf_OperacionEnlace.Value = 2
+        End If
+    End Sub
+
+    Protected Sub gv_Enlaces_RowUpdated(sender As Object, e As GridViewUpdatedEventArgs) Handles gv_Enlaces.RowUpdated
+        If e.Exception IsNot Nothing Then
+            e.ExceptionHandled = True
+            Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro al Modificar Enlaces - Updated")
+        End If
+    End Sub
+
+#Region "Contrapartes"
+
+#End Region
+
+    Protected Sub gv_ContraparteFinanciera_RowCreated(sender As Object, e As GridViewRowEventArgs) Handles gv_ContraparteFinanciera.RowCreated
+        Try
+            If e.Row.RowIndex <> -1 Then
+
+                If CType(sender, GridView).DataKeys(e.Row.RowIndex).Values(0) = 0 Then
+
+                    Dim btn As LinkButton
+
+                    btn = CType(e.Row.FindControl("lnk_Eliminar_Contra"), LinkButton)
+                    If Not btn Is Nothing Then
+                        btn.Visible = False
+                    End If
+
+                    btn = CType(e.Row.FindControl("lnk_Editar_Contra"), LinkButton)
+                    If Not btn Is Nothing Then
+                        btn.Visible = False
+                    End If
+
+                    btn = CType(e.Row.FindControl("lnk_Agregar_Contra"), LinkButton)
+                    If Not btn Is Nothing Then
+                        btn.Visible = True
+                    End If
+
+                End If
+
+            End If
+        Catch ex As Exception
+            Gestor_Errores.Escribir_Log(ex, "Error de Registro de Enlace - Created")
+        End Try
+    End Sub
+
+    Protected Sub gv_ContraparteFinanciera_RowDeleted(sender As Object, e As GridViewDeletedEventArgs) Handles gv_ContraparteFinanciera.RowDeleted
+        If e.Exception IsNot Nothing Then
+            e.ExceptionHandled = True
+            Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro al Modificar Enlaces - Updated")
+        End If
+    End Sub
+
+    Protected Sub gv_ContraparteFinanciera_RowUpdated(sender As Object, e As GridViewUpdatedEventArgs) Handles gv_ContraparteFinanciera.RowUpdated
+        If e.Exception IsNot Nothing Then
+            e.ExceptionHandled = True
+            Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro al Modificar Enlaces - Updated")
+        End If
+    End Sub
+
+    Protected Sub gv_ContraparteFinanciera_RowUpdating(sender As Object, e As GridViewUpdateEventArgs) Handles gv_ContraparteFinanciera.RowUpdating
+        If (e.Keys(0) = 0) Then
+            hdf_OperacionContraparte.Value = 1
+        Else
+            hdf_OperacionContraparte.Value = 2
+        End If
+    End Sub
+
+    Protected Sub gv_ActivarEnlaces_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles gv_ActivarEnlaces.RowCommand
+        Dim rowIndex As Integer = 0 'Convert.ToInt32(e.CommandArgument)
+        gv_ActivarEnlaces.SelectedIndex = rowIndex
+
+
+        Dim seletedRowPrimaryKey As Integer = Integer.Parse(gv_ActivarEnlaces.SelectedDataKey(0).ToString())
+
+        hdf_Cambio.Value = Integer.Parse(gv_ActivarEnlaces.SelectedDataKey(0).ToString())
+
+
+        If CType(gv_ActivarEnlaces.Rows(0).FindControl("chk_Documentos"), CheckBox).Checked Then
+            hdf_ConDocumentos.Value = 1
+        Else
+            hdf_ConDocumentos.Value = 0
+        End If
+
+        If CType(gv_ActivarEnlaces.Rows(rowIndex).FindControl("chk_Videos"), CheckBox).Checked Then
+            hdf_ConVideos.Value = 1
+        Else
+            hdf_ConVideos.Value = 0
+        End If
+
+        If CType(gv_ActivarEnlaces.Rows(rowIndex).FindControl("chk_Imagenes"), CheckBox).Checked Then
+            hdf_ConImagenes.Value = 1
+        Else
+            hdf_ConImagenes.Value = 0
+        End If
+
+        If CType(gv_ActivarEnlaces.Rows(rowIndex).FindControl("chk_Noticias"), CheckBox).Checked Then
+            hdf_ConNoticias.Value = 1
+        Else
+            hdf_ConNoticias.Value = 0
+        End If
+
+        If CType(gv_ActivarEnlaces.Rows(rowIndex).FindControl("chk_Eventos"), CheckBox).Checked Then
+            hdf_ConEventos.Value = 1
+        Else
+            hdf_ConEventos.Value = 0
+        End If
+
+        hdf_Operacion.Value = 1
+
+        sqlDS_ActivarEnlaces.Update()
+
+
+    End Sub
+
+    Protected Sub gv_ActivarEnlaces_RowUpdated(sender As Object, e As GridViewUpdatedEventArgs) Handles gv_ActivarEnlaces.RowUpdated
+        If e.Exception IsNot Nothing Then
+            e.ExceptionHandled = True
+            Gestor_Errores.Escribir_Log(e.Exception, "Error de Registro al Modificar Enlaces - Updated")
+        End If
+    End Sub
+
+
+#End Region
+
 End Class

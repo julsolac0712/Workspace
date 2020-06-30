@@ -356,6 +356,14 @@
                              </SelectParameters>
                          </asp:SqlDataSource>
                      </div>
+                     <div class="col-md-2">
+                         <asp:label ID="lbl_FiltroPeriodo" runat="server" Text="Filtrar por Periodo" AssociatedControlID="ddl_FiltroPeriodo"></asp:label>
+                         <asp:DropDownList ID="ddl_FiltroPeriodo" runat="server" CssClass="form-control" AutoPostBack="True" Width="98%">
+                             <asp:ListItem Value="25" text="2020"></asp:ListItem>
+                             <asp:ListItem Value="24" Text="2019"></asp:ListItem>
+                         </asp:DropDownList>
+                         
+                     </div>
 
                      <div class="col-md-6 conteo">
                          <asp:Localize ID="lcl_Conteo" runat="server" Text="Se han encontrado "></asp:Localize>
@@ -420,6 +428,7 @@
                              <asp:ControlParameter ControlID="ddl_Contrapartes" Name="Contraparte" PropertyName="SelectedValue" Type="Int32" DefaultValue="0" />
                              <asp:ControlParameter ControlID="ddl_Recursos" Name="Recursos" PropertyName="SelectedValue" Type="Int32" DefaultValue="0" />
                              <asp:ControlParameter ControlID="ddl_FiltroTipo" Name="Tipo" PropertyName="SelectedValue" Type="Int32" DefaultValue="0" />
+                             <asp:ControlParameter ControlID="ddl_FiltroPeriodo" Name="Presupuesto" PropertyName="SelectedValue" Type="Int32" DefaultValue="0" />
                              <asp:Parameter Direction="InputOutput" Name="CantResultados" Type="Int32" DefaultValue="0" />
                          </SelectParameters>
                      </asp:SqlDataSource>

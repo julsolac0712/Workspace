@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<preserve resultType="3" virtualPath="/Pages/Metricas/tableroGeneral.aspx" hash="987237759" filehash="72c70e6e6289ffe5" flags="110000" assembly="App_Web_r43kjxp3" type="ASP.pages_metricas_tablerogeneral_aspx">
+<preserve resultType="3" virtualPath="/Pages/Metricas/tableroGeneral.aspx" hash="de25f7585" filehash="6123afa07b249f8a" flags="110000" assembly="App_Web_rpfpm4yc" type="ASP.pages_metricas_tablerogeneral_aspx">
     <filedeps>
         <filedep name="/Pages/Metricas/tableroGeneral.aspx" />
         <filedep name="/Site.Master" />

@@ -20,7 +20,6 @@ C:\Users\jsolis\Desktop\WorkSpace\WorkSpace\bin\Microsoft.AspNet.FriendlyUrls.xm
 C:\Users\jsolis\Desktop\WorkSpace\WorkSpace\bin\Newtonsoft.Json.xml
 C:\Users\jsolis\Desktop\WorkSpace\WorkSpace\obj\Release\WorkSpace.Resources.resources
 C:\Users\jsolis\Desktop\WorkSpace\WorkSpace\obj\Release\WorkSpace.vbproj.GenerateResource.Cache
-C:\Users\jsolis\Desktop\WorkSpace\WorkSpace\obj\Release\WorkSpace.vbproj.CoreCompileInputs.cache
 C:\Users\jsolis\Desktop\WorkSpace\WorkSpace\obj\Release\WorkSpace.dll
 C:\Users\jsolis\Desktop\WorkSpace\WorkSpace\obj\Release\WebForms_Basic.xml
 C:\Users\jsolis\Desktop\WorkSpace\WorkSpace\obj\Release\WorkSpace.pdb
@@ -80,3 +79,4 @@ C:\Users\jsolis\Desktop\WORKSPACEV3\WorkSpace\obj\Release\WorkSpace.vbproj.CopyC
 C:\Users\jsolis\Desktop\WORKSPACEV3\WorkSpace\obj\Release\WorkSpace.dll
 C:\Users\jsolis\Desktop\WORKSPACEV3\WorkSpace\obj\Release\WebForms_Basic.xml
 C:\Users\jsolis\Desktop\WORKSPACEV3\WorkSpace\obj\Release\WorkSpace.pdb
+C:\Users\jsolis\Desktop\Workspace\WorkSpace\obj\Release\WorkSpace.vbproj.CoreCompileInputs.cache

@@ -4,28 +4,22 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card profile profile-card">
-                <asp:Image ID="img_Perfil" runat="server" CssClass="profile-image-width"  />
-                       <asp:LinkButton runat="server" class="btn edit-profile position-edit-profile " ID="lnkBtn_VerPlan" ToolTip="Editar" data-toggle="modal" data-target="#myModal">
-                                <span class="glyphicon glyphicon-pencil imagen-edit-profile"></span>
-                           </asp:LinkButton> 
-             
+                <asp:Image ID="img_Perfil" runat="server" CssClass="profile-image-width" />
+                <asp:LinkButton runat="server" class="btn edit-profile position-edit-profile " ID="lnkBtn_VerPlan" ToolTip="Editar" data-toggle="modal" data-target="#myModal">
+                     <span class="glyphicon glyphicon-pencil imagen-edit-profile"></span>
+                </asp:LinkButton>
+
                 <h1>
-                    <asp:Literal ID="ltl_nombre" runat="server" ></asp:Literal></h1>
+                    <asp:Literal ID="ltl_nombre" runat="server"></asp:Literal></h1>
                 <p class="title">
-                    <asp:Literal ID="ltl_Profesion" runat="server"></asp:Literal></p>
-          
-               
-                       
-                    <div><a href="../../Default.aspx">Home</a> </div>
+                    <asp:Literal ID="ltl_Profesion" runat="server"></asp:Literal>
+                </p>
+                <div><a href="../../Default.aspx">Home</a> </div>
 
-                       
-
-                
-                
             </div>
         </div>
-        
-        
+
+
     </div>
     <!-- Modal -->
    

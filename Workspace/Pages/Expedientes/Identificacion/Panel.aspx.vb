@@ -10,7 +10,7 @@ Public Class Panel
             Response.Redirect("http://apps.iica.int/workspace/")
         End If
 
-        '    hdf_Usuario.Value = 2802
+        ''      hdf_Usuario.Value = 2802
 
     End Sub
 

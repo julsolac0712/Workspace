@@ -203,6 +203,96 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:WorkSpace.Contrapartes._hdf_Operacion">
+<summary>
+hdf_Operacion control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.Contrapartes._hdf_Usuario">
+<summary>
+hdf_Usuario control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.Contrapartes._hdf_Idioma">
+<summary>
+hdf_Idioma control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.Contrapartes._upAjax_Contrapartes">
+<summary>
+upAjax_Contrapartes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.Contrapartes._lcl_Descripcion">
+<summary>
+lcl_Descripcion control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.Contrapartes._Localize1">
+<summary>
+Localize1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.Contrapartes._txt_buscar">
+<summary>
+txt_buscar control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.Contrapartes._btn_buscar">
+<summary>
+btn_buscar control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.Contrapartes._gv_Contrapartes">
+<summary>
+gv_Contrapartes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WorkSpace.Contrapartes._sqlDS_Contrapartes">
+<summary>
+sqlDS_Contrapartes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:WorkSpace.PalabrasClave._hdf_Operacion">
 <summary>
 Control hdf_Operacion.
@@ -1220,33 +1310,6 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:WorkSpace.Formulario._lcl_links">
-<summary>
-Control lcl_links.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:WorkSpace.Formulario._gv_Participantes_Enlaces">
-<summary>
-Control gv_Participantes_Enlaces.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:WorkSpace.Formulario._sqlDS_Participantes_Enlaces">
-<summary>
-Control sqlDS_Participantes_Enlaces.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
 <member name="F:WorkSpace.Formulario._lcl_links2">
 <summary>
 Control lcl_links2.
@@ -1850,9 +1913,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:WorkSpace.Panel._lcl_FiltroRegion">
+<member name="F:WorkSpace.Panel._lbl_FiltroRegion">
 <summary>
-Control lcl_FiltroRegion.
+Control lbl_FiltroRegion.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1868,9 +1931,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:WorkSpace.Panel._lcl_FiltroPais">
+<member name="F:WorkSpace.Panel._lbl_FiltroPais">
 <summary>
-Control lcl_FiltroPais.
+Control lbl_FiltroPais.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1895,9 +1958,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:WorkSpace.Panel._lcl_FiltroAgrovoc">
+<member name="F:WorkSpace.Panel._lbl_FiltroAgrovoc">
 <summary>
-Control lcl_FiltroAgrovoc.
+Control lbl_FiltroAgrovoc.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1922,9 +1985,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:WorkSpace.Panel._lcl_FiltroFondos">
+<member name="F:WorkSpace.Panel._lbl_FiltroFondos">
 <summary>
-Control lcl_FiltroFondos.
+Control lbl_FiltroFondos.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1940,9 +2003,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:WorkSpace.Panel._Localize1">
+<member name="F:WorkSpace.Panel._lblBuscarpor">
 <summary>
-Control Localize1.
+Control lblBuscarpor.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1961,6 +2024,123 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:WorkSpace.Panel._btn_buscar">
 <summary>
 Control btn_buscar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._lbl_Contrapartes">
+<summary>
+Control lbl_Contrapartes.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._ddl_Contrapartes">
+<summary>
+Control ddl_Contrapartes.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._sqlDS_Contrapartes">
+<summary>
+Control sqlDS_Contrapartes.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._lbl_Recursos">
+<summary>
+Control lbl_Recursos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._ddl_Recursos">
+<summary>
+Control ddl_Recursos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._lbl_FiltroTipo">
+<summary>
+Control lbl_FiltroTipo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._ddl_FiltroTipo">
+<summary>
+Control ddl_FiltroTipo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._sqlDS_Tipos">
+<summary>
+Control sqlDS_Tipos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._lbl_FiltroPeriodo">
+<summary>
+Control lbl_FiltroPeriodo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._ddl_FiltroPeriodo">
+<summary>
+Control ddl_FiltroPeriodo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._lcl_Conteo">
+<summary>
+Control lcl_Conteo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._lcl_Conteo1">
+<summary>
+Control lcl_Conteo1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorkSpace.Panel._lcl_Conteo2">
+<summary>
+Control lcl_Conteo2.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -2257,101 +2437,101 @@ To modify move field declaration from designer file to code-behind file.
 </member>
 <member name="F:WorkSpace.Perfil._img_Perfil">
 <summary>
-img_Perfil control.
+Control img_Perfil.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Perfil._lnkBtn_VerPlan">
 <summary>
-lnkBtn_VerPlan control.
+Control lnkBtn_VerPlan.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Perfil._ltl_nombre">
 <summary>
-ltl_nombre control.
+Control ltl_nombre.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Perfil._ltl_Profesion">
 <summary>
-ltl_Profesion control.
+Control ltl_Profesion.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Perfil._ltl_Profile">
 <summary>
-ltl_Profile control.
+Control ltl_Profile.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Perfil._hdf_ID_Intranet">
 <summary>
-hdf_ID_Intranet control.
+Control hdf_ID_Intranet.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Perfil._hdf_Imagen">
 <summary>
-hdf_Imagen control.
+Control hdf_Imagen.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Perfil._hdf_Operacion">
 <summary>
-hdf_Operacion control.
+Control hdf_Operacion.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Perfil._fv_Perfil">
 <summary>
-fv_Perfil control.
+Control fv_Perfil.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Perfil._sqlDS_Perfil">
 <summary>
-sqlDS_Perfil control.
+Control sqlDS_Perfil.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Perfil._Literal2">
 <summary>
-Literal2 control.
+Control Literal2.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:WorkSpace.Menu._hdf_Operacion">
@@ -2482,146 +2662,146 @@ To modify move field declaration from designer file to code-behind file.
 </member>
 <member name="F:WorkSpace.Usuarios._hdf_Operacion">
 <summary>
-Control hdf_Operacion.
+hdf_Operacion control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._hdf_Operacionrol">
 <summary>
-Control hdf_Operacionrol.
+hdf_Operacionrol control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._hdf_Usuario">
 <summary>
-Control hdf_Usuario.
+hdf_Usuario control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._hdf_Idioma">
 <summary>
-Control hdf_Idioma.
+hdf_Idioma control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._hdf_ID">
 <summary>
-Control hdf_ID.
+hdf_ID control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._upAjax_Usuarios">
 <summary>
-Control upAjax_Usuarios.
+upAjax_Usuarios control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._lcl_Descripcion">
 <summary>
-Control lcl_Descripcion.
+lcl_Descripcion control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._Localize1">
 <summary>
-Control Localize1.
+Localize1 control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._txt_buscar">
 <summary>
-Control txt_buscar.
+txt_buscar control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._btn_buscar">
 <summary>
-Control btn_buscar.
+btn_buscar control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._gv_Usuarios">
 <summary>
-Control gv_Usuarios.
+gv_Usuarios control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._sqlDS_Usuarios">
 <summary>
-Control sqlDS_Usuarios.
+sqlDS_Usuarios control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._pnl_Roles">
 <summary>
-Control pnl_Roles.
+pnl_Roles control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._lcl_Usuario">
 <summary>
-Control lcl_Usuario.
+lcl_Usuario control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._gv_Roles">
 <summary>
-Control gv_Roles.
+gv_Roles control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.Usuarios._sqlDS_Roles">
 <summary>
-Control sqlDS_Roles.
+sqlDS_Roles control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.FormularioInstrumentos._hdf_Operacion">
@@ -3139,497 +3319,497 @@ To modify move field declaration from designer file to code-behind file.
 </member>
 <member name="F:WorkSpace.SiteMaster._hdf_ID_Intranet">
 <summary>
-Control hdf_ID_Intranet.
+hdf_ID_Intranet control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._img_perfil">
 <summary>
-Control img_perfil.
+img_perfil control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_MenuToolbox">
 <summary>
-Control li_MenuToolbox.
+li_MenuToolbox control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Tablero_Directivo">
 <summary>
-Control li_Tablero_Directivo.
+li_Tablero_Directivo control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Historico">
 <summary>
-Control li_Historico.
+li_Historico control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_ARR">
 <summary>
-Control li_ARR.
+li_ARR control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Programas">
 <summary>
-Control li_Programas.
+li_Programas control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Comercio">
 <summary>
-Control li_Comercio.
+li_Comercio control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_BioEconomia">
 <summary>
-Control li_BioEconomia.
+li_BioEconomia control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_CambioClimatico">
 <summary>
-Control li_CambioClimatico.
+li_CambioClimatico control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_DesarrolloTerritorial">
 <summary>
-Control li_DesarrolloTerritorial.
+li_DesarrolloTerritorial control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_SAIA">
 <summary>
-Control li_SAIA.
+li_SAIA control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_PAEN">
 <summary>
-Control li_PAEN.
+li_PAEN control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_PAESC">
 <summary>
-Control li_PAESC.
+li_PAESC control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_FonPRI">
 <summary>
-Control li_FonPRI.
+li_FonPRI control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Belice">
 <summary>
-Control li_Of_Belice.
+li_Of_Belice control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_CR">
 <summary>
-Control li_Of_CR.
+li_Of_CR control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Guatemala">
 <summary>
-Control li_Of_Guatemala.
+li_Of_Guatemala control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Honduras">
 <summary>
-Control li_Of_Honduras.
+li_Of_Honduras control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Nicaragua">
 <summary>
-Control li_Of_Nicaragua.
+li_Of_Nicaragua control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Panama">
 <summary>
-Control li_Of_Panama.
+li_Of_Panama control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Salvador">
 <summary>
-Control li_Of_Salvador.
+li_Of_Salvador control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Antigua">
 <summary>
-Control li_Of_Antigua.
+li_Of_Antigua control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Barbados">
 <summary>
-Control li_Of_Barbados.
+li_Of_Barbados control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Dominica">
 <summary>
-Control li_Of_Dominica.
+li_Of_Dominica control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Guayana">
 <summary>
-Control li_Of_Guayana.
+li_Of_Guayana control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Haiti">
 <summary>
-Control li_Of_Haiti.
+li_Of_Haiti control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Jamaica">
 <summary>
-Control li_Of_Jamaica.
+li_Of_Jamaica control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_SCN">
 <summary>
-Control li_Of_SCN.
+li_Of_SCN control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_SL">
 <summary>
-Control li_Of_SL.
+li_Of_SL control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Bahamas">
 <summary>
-Control li_Of_Bahamas.
+li_Of_Bahamas control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_RDominicana">
 <summary>
-Control li_Of_RDominicana.
+li_Of_RDominicana control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Granada">
 <summary>
-Control li_Of_Granada.
+li_Of_Granada control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Surinam">
 <summary>
-Control li_Of_Surinam.
+li_Of_Surinam control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Trinidad">
 <summary>
-Control li_Of_Trinidad.
+li_Of_Trinidad control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_SanVicente">
 <summary>
-Control li_Of_SanVicente.
+li_Of_SanVicente control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Bolivia">
 <summary>
-Control li_Of_Bolivia.
+li_Of_Bolivia control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Colombia">
 <summary>
-Control li_Of_Colombia.
+li_Of_Colombia control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Ecuador">
 <summary>
-Control li_Of_Ecuador.
+li_Of_Ecuador control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Peru">
 <summary>
-Control li_Of_Peru.
+li_Of_Peru control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Venezuela">
 <summary>
-Control li_Of_Venezuela.
+li_Of_Venezuela control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Argentina">
 <summary>
-Control li_Of_Argentina.
+li_Of_Argentina control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Brasil">
 <summary>
-Control li_Of_Brasil.
+li_Of_Brasil control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Chile">
 <summary>
-Control li_Of_Chile.
+li_Of_Chile control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Paraguay">
 <summary>
-Control li_Of_Paraguay.
+li_Of_Paraguay control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Uruguay">
 <summary>
-Control li_Of_Uruguay.
+li_Of_Uruguay control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Canada">
 <summary>
-Control li_Of_Canada.
+li_Of_Canada control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_USA">
 <summary>
-Control li_Of_USA.
+li_Of_USA control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_España">
 <summary>
-Control li_Of_España.
+li_Of_España control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_Mexico">
 <summary>
-Control li_Of_Mexico.
+li_Of_Mexico control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._li_Of_SedeCentral">
 <summary>
-Control li_Of_SedeCentral.
+li_Of_SedeCentral control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._img_IICA_Back">
 <summary>
-Control img_IICA_Back.
+img_IICA_Back control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._MainContent">
 <summary>
-Control MainContent.
+MainContent control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._sqlDS_Perfil">
 <summary>
-Control sqlDS_Perfil.
+sqlDS_Perfil control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.SiteMaster._sqlDS_RolUsuario">
 <summary>
-Control sqlDS_RolUsuario.
+sqlDS_RolUsuario control.
 </summary>
 <remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:WorkSpace.Site_Mobile._hdf_ID_Intranet">
